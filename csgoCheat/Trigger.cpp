@@ -31,7 +31,7 @@ void Trigger::Run()
 	DWORD crosshair = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iCrosshairId); // gets the address of the crosshair
 	DWORD crosshairEntity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (crosshair - 1) * 0x10); // gets the address the entity in the crosshair if it is a player
 
-	int triggerInterval = GetRecoveryTime(localPlayer); // gets the trigger intverval depending on the active weapon
+	// int triggerInterval = GetRecoveryTime(localPlayer); // gets the trigger intverval depending on the active weapon   !!!! Broken !!!!
 
 	if (crosshairEntity != 0) { // checks if there is a player entity in the crosshair
 
@@ -46,7 +46,7 @@ void Trigger::Run()
 			Sleep(25);
 			SendInput(1, &up, sizeof(up));
 
-			Sleep(triggerInterval); // time between the shots
+			Sleep(300); // time between the shots !!! Broken usually trigerInterval in line 34 !!!
 		}
 	}
 }
