@@ -25,11 +25,11 @@ public:
 	DWORD m_iItemIDHigh = 0x2FC0;
 	DWORD m_szCustomName = 0x303C;
 	DWORD m_hActiveWeapon = 0x2EF8;
-	DWORD dwEntityList = 0x4DA2E74;
-	DWORD dwForceJump = 0x524CDD4;
-	DWORD dwGlowObjectManager = 0x52EB478;
-	DWORD dwLocalPlayer = 0xD8B2AC;
-	DWORD dwbSendPackets = 0xD73CA;
+	DWORD dwEntityList = 0x4DA2F24;
+	DWORD dwForceJump = 0x524CE84;
+	DWORD dwGlowObjectManager = 0x52EB518;
+	DWORD dwLocalPlayer = 0xD8B2DC;
+	DWORD dwbSendPackets = 0xD745A;
 	DWORD m_bDormant = 0xED;
 	DWORD model_ambient_min = 0x59205C;
 	DWORD m_hViewModel = 0x32F8;
