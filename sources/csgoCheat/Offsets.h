@@ -25,9 +25,9 @@ public:
 	DWORD m_iItemIDHigh = 0x2FC0;
 	DWORD m_szCustomName = 0x303C;
 	DWORD m_hActiveWeapon = 0x2EF8;
-	DWORD dwEntityList = 0x4DA3F44;
-	DWORD dwForceJump = 0x524DEA4;
-	DWORD dwGlowObjectManager = 0x52EC558;
+	DWORD dwEntityList = 0x4DA3F5C;
+	DWORD dwForceJump = 0x524DEBC;
+	DWORD dwGlowObjectManager = 0x52EC550;
 	DWORD dwLocalPlayer = 0xD8C2CC;
 	DWORD dwbSendPackets = 0xD749A;
 	DWORD m_bDormant = 0xED;
