@@ -45,6 +45,7 @@ void Trigger::Run()
 			SendInput(1, &down, sizeof(down));
 			Sleep(25);
 			SendInput(1, &up, sizeof(up));
+			cout << triggerInterval << endl;
 
 			Sleep(triggerInterval); // time between the shots !!! Broken usually trigerInterval in line 34 !!!
 		}
@@ -126,7 +127,7 @@ int Trigger::GetRecoveryTime(DWORD _localPlayer) {
 	case 61:
 		return usps;
 	default:
-		break;
+		return 0;
 	}
 }
 
