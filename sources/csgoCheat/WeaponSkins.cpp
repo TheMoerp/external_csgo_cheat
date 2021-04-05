@@ -9,9 +9,9 @@ WeaponSkins weaponSkins;
 using namespace std;
 
 
-int desertEagleStock[] = { 711, 805, 527, 231, 757, 37 };
-int dualBerettasStock[] = { 658, 625, 895, 491 };
-int fiveSevenStock[] = { 837, 660, 427 };
+int desertEagleStock[] = { 711, 805, 527, 231, 757, 37, 1006 };
+int dualBerettasStock[] = { 658, 625, 895, 491, 978 };
+int fiveSevenStock[] = { 837, 660, 427, 979 };
 int glock18Stock[] = { 957, 586, 963, 353, 38, 988 };
 int p2000Stock[] = { 389, 591 };
 int p250Stock[] = { 678, 551, 404, 388, 258, 501 };
@@ -21,8 +21,8 @@ int uspStock[] = { 504, 653, 705, 313, 637, 817, 991 };
 int ak47Stock[] = { 959, 801, 801, 675, 639, 639, 302, 490, 282, 44 };
 int augStock[] = { 280, 690, 9, 886, 583 };
 int awpStock[] = { 887, 917, 803, 475, 279, 756, 736, 446, 344, 691, 838, 975 };
-int galilArStock[] = { 398, 661, 647, 379 };
-int famasStock[] = { 919, 604, 723, 626, 529 };
+int galilArStock[] = { 398, 661, 647, 379, 1013 };
+int famasStock[] = { 919, 604, 723, 626, 529, 999 };
 int g3s61Stock[] = { 511, 712, 628 };
 int m4a4Stock[] = { 309, 844, 512, 255, 971, 664, 588, 400, 449, 384, 167 };
 int scar20Stock[] = { 597, 391, 312, 232 };
@@ -30,12 +30,12 @@ int sg553Stock[] = { 897, 487, 750, 955 };
 int ssg09Stock[] = { 624, 222, 899 };
 int m4a1sStock[] = { 946, 587, 548, 497, 430, 360, 1001, 714, 644, 1017, 321, 440, 631, 984 };
 
-int mac10Stock[] = { 898, 433, 947, 310, 498, 38 };
+int mac10Stock[] = { 898, 433, 947, 310, 498, 38, 1009 };
 int mp7Stock[] = { 696, 481, 752, 847 };
 int mp9Stock[] = { 910, 609, 734, 262 };
 int ppBizonStock[] = { 542, 676, 508 };
 int p90Stock[] = { 359, 283, 759, 611 };
-int ump45Stock[] = { 556, 704, 37 };
+int ump45Stock[] = { 556, 704, 37, 1003 };
 
 int mag7Stock[] = { 948, 737, 961 };
 int novaStock[] = { 537, 62, 356, 746 };
