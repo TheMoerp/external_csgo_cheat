@@ -39,6 +39,7 @@ public:
 	int xm1014;
 	int m249;
 	int negev;
+	int usp;
 
 	int GetSkinID(int _weaponID);
 	void ChangeSkinLayout();

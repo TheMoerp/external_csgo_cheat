@@ -12,14 +12,16 @@ using namespace std;
 int desertEagleStock[] = { 711, 805, 527, 231, 757, 37 };
 int dualBerettasStock[] = { 658, 625, 895, 491 };
 int fiveSevenStock[] = { 837, 660, 427 };
-int glock18Stock[] = { 957, 586, 963, 353, 38 };
+int glock18Stock[] = { 957, 586, 963, 353, 38, 988 };
 int p2000Stock[] = { 389, 591 };
 int p250Stock[] = { 678, 551, 404, 388, 258, 501 };
 int tec9Stock[] = { 889, 614, 179 };
+int uspStock[] = { 504, 653, 705, 313, 637, 817, 991 };
 
-int ak47Stock[] = { 959, 801, 707, 675, 679, 600, 524, 474, 316, 306, 180, 490, 282, 44 };
+int ak47Stock[] = { 959, 801, 707, 675, 679, 600, 524, 474, 316, 306, 180, 490, 282, 44, 639, 1018 };
 int augStock[] = { 280, 690, 9, 886, 583 };
-int awpStock[] = { 887, 917, 803, 475, 279, 756, 736, 446, 344, 691, 838 };
+int awpStock[] = { 887, 917, 803, 475, 279, 756, 736, 446, 344, 691, 838, 975 };
+int galilArStock[] = { 398, 661, 647, 379 };
 int famasStock[] = { 919, 604, 723, 626, 529 };
 int g3s61Stock[] = { 511, 712, 628 };
 int m4a4Stock[] = { 309, 844, 512, 255, 971, 664, 588, 400, 449, 384, 167 };
@@ -36,13 +38,14 @@ int ump45Stock[] = { 556, 704, 37 };
 
 int mag7Stock[] = { 948, 737, 961 };
 int novaStock[] = { 537, 62, 356, 746 };
-int sawedOffStock[] = { 256, 720, 638 };
+int sawedOffStock[] = { 256, 720, 638, 638 };
 int xm1014Stock[] = { 850, 393 };
 int m249Stock[] = { 902, 496, 900 };
 int negevStock[] = { 763, 483, 432, 317 };
 
 
 int WeaponSkins::GetSkinID(int _weaponID) {
+	//cout << _weaponID << endl;
 	switch (_weaponID) {
 	case 1:
 		return desertEagle;
@@ -106,8 +109,11 @@ int WeaponSkins::GetSkinID(int _weaponID) {
 		return ssg08;
 	case 63:
 		return cz75;
+	case 262205:
+		//cout << "usp" << endl;
+		return usp;
 	default:
-		break;
+		return 0;
 	}
 }
 
@@ -143,6 +149,7 @@ void WeaponSkins::ChangeSkinLayout() {
 	awp = getRandomSkinID(awpStock, sizeof(awpStock));
 	famas = getRandomSkinID(famasStock, sizeof(famasStock));
 	g3sg1 = getRandomSkinID(g3s61Stock, sizeof(g3s61Stock));
+	galilAr = getRandomSkinID(galilArStock, sizeof(galilArStock));
 	m4a4 = getRandomSkinID(m4a4Stock, sizeof(m4a4Stock));
 	scar20 = getRandomSkinID(scar20Stock, sizeof(scar20Stock));
 	sg553 = getRandomSkinID(sg553Stock, sizeof(sg553Stock));
@@ -159,6 +166,7 @@ void WeaponSkins::ChangeSkinLayout() {
 	xm1014 = getRandomSkinID(xm1014Stock, sizeof(xm1014Stock));
 	m249 = getRandomSkinID(m249Stock, sizeof(m249Stock));
 	negev = getRandomSkinID(negevStock, sizeof(negevStock));
+	usp = getRandomSkinID(uspStock, sizeof(uspStock));
 
 	cout << "Skin Layout Changed." << endl;
 }
