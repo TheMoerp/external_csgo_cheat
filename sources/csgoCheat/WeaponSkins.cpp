@@ -110,7 +110,7 @@ int WeaponSkins::GetSkinID(int _weaponID) {
 	case 63:
 		return cz75;
 	case 262205:
-		return usp;
+		return usps;
 	case 262204:
 		return m4a1s;
 	default:
@@ -167,7 +167,7 @@ void WeaponSkins::ChangeSkinLayout() {
 	xm1014 = getRandomSkinID(xm1014Stock, sizeof(xm1014Stock));
 	m249 = getRandomSkinID(m249Stock, sizeof(m249Stock));
 	negev = getRandomSkinID(negevStock, sizeof(negevStock));
-	usp = getRandomSkinID(uspStock, sizeof(uspStock));
+	usps = getRandomSkinID(uspStock, sizeof(uspStock));
 	m4a1s = getRandomSkinID(m4a1sStock, sizeof(m4a1sStock));
 
 	cout << "Skin Layout Changed." << endl;

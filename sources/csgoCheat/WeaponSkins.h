@@ -39,7 +39,7 @@ public:
 	int xm1014;
 	int m249;
 	int negev;
-	int usp;
+	int usps;
 	int m4a1s;
 
 	int GetSkinID(int _weaponID);

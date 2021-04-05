@@ -121,9 +121,9 @@ int Trigger::GetRecoveryTime(DWORD _localPlayer) {
 		return ssg08;
 	case 63:
 		return cz75;
-	case 60:
+	case 262204:
 		return m4a1s;
-	case 61:
+	case 262205:
 		return usps;
 	default:
 		return 0;
