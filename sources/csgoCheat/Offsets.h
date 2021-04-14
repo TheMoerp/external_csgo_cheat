@@ -31,7 +31,7 @@ public:
 	DWORD dwLocalPlayer = 0xD8C2CC;
 	DWORD dwbSendPackets = 0xD749A;
 	DWORD m_bDormant = 0xED;
-	DWORD model_ambient_min = 0x59205C;
+	DWORD model_ambient_min = 0x58C05C;
 	DWORD m_hViewModel = 0x32F8;
 	DWORD m_iViewModelIndex = 0x3240;
 	DWORD m_nModelIndex = 0x258;
