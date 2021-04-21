@@ -11,6 +11,7 @@
 using namespace std;
 
 bool triggerToggle = false; // triggerbot off/on
+bool whToggle = false;
 
 // initializes the Cheat
 void Init() {
@@ -30,11 +31,19 @@ void toggleFeatures() {
         triggerToggle = false;
         cout << "Triggerbot turned off." << endl;
     }
+    else if (GetKeyState('X') < 0 && whToggle == false) {
+        whToggle = true;
+        cout << "Wallhack turned on." << endl;
+    }
+    else if (GetKeyState('X') < 0 && whToggle == true) {
+        whToggle = false;
+        cout << "Wallhack turned off." << endl;
+    }
 }
 
 
 void NoDelayFeatures() {
-    cout << "--> Triggerbot activated (Toggle it with V)" << endl;
+    cout << "--> Triggerbot ready (Toggle it with V)" << endl;
     cout << "--> Bhop activated" << endl;
     while (true) {
         if (triggerToggle) {
@@ -47,10 +56,12 @@ void NoDelayFeatures() {
 
 void DelayFeatures() {
     Sleep(10);
-    cout << "--> Wallhack activated" << endl;
+    cout << "--> Wallhack ready (Toggle it with X)" << endl;
     
     while (true) {
-        wh.Run();
+        if (whToggle) {
+            wh.Run();
+        }
         weaponSkins.RandomSkinChanger();
         Sleep(1);
     }
