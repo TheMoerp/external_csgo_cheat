@@ -59,8 +59,9 @@ void NoDelayFeatures() {
         if (triggerToggle) {
             trigger.Run();
         }
-        
-        bhop.Run();
+        if (bhobToggle) {
+            bhop.Run();
+        }
     }
 }
 
