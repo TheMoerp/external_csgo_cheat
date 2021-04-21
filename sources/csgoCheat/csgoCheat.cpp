@@ -102,7 +102,7 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 400, 800, TRUE);
+    MoveWindow(console, r.left, r.top, 400, 700, TRUE);
 
     cout << "             CS:GO Moerper" << endl;
     cout << "<-------------------------------------->" << endl;
