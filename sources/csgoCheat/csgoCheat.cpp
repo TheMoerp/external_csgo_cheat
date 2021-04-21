@@ -28,26 +28,32 @@ void toggleFeatures() {
     if (GetKeyState('V') < 0 && triggerToggle == false) {
         triggerToggle = true;
         cout << "Triggerbot on" << endl;
+        Sleep(50);
     }
     else if (GetKeyState('V') < 0 && triggerToggle == true) {
         triggerToggle = false;
         cout << "Triggerbot off" << endl;
+        Sleep(50);
     }
     else if (GetKeyState('X') < 0 && whToggle == false) {
         whToggle = true;
         cout << "Wallhack on" << endl;
+        Sleep(50);
     }
     else if (GetKeyState('X') < 0 && whToggle == true) {
         whToggle = false;
         cout << "Wallhack off" << endl;
+        Sleep(50);
     }
     else if (GetKeyState('C') < 0 && bhobToggle == false) {
         bhobToggle = true;
         cout << "Bhop on" << endl;
+        Sleep(50);
     }
     else if (GetKeyState('C') < 0 && bhobToggle == true) {
         bhobToggle = false;
         cout << "Bhop off" << endl;
+        Sleep(50);
     }
 }
 
