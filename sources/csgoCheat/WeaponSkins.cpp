@@ -200,7 +200,7 @@ void WeaponSkins::StandartSkinLayout() {
 	nova = 537;
 	sawedOff = 256;
 	xm1014 = 393;
-	m249 = 496;
+	m249 = 902;
 	negev = 763;
 	usps = 504;
 	m4a1s = 1001;
