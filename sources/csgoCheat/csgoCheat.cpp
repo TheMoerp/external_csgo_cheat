@@ -22,7 +22,6 @@ void Init() {
     cout << "Initiating engine..." << endl;
     mem.Setup();
     mem.GetModules();
-    weaponSkins.ChangeSkinLayout();
 }
 
 
@@ -107,7 +106,7 @@ void SkinChangerThread() {
     cout << "--> Skinchanger activated (Toggle Randomness with N)" << endl;
     cout << "" << endl;
     cout << "----------------------------------------------------" << endl;
-    cout << "\n\n\n                   Toggle Log" << endl;
+    cout << "\n\n\n                      Toggle Log" << endl;
     cout << "----------------------------------------------------\n" << endl;
     cout << "Triggerbot off\nWallhack off\nBhop off" << endl;
 
@@ -127,7 +126,7 @@ int main()
     GetWindowRect(console, &r);
     MoveWindow(console, r.left, r.top, 450, 700, TRUE);
 
-    cout << "                   CS:GO Moerper" << endl;
+    cout << "\n                     The Moerper" << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "waiting for CS:GO..." << endl;
 
