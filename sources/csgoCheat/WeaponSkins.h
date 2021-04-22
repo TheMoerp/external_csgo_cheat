@@ -4,7 +4,7 @@
 class WeaponSkins {
 private:
 	bool alive = true;
-
+	
 	int getRandomSkinID(int *_skinStock, int _length);
 	bool AliveCheck();
 public:
@@ -45,6 +45,7 @@ public:
 	int GetSkinID(int _weaponID);
 	void ChangeSkinLayout();
 	void RandomSkinChanger();
+	void StandartSkinLayout();
 };
 
 extern WeaponSkins weaponSkins;

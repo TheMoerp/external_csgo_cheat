@@ -14,6 +14,8 @@ using namespace std;
 bool triggerToggle = false; // triggerbot off/on
 bool whToggle = false;
 bool bhobToggle = false;
+bool rsToggle = false;
+
 
 // initializes the Cheat
 void Init() {
@@ -55,12 +57,22 @@ void toggleFeatures() {
         cout << "Bhop off" << endl;
         Sleep(50);
     }
+    else if (GetKeyState('N') < 0 && rsToggle == false) {
+        rsToggle = true;
+        cout << "Random skinchanger on" << endl;
+        Sleep(50);
+    }
+    else if (GetKeyState('N') < 0 && rsToggle == true) {
+        rsToggle = false;
+        cout << "Random skinchanger off" << endl;
+        Sleep(50);
+    }
 }
 
 
 void NoDelayFeatures() {
-    cout << "--> Triggerbot ready (Toggle it with V)" << endl;
-    cout << "--> Bhop ready       (Toggle it with C)" << endl;
+    cout << "--> Triggerbot ready      (Toggle it with V)" << endl;
+    cout << "--> Bhop ready            (Toggle it with C)" << endl;
     while (true) {
         if (triggerToggle) {
             trigger.Run();
@@ -73,13 +85,18 @@ void NoDelayFeatures() {
 
 void DelayFeatures() {
     Sleep(10);
-    cout << "--> Wallhack ready   (Toggle it with X)" << endl;
+    cout << "--> Wallhack ready        (Toggle it with X)" << endl;
     
     while (true) {
         if (whToggle) {
             wh.Run();
         }
-        weaponSkins.RandomSkinChanger();
+        if (rsToggle) {
+            weaponSkins.RandomSkinChanger();
+        }
+        else {
+            weaponSkins.StandartSkinLayout();
+        }
         Sleep(1);
     }
 }
@@ -87,12 +104,12 @@ void DelayFeatures() {
 
 void SkinChangerThread() {
     Sleep(30);
-    cout << "--> Random skinchanger activated" << endl;
+    cout << "--> Skinchanger activated (Toggle Randomness with N)" << endl;
     cout << "" << endl;
-    cout << "<-------------------------------------->" << endl;
-    cout << "\n\n" << endl;
-    cout << "<---- Toggle Log ---->\n" << endl;
-    cout << "Triggerbot off\nWallhack off\nBhob off" << endl;
+    cout << "----------------------------------------------------" << endl;
+    cout << "\n\n\n                   Toggle Log" << endl;
+    cout << "----------------------------------------------------\n" << endl;
+    cout << "Triggerbot off\nWallhack off\nBhop off" << endl;
 
     while (true) {
         skinChanger.Run();
@@ -108,10 +125,10 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 400, 700, TRUE);
+    MoveWindow(console, r.left, r.top, 450, 700, TRUE);
 
-    cout << "             CS:GO Moerper" << endl;
-    cout << "<-------------------------------------->" << endl;
+    cout << "                   CS:GO Moerper" << endl;
+    cout << "----------------------------------------------------" << endl;
     cout << "waiting for CS:GO..." << endl;
 
     Init();

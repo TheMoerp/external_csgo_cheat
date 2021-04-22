@@ -170,7 +170,40 @@ void WeaponSkins::ChangeSkinLayout() {
 	usps = getRandomSkinID(uspStock, sizeof(uspStock));
 	m4a1s = getRandomSkinID(m4a1sStock, sizeof(m4a1sStock));
 
-	cout << "Skin Layout Changed." << endl;
+	cout << "Skin Layout Changed" << endl;
+}
+
+void WeaponSkins::StandartSkinLayout() {
+	desertEagle = 711;
+	dualBerettas = 658;
+	fiveSeven = 660;
+	glock18 = 353;
+	p2000 = 389;
+	p250 = 678;
+	tec9 = 889;
+	ak47 = 959;
+	aug = 280;
+	awp = 344;
+	famas = 919;
+	g3sg1 = 628;
+	galilAr = 379;
+	m4a4 = 309;
+	scar20 =487;
+	ssg08 = 624;
+	mac10 = 898;
+	mp7 = 696;
+	mp9 = 910;
+	ppBizon = 542;
+	p90 = 359;
+	ump45 = 556;
+	mag7 = 948;
+	nova = 537;
+	sawedOff = 256;
+	xm1014 = 393;
+	m249 = 496;
+	negev = 763;
+	usps = 504;
+	m4a1s = 1001;
 }
 
 
