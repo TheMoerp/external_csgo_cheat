@@ -122,7 +122,7 @@ void Aimbot::Run() {
 				}
 			if (localPlayer != 0) {
 					if (target != 0 && targetHealth > 0 && targetDormant == false) {
-						cout << "121" << endl;
+						cout << "calculating target pos" << endl;
 						// recalc angles of target
 						double deltaX = localPos1 - targetPosX;
 						double deltaY = localPos2 - targetPosY;
