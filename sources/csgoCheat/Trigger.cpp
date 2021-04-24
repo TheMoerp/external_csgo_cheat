@@ -34,7 +34,6 @@ void Trigger::Run()
 	int triggerInterval = GetRecoveryTime(localPlayer); // gets the trigger intverval depending on the active weapon   !!!! Broken !!!!
 
 	if (crosshairEntity != 0) { // checks if there is a player entity in the crosshair
-
 		int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum); // gets the team of the local player
 		int crosshairEntityTeam = mem.ReadMemory<int>(crosshairEntity + offsets.m_iTeamNum); // gets the team of the player the crosshair is pointing at
 		

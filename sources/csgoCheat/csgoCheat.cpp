@@ -8,6 +8,7 @@
 #include "Wallhack.h"
 #include "SkinChanger.h"
 #include "WeaponSkins.h"
+#include "Aimbot1.h"
 
 using namespace std;
 
@@ -72,6 +73,7 @@ void toggleFeatures() {
 void NoDelayFeatures() {
     cout << "--> Triggerbot ready      (Toggle it with V)" << endl;
     cout << "--> Bhop ready            (Toggle it with C)" << endl;
+    Aimbot aimbot;
     while (true) {
         if (triggerToggle) {
             trigger.Run();
@@ -79,6 +81,7 @@ void NoDelayFeatures() {
         if (bhobToggle) {
             bhop.Run();
         }
+        aimbot.Run();
     }
 }
 

@@ -39,6 +39,9 @@
     <ClCompile Include="WeaponSkins.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Aimbot1.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Memory.h">
@@ -60,6 +63,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="WeaponSkins.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Aimbot1.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

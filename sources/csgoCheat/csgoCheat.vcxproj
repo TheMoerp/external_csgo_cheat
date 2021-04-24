@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Aimbot1.cpp" />
     <ClCompile Include="Bhob.cpp" />
     <ClCompile Include="csgoCheat.cpp" />
     <ClCompile Include="Memory.cpp" />
@@ -149,6 +150,7 @@
     <ClCompile Include="WeaponSkins.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Aimbot1.h" />
     <ClInclude Include="Bhop.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Offsets.h" />

@@ -35,6 +35,12 @@ public:
 	DWORD m_hViewModel = 0x32F8;
 	DWORD m_iViewModelIndex = 0x3240;
 	DWORD m_nModelIndex = 0x258;
+	DWORD m_vecOrigin = 0x138;
+	DWORD m_vecViewOffset = 0x108;
+	DWORD m_dwBoneMatrix = 0x26A8;
+	DWORD dwClientState = 0x588FE4;
+	DWORD dwClientState_ViewAngles = 0x4D90;
+	DWORD m_aimPunchAngle = 0x302C;
 
 	// every variable offset
 	DWORD processID = 0;
