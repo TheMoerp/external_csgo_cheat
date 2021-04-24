@@ -63,6 +63,7 @@ void Aimbot::Run() {
 			float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
 			float entityPosY = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
 			float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
+			cout << "got the enemy pos" << endl;
 
 			// calc angle
 			try {
@@ -76,8 +77,9 @@ void Aimbot::Run() {
 				if (deltaX >= 0.0) {
 					yaw = yaw + 180;
 				}
+				cout << "got the angle" << endl;
 				// calc dist
-				float distX = pitch - localXAngle;
+				double distX = pitch - localXAngle;
 				if (distX < -89.0) {
 					distX = distX + 360;
 				}
@@ -88,7 +90,7 @@ void Aimbot::Run() {
 					distX = -distX;
 				}
 
-				float distY = yaw - localYAngle;
+				double distY = yaw - localYAngle;
 				if (distY < -89.0) {
 					distY = distY + 360;
 				}
@@ -98,19 +100,19 @@ void Aimbot::Run() {
 				if (distY < 0.0) {
 					distY = -distY;
 				}
+				cout << "got the distance" << endl;
 
-
-
+				cout << "x: " << distX << " y: " << distY << endl;
 				DWORD target = 4;
 				int targetHealth = 0;
 				bool targetDormant = true;
-				float targetPosX = 0.0;
-				float targetPosY = 0.0;
-				float targetPosZ = 0.0;
+				double targetPosX = 0.0;
+				double targetPosY = 0.0;
+				double targetPosZ = 0.0;
 				if (distX < oldDistX && distY < oldDistY and distX <= AIM_FOV and distY <= AIM_FOV) {
-					cout << "109" << endl;
-					float oldDistX = distX;
-					float oldDistY = distY;
+					cout << "giving target data" << endl;
+					double oldDistX = distX;
+					double oldDistY = distY;
 					target = entity;
 					targetHealth = entityHealth;
 					targetDormant = entityDormant;
@@ -118,16 +120,16 @@ void Aimbot::Run() {
 					targetPosY = entityPosY;
 					targetPosZ = entityPosZ;
 				}
-				if (localPlayer != 0) {
+			if (localPlayer != 0) {
 					if (target != 0 && targetHealth > 0 && targetDormant == false) {
 						cout << "121" << endl;
 						// recalc angles of target
-						float deltaX = localPos1 - targetPosX;
-						float deltaY = localPos2 - targetPosY;
-						float deltaZ = localPos3 - targetPosZ;
-						float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-						float pitch = atan(deltaZ / hypotenuse) * 180 / M_PI;
-						float yaw = atan(deltaY / deltaX) * 180 / M_PI;
+						double deltaX = localPos1 - targetPosX;
+						double deltaY = localPos2 - targetPosY;
+						double deltaZ = localPos3 - targetPosZ;
+						double hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+						double pitch = atan(deltaZ / hypotenuse) * 180 / M_PI;
+						double yaw = atan(deltaY / deltaX) * 180 / M_PI;
 						if (deltaX >= 0.0) {
 							yaw = yaw + 180;
 						}
@@ -146,8 +148,8 @@ void Aimbot::Run() {
 						}
 						
 						// aim
-						mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
-						mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
+						mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
+						mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 					}
 				}
 			}
