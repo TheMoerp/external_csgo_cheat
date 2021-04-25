@@ -160,7 +160,7 @@ void Aimbot::Run() {
 							}
 						
 							// aim
-							cout << "------------------------ AIMING ---------------------------" << endl;
+							cout << "---- AIMING ----" << endl;
 							mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
 							mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 						}
