@@ -127,7 +127,7 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 700, 700, TRUE);
+    MoveWindow(console, r.left, r.top, 800, 700, TRUE); // width, height
 
     cout << "\n                     The Moerper" << endl;
     cout << "----------------------------------------------------" << endl;

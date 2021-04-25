@@ -23,7 +23,7 @@ void Aimbot::Run() {
 	cout << "got local data" << endl;
 	for (int i = 1; i < 32; i++) {
 		DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);
-		cout << "------------ found an entity in loop round no. " << i << " ---------" << endl;
+		cout << "------------ found an entity in loop round no. " << i << " ----------" << endl;
 		int entityTeam = 0;
 		int entityHealth = 0;
 		bool entityDormant = false;
@@ -97,10 +97,10 @@ void Aimbot::Run() {
 						distX = -distX;
 					}
 					float distY = yaw - localYAngle;
-					if (distY < -89.0) {
+					if (distY < -180) {
 						distY = distY + 360;
 					}
-					else if (distY > 89.0) {
+					else if (distY > 180) {
 						distY = distY - 360;
 					}
 					if (distY < 0.0) {
@@ -145,7 +145,7 @@ void Aimbot::Run() {
 							float pitch = (float)atan(deltaZ / hypotenuse) * 180 / M_PI;
 							float yaw = (float)atan(deltaY / deltaX) * 180 / M_PI;
 							if (deltaX >= 0.0) {
-								yaw = yaw + 180;
+								yaw = yaw + 180.0;
 							}
 							cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
 							// normalize angles
