@@ -8,7 +8,7 @@ using namespace std;
 
 
 int TARGET_BONE = 1; //8 = head
-int AIM_FOV = 120.0;
+int AIM_FOV = 5;
 
 
 
@@ -54,7 +54,7 @@ void Aimbot::Run() {
 		float targetPosX = 0.0;
 		float targetPosY = 0.0;
 		float targetPosZ = 0.0;
-		try {
+		//try {
 			if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
 				//cout << "the entity is a living enemy" << endl;
 				// calc pos
@@ -80,32 +80,32 @@ void Aimbot::Run() {
 				float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
 				float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
 				float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
-					if (deltaX >= 0.0) {
-						yaw = yaw + 180.0;
-					}
-					//cout << "pitch: " << pitch << " yaw: " << yaw << endl;
-					//cout << "calculating distance..." << endl;
-					// calc dist
-					float distX = pitch - localXAngle;
-					if (distX < -89.0) {
-						distX = distX + 360.0;
-					}
-					else if (distX > 89.0) {
-						distX = distX - 360.0;
-					}
-					if (distX < 0.0) {
-						distX = -distX;
-					}
-					float distY = yaw - localYAngle;
-					if (distY < -180.0) {
-						distY = distY + 360.0;
-					}
-					else if (distY > 180.0) {
-						distY = distY - 360.0;
-					}
-					if (distY < 0.0) {
-						distY = -distY;
-					}
+				if (deltaX >= 0.0) {
+					yaw = yaw + 180.0;
+				}
+				//cout << "pitch: " << pitch << " yaw: " << yaw << endl;
+				//cout << "calculating distance..." << endl;
+				// calc dist
+				float distX = pitch - localXAngle;
+				if (distX < -89.0) {
+					distX = distX + 360.0;
+				}
+				else if (distX > 89.0) {
+					distX = distX - 360.0;
+				}
+				if (distX < 0.0) {
+					distX = -distX;
+				}
+				float distY = yaw - localYAngle;
+				if (distY < -180.0) {
+					distY = distY + 360.0;
+				}
+				else if (distY > 180.0) {
+					distY = distY - 360.0;
+				}
+				if (distY < 0.0) {
+					distY = -distY;
+				}
 
 					//cout << "distX: " << distX << " distY: " << distY << endl;
 					//cout << "oldDistX: " << oldDistX << " oldDistY: " << oldDistY << endl;
@@ -118,61 +118,61 @@ void Aimbot::Run() {
 					double targetPosZ = 0.0;
 					*/
 					//cout << distX << " < " << oldDistX << " && " << distY << " < " << oldDistY << " && " << distX << " <= " << AIM_FOV << " && " << distY << " <= " << AIM_FOV << endl;
-					if (distX < oldDistX && distY < oldDistY && distX <= AIM_FOV && distY <= AIM_FOV) {
-						//cout << "save entityData as targetData..." << endl;
-						float oldDistX = distX;
-						float oldDistY = distY;
-						target = entity;
-						targetHealth = entityHealth;
-						targetDormant = entityDormant;
-						targetPosX = entityPosX;
-						targetPosY = entityPosY;
-						targetPosZ = entityPosZ;
+				if (distX < (oldDistX-0.5) && distY < (oldDistY-0.5) && distX <= AIM_FOV && distY <= AIM_FOV && distX) {
+					//cout << "save entityData as targetData..." << endl;
+					float oldDistX = distX;
+					float oldDistY = distY;
+					target = entity;
+					targetHealth = entityHealth;
+					targetDormant = entityDormant;
+					targetPosX = entityPosX;
+					targetPosY = entityPosY;
+					targetPosZ = entityPosZ;
+				}
+			}
+
+
+			if (GetAsyncKeyState(VK_LBUTTON) < 0 && localPlayer != 0) {
+				//cout << "localPlayer != 0" << endl;
+				if (target != 0 && targetHealth > 0 && targetDormant == false) {
+					//cout << "target is alive and updated" << endl;
+					// recalc angles of target
+					//cout << "calculating angles of the target..." << endl;
+					float deltaX = localPos1 - targetPosX;
+					float deltaY = localPos2 - targetPosY;
+					float deltaZ = localPos3 - targetPosZ;
+					float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+					float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
+					float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
+					if (deltaX >= 0.0) {
+						yaw = yaw + 180.0;
 					}
+					//cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
+					// normalize angles
+					//cout << "normalizing angles..." << endl;
+					if (pitch > 89.0) {
+						pitch = pitch - 360.0;
+					}
+					if (pitch < -89.0) {
+						pitch = pitch + 360.0;
+					}
+					if (yaw > 180.0) {
+						yaw = yaw - 360.0;
+					}
+					if (yaw < -180.0) {
+						yaw = yaw + 360.0;
+					}
+					//cout << "normalizedPitch: " << pitch << " normalizedYaw: " << yaw << endl;
+					// aim
+					//cout << "------------------------ AIMING ---------------------------" << endl;
+					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
+					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 				}
-
-
-				if (localPlayer != 0) {
-					//cout << "localPlayer != 0" << endl;
-						if (target != 0 && targetHealth > 0 && targetDormant == false) {
-							//cout << "target is alive and updated" << endl;
-							// recalc angles of target
-							//cout << "calculating angles of the target..." << endl;
-							float deltaX = localPos1 - targetPosX;
-							float deltaY = localPos2 - targetPosY;
-							float deltaZ = localPos3 - targetPosZ;
-							float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-							float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
-							float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
-							if (deltaX >= 0.0) {
-								yaw = yaw + 180.0;
-							}
-							//cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
-							// normalize angles
-							//cout << "normalizing angles..." << endl;
-							if (pitch > 89.0) {
-								pitch = pitch - 360.0;
-							}
-							if (pitch < -89.0) {
-								pitch = pitch + 360.0;
-							}
-							if (yaw > 180.0) {
-								yaw = yaw - 360.0;
-							}
-							if (yaw < -180.0) {
-								yaw = yaw + 360.0;
-							}
-							//cout << "normalizedPitch: " << pitch << " normalizedYaw: " << yaw << endl;
-							// aim
-							//cout << "------------------------ AIMING ---------------------------" << endl;
-							mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
-							mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
-						}
-				}
-		}
-		catch(...) {
-			cout << "ex" << endl;
-		}
+			}
+		//}
+		//catch(...) {
+		//	cout << "ex" << endl;
+		//}
 
 		
 	}

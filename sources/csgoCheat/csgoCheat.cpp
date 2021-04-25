@@ -75,12 +75,15 @@ void NoDelayFeatures() {
     cout << "--> Bhop ready            (Toggle it with C)" << endl;
     Aimbot aimbot;
     while (true) {
+        /*
         if (triggerToggle) {
             trigger.Run();
         }
         if (bhobToggle) {
             bhop.Run();
         }
+        */
+        //Sleep(50);
         aimbot.Run();
     }
 }
