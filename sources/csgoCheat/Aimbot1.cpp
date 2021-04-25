@@ -119,8 +119,9 @@ void Aimbot::Run() {
 					double targetPosY = 0.0;
 					double targetPosZ = 0.0;
 					*/
+					cout << distX << " < " << oldDistX << " && " << distY << " < " << oldDistY << " && " << distX << " <= " << AIM_FOV << " && " << distY << " <= " << AIM_FOV << endl;
 					if (distX < oldDistX && distY < oldDistY && distX <= AIM_FOV && distY <= AIM_FOV) {
-						cout << "---------giving target data--------" << endl;
+						cout << "giving target data" << endl;
 						double oldDistX = distX;
 						double oldDistY = distY;
 						target = entity;
@@ -149,16 +150,17 @@ void Aimbot::Run() {
 								pitch = pitch - 360;
 							}
 							if (pitch < -89) {
-								pitch = pitch - 360;
+								pitch = pitch + 360;
 							}
 							if (pitch > 180) {
 								pitch = pitch - 360;
 							}
 							if (pitch < -180) {
-								pitch = pitch - 360;
+								pitch = pitch + 360;
 							}
 						
 							// aim
+							cout << "---- AIMING ----" << endl;
 							mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
 							mem.WriteMemory<double>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 						}
