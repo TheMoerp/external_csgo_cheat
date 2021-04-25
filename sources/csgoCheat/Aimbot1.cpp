@@ -20,10 +20,10 @@ void Aimbot::Run() {
 	DWORD target;
 	int oldDistX = 11111111;
 	int oldDistY = 11111111;
-	cout << "got local data" << endl;
+	//cout << "got local data" << endl;
 	for (int i = 1; i < 32; i++) {
 		DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);
-		cout << "------------ found an entity in loop round no. " << i << " ----------" << endl;
+		//cout << "------------ found an entity in loop round no. " << i << " ----------" << endl;
 		int entityTeam = 0;
 		int entityHealth = 0;
 		bool entityDormant = false;
@@ -32,10 +32,10 @@ void Aimbot::Run() {
 				entityTeam = mem.ReadMemory<int>(entity + offsets.m_iTeamNum);
 				entityHealth = mem.ReadMemory<int>(entity + offsets.m_iHealth);
 				entityDormant = mem.ReadMemory<bool>(entity + offsets.m_bDormant);
-				cout << "got data of the entity" << endl;
+				//cout << "got data of the entity" << endl;
 			}
 			catch(...) {
-				cout << "failed to get the data of the entity" << endl;
+				//cout << "failed to get the data of the entity" << endl;
 			}
 		}
 		
@@ -56,23 +56,23 @@ void Aimbot::Run() {
 		float targetPosZ = 0.0;
 		try {
 			if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
-				cout << "the entity is a living enemy" << endl;
+				//cout << "the entity is a living enemy" << endl;
 				// calc pos
-				cout << "reading in localPos..." << endl;
+				//cout << "reading in localPos..." << endl;
 				localXAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
 				localYAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
 				localZAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x8);
 				localPos1 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x0);
 				localPos2 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
 				localPos3 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8);
-				cout << "localPosX: " << localPos1 << " localPosY: " << localPos2 << " localPosZ: " << localPos3 << endl;
-				cout << "reading in enemyPos..." << endl;
+				//cout << "localPosX: " << localPos1 << " localPosY: " << localPos2 << " localPosZ: " << localPos3 << endl;
+				//cout << "reading in enemyPos..." << endl;
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
 				float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
 				float entityPosY = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
 				float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
-				cout << "enemyPosX: " << entityPosX << " enemyPosY: " << entityPosY << " enemyPosZ: " << entityPosZ << endl;
-				cout << "calculating angles..." << endl;
+				//cout << "enemyPosX: " << entityPosX << " enemyPosY: " << entityPosY << " enemyPosZ: " << entityPosZ << endl;
+				//cout << "calculating angles..." << endl;
 				// calc angle
 				float deltaX = localPos1 - entityPosX;
 				float deltaY = localPos2 - entityPosY;
@@ -83,8 +83,8 @@ void Aimbot::Run() {
 					if (deltaX >= 0.0) {
 						yaw = yaw + 180.0;
 					}
-					cout << "pitch: " << pitch << " yaw: " << yaw << endl;
-					cout << "calculating distance..." << endl;
+					//cout << "pitch: " << pitch << " yaw: " << yaw << endl;
+					//cout << "calculating distance..." << endl;
 					// calc dist
 					float distX = pitch - localXAngle;
 					if (distX < -89.0) {
@@ -107,8 +107,8 @@ void Aimbot::Run() {
 						distY = -distY;
 					}
 
-					cout << "distX: " << distX << " distY: " << distY << endl;
-					cout << "oldDistX: " << oldDistX << " oldDistY: " << oldDistY << endl;
+					//cout << "distX: " << distX << " distY: " << distY << endl;
+					//cout << "oldDistX: " << oldDistX << " oldDistY: " << oldDistY << endl;
 					/*
 					DWORD target = 4;
 					int targetHealth = 0;
@@ -117,9 +117,9 @@ void Aimbot::Run() {
 					double targetPosY = 0.0;
 					double targetPosZ = 0.0;
 					*/
-					cout << distX << " < " << oldDistX << " && " << distY << " < " << oldDistY << " && " << distX << " <= " << AIM_FOV << " && " << distY << " <= " << AIM_FOV << endl;
+					//cout << distX << " < " << oldDistX << " && " << distY << " < " << oldDistY << " && " << distX << " <= " << AIM_FOV << " && " << distY << " <= " << AIM_FOV << endl;
 					if (distX < oldDistX && distY < oldDistY && distX <= AIM_FOV && distY <= AIM_FOV) {
-						cout << "save entityData as targetData..." << endl;
+						//cout << "save entityData as targetData..." << endl;
 						float oldDistX = distX;
 						float oldDistY = distY;
 						target = entity;
@@ -133,11 +133,11 @@ void Aimbot::Run() {
 
 
 				if (localPlayer != 0) {
-					cout << "localPlayer != 0" << endl;
+					//cout << "localPlayer != 0" << endl;
 						if (target != 0 && targetHealth > 0 && targetDormant == false) {
-							cout << "target is alive and updated" << endl;
+							//cout << "target is alive and updated" << endl;
 							// recalc angles of target
-							cout << "calculating angles of the target..." << endl;
+							//cout << "calculating angles of the target..." << endl;
 							float deltaX = localPos1 - targetPosX;
 							float deltaY = localPos2 - targetPosY;
 							float deltaZ = localPos3 - targetPosZ;
@@ -147,9 +147,9 @@ void Aimbot::Run() {
 							if (deltaX >= 0.0) {
 								yaw = yaw + 180.0;
 							}
-							cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
+							//cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
 							// normalize angles
-							cout << "normalizing angles..." << endl;
+							//cout << "normalizing angles..." << endl;
 							if (pitch > 89.0) {
 								pitch = pitch - 360.0;
 							}
@@ -162,9 +162,9 @@ void Aimbot::Run() {
 							if (yaw < -180.0) {
 								yaw = yaw + 360.0;
 							}
-							cout << "normalizedPitch: " << pitch << " normalizedYaw: " << yaw << endl;
+							//cout << "normalizedPitch: " << pitch << " normalizedYaw: " << yaw << endl;
 							// aim
-							cout << "------------------------ AIMING ---------------------------" << endl;
+							//cout << "------------------------ AIMING ---------------------------" << endl;
 							mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
 							mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 						}
