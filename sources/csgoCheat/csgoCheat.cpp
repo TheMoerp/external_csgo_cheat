@@ -16,6 +16,7 @@ bool triggerToggle = false; // triggerbot off/on
 bool whToggle = false;
 bool bhobToggle = false;
 bool rsToggle = false;
+bool aimbotToggle = false;
 
 
 // initializes the Cheat
@@ -47,24 +48,34 @@ void toggleFeatures() {
         cout << "Wallhack off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('C') < 0 && bhobToggle == false) {
+    else if (GetKeyState('N') < 0 && bhobToggle == false) {
         bhobToggle = true;
         cout << "Bhop on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('C') < 0 && bhobToggle == true) {
+    else if (GetKeyState('N') < 0 && bhobToggle == true) {
         bhobToggle = false;
         cout << "Bhop off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('N') < 0 && rsToggle == false) {
+    else if (GetKeyState('L') < 0 && rsToggle == false) {
         rsToggle = true;
         cout << "Random skinchanger on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('N') < 0 && rsToggle == true) {
+    else if (GetKeyState('L') < 0 && rsToggle == true) {
         rsToggle = false;
         cout << "Random skinchanger off" << endl;
+        Sleep(50);
+    }
+    else if (GetKeyState('C') < 0 && aimbotToggle == false) {
+        aimbotToggle = true;
+        cout << "Aimbot on" << endl;
+        Sleep(50);
+    }
+    else if (GetKeyState('C') < 0 && aimbotToggle == true) {
+        aimbotToggle = false;
+        cout << "Aimbot off" << endl;
         Sleep(50);
     }
 }
@@ -72,7 +83,9 @@ void toggleFeatures() {
 
 void NoDelayFeatures() {
     cout << "--> Triggerbot ready      (Toggle it with V)" << endl;
-    cout << "--> Bhop ready            (Toggle it with C)" << endl;
+    cout << "--> Autoaim ready         (Toggle it with C)" << endl;
+    cout << "--> Bhop ready            (Toggle it with N)" << endl;
+
     Aimbot aimbot;
     while (true) {
         
@@ -82,8 +95,9 @@ void NoDelayFeatures() {
         if (bhobToggle) {
             bhop.Run();
         }
-        
-        aimbot.Run();
+        if (aimbotToggle) {
+            aimbot.Run();
+        }
     }
 }
 
@@ -108,12 +122,12 @@ void DelayFeatures() {
 
 void SkinChangerThread() {
     Sleep(30);
-    cout << "--> Skinchanger activated (Toggle Randomness with N)" << endl;
+    cout << "--> Skinchanger activated (Toggle Randomness with L)" << endl;
     cout << "" << endl;
     cout << "----------------------------------------------------" << endl;
     cout << "\n\n\n                      Toggle Log" << endl;
     cout << "----------------------------------------------------\n" << endl;
-    cout << "Triggerbot off\nWallhack off\nBhop off" << endl;
+    cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
 
     while (true) {
         skinChanger.Run();
@@ -129,7 +143,7 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 800, 700, TRUE); // width, height
+    MoveWindow(console, r.left, r.top, 450, 700, TRUE); // width, height
 
     cout << "\n                     The Moerper" << endl;
     cout << "----------------------------------------------------" << endl;
@@ -147,6 +161,6 @@ int main()
     Sleep(20);
     while (true) {
         toggleFeatures();
-        Sleep(100);
+        Sleep(50);
     }
 }

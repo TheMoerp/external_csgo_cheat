@@ -8,7 +8,7 @@ using namespace std;
 
 
 int TARGET_BONE = 8; //8 = head
-int AIM_FOV = 8;
+int AIM_FOV = 5.0;
 
 
 
