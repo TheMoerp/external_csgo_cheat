@@ -7,7 +7,7 @@
 using namespace std;
 
 
-int TARGET_BONE = 8; //8 = head
+int TARGET_BONE = 1; //8 = head
 int AIM_FOV = 120.0;
 
 
@@ -68,9 +68,9 @@ void Aimbot::Run() {
 				cout << "localPosX: " << localPos1 << " localPosY: " << localPos2 << " localPosZ: " << localPos3 << endl;
 				cout << "reading in enemyPos..." << endl;
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
-				double entityPosX = mem.ReadMemory<double>(entityBones + 0x30 * TARGET_BONE + 0xC);
-				double entityPosY = mem.ReadMemory<double>(entityBones + 0x30 * TARGET_BONE + 0x1C);
-				double entityPosZ = mem.ReadMemory<double>(entityBones + 0x30 * TARGET_BONE + 0x2C);
+				float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
+				float entityPosY = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
+				float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
 				cout << "enemyPosX: " << entityPosX << " enemyPosY: " << entityPosY << " enemyPosZ: " << entityPosZ << endl;
 				cout << "calculating angles..." << endl;
 				// calc angle
@@ -78,30 +78,30 @@ void Aimbot::Run() {
 				float deltaY = localPos2 - entityPosY;
 				float deltaZ = localPos3 - entityPosZ;
 				float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-				float pitch = (float)atan(deltaZ / hypotenuse) * 180 / M_PI;
-				float yaw = (float)atan(deltaY / deltaX) * 180 / M_PI;
+				float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
+				float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
 					if (deltaX >= 0.0) {
-						yaw = yaw + 180;
+						yaw = yaw + 180.0;
 					}
 					cout << "pitch: " << pitch << " yaw: " << yaw << endl;
 					cout << "calculating distance..." << endl;
 					// calc dist
 					float distX = pitch - localXAngle;
 					if (distX < -89.0) {
-						distX = distX + 360;
+						distX = distX + 360.0;
 					}
 					else if (distX > 89.0) {
-						distX = distX - 360;
+						distX = distX - 360.0;
 					}
 					if (distX < 0.0) {
 						distX = -distX;
 					}
 					float distY = yaw - localYAngle;
-					if (distY < -180) {
-						distY = distY + 360;
+					if (distY < -180.0) {
+						distY = distY + 360.0;
 					}
-					else if (distY > 180) {
-						distY = distY - 360;
+					else if (distY > 180.0) {
+						distY = distY - 360.0;
 					}
 					if (distY < 0.0) {
 						distY = -distY;
@@ -142,25 +142,25 @@ void Aimbot::Run() {
 							float deltaY = localPos2 - targetPosY;
 							float deltaZ = localPos3 - targetPosZ;
 							float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-							float pitch = (float)atan(deltaZ / hypotenuse) * 180 / M_PI;
-							float yaw = (float)atan(deltaY / deltaX) * 180 / M_PI;
+							float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
+							float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
 							if (deltaX >= 0.0) {
 								yaw = yaw + 180.0;
 							}
 							cout << "targetPitch: " << pitch << " targetYaw: " << yaw << endl;
 							// normalize angles
 							cout << "normalizing angles..." << endl;
-							if (pitch > 89) {
-								pitch = pitch - 360;
+							if (pitch > 89.0) {
+								pitch = pitch - 360.0;
 							}
-							if (pitch < -89) {
-								pitch = pitch + 360;
+							if (pitch < -89.0) {
+								pitch = pitch + 360.0;
 							}
-							if (yaw > 180) {
-								yaw = yaw - 360;
+							if (yaw > 180.0) {
+								yaw = yaw - 360.0;
 							}
-							if (yaw < -180) {
-								yaw = yaw + 360;
+							if (yaw < -180.0) {
+								yaw = yaw + 360.0;
 							}
 							cout << "normalizedPitch: " << pitch << " normalizedYaw: " << yaw << endl;
 							// aim
