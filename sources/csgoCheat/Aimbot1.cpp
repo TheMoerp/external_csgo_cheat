@@ -7,8 +7,8 @@
 using namespace std;
 
 
-int TARGET_BONE = 1; //8 = head
-int AIM_FOV = 5;
+int TARGET_BONE = 8; //8 = head
+int AIM_FOV = 8;
 
 
 
@@ -61,10 +61,10 @@ void Aimbot::Run() {
 				//cout << "reading in localPos..." << endl;
 				localXAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
 				localYAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
-				localZAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x8);
+				localZAngle = mem.ReadMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8);
 				localPos1 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x0);
 				localPos2 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
-				localPos3 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8);
+				localPos3 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8) + localZAngle;
 				//cout << "localPosX: " << localPos1 << " localPosY: " << localPos2 << " localPosZ: " << localPos3 << endl;
 				//cout << "reading in enemyPos..." << endl;
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
@@ -142,8 +142,8 @@ void Aimbot::Run() {
 					float deltaY = localPos2 - targetPosY;
 					float deltaZ = localPos3 - targetPosZ;
 					float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-					float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
-					float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
+					float pitch = ((double)atan(deltaZ / hypotenuse) * 180.0) / M_PI;
+					float yaw = ((double)atan(deltaY / deltaX) * 180.0) / M_PI;
 					if (deltaX >= 0.0) {
 						yaw = yaw + 180.0;
 					}
