@@ -9,6 +9,7 @@
 #include "SkinChanger.h"
 #include "WeaponSkins.h"
 #include "Aimbot1.h"
+#include "KnifeChanger.h"
 
 using namespace std;
 
@@ -105,7 +106,9 @@ void DelayFeatures() {
     Sleep(10);
     cout << "--> Wallhack ready        (Toggle it with X)" << endl;
     
+ 
     while (true) {
+        //knifeChanger.Run();
         if (whToggle) {
             wh.Run();
         }
@@ -128,13 +131,19 @@ void SkinChangerThread() {
     cout << "\n\n\n                      Toggle Log" << endl;
     cout << "----------------------------------------------------\n" << endl;
     cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
-
+    
     while (true) {
         skinChanger.Run();
-        Sleep(1);
     }
 }
 
+void KnifeChangerThread() {
+    Sleep(50);
+    KnifeChanger knifeChanger;
+    while (true) {
+        knifeChanger.Run();
+    }
+}
 
 int main()
 {
@@ -156,7 +165,7 @@ int main()
     thread NoDelayThread(NoDelayFeatures);
     thread DelayThread(DelayFeatures);
     thread SkinChangerThread(SkinChangerThread);
-
+    thread KnifeChangerThread(KnifeChangerThread);
 
     Sleep(20);
     while (true) {

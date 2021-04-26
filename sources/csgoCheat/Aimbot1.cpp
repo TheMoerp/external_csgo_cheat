@@ -106,6 +106,7 @@ void Aimbot::Run() {
 				if (distY < 0.0) {
 					distY = -distY;
 				}
+				
 
 					//cout << "distX: " << distX << " distY: " << distY << endl;
 					//cout << "oldDistX: " << oldDistX << " oldDistY: " << oldDistY << endl;
@@ -118,7 +119,13 @@ void Aimbot::Run() {
 					double targetPosZ = 0.0;
 					*/
 					//cout << distX << " < " << oldDistX << " && " << distY << " < " << oldDistY << " && " << distX << " <= " << AIM_FOV << " && " << distY << " <= " << AIM_FOV << endl;
-				if (distX < (oldDistX-0.5) && distY < (oldDistY-0.5) && distX <= AIM_FOV && distY <= AIM_FOV && distX) {
+				if (distX < (oldDistX-0.25) && distY < (oldDistY-0.25) && distX <= AIM_FOV && distY <= AIM_FOV && distX) {
+					DWORD curGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
+					DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
+					float green = 3.0;
+					float red = 0.0;
+					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x4, red);
+					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, green);
 					//cout << "save entityData as targetData..." << endl;
 					float oldDistX = distX;
 					float oldDistY = distY;
