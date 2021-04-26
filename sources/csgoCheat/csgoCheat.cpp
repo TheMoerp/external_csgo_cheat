@@ -138,7 +138,7 @@ void SkinChangerThread() {
 }
 
 void KnifeChangerThread() {
-    Sleep(50);
+    //Sleep(50);
     KnifeChanger knifeChanger;
     while (true) {
         knifeChanger.Run();
