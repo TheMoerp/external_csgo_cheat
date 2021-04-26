@@ -1,5 +1,5 @@
 # CS:GO Moerper
-CS:GO Moerper is an external multicheat. It's just an experimental project and it's not intended for cheating in competitive matchmaking. Nobody likes tryhard cheaters!
+CS:GO Moerper is an external multicheat. It's just an experimental project and it's not intended for cheating in competitive matchmaking. Nobody likes tryhard cheater!
 ### Features
  - Wallhack
  - Autoaim/Aimbot
@@ -22,6 +22,13 @@ Toggle the triggerbot with the key **V**. It will shoot if you hover over an ene
 Toggle the bhop script with the key **N**. Just keep pressing **Space** an start bhopping.
 ##### Skinchanger
 The standart skinlayout is set my some nice skins. You can also get a new random skinlayout everytime you die. To toggle the randomness press **L**. 
+Since the knifechanger can be pretty glitchy i recomment to create a autoconfig file for csgo. Just create a file named autoexec.txt in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
+
+> bind f4 "record 1; stop;"
+> host_writeconfig
+
+Then save it and rename the file to autoexec.cvg.
+Now everytime the knifemodel or the skins won't load just press *F4* to force update.
 If you wish you can adjust the skinlayouts in the *WeaponSkins.cpp* file. Just look up the skin IDs at [csgostash](https://csgostash.com/).
 
 
