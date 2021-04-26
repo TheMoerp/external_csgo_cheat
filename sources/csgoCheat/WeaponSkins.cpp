@@ -228,7 +228,7 @@ void WeaponSkins::StandartSkinLayout() {
 	p2000 = 389;
 	p250 = 678;
 	tec9 = 889;
-	ak47 = 959;
+	ak47 = 675;
 	aug = 280;
 	awp = 344;
 	famas = 919;
@@ -252,7 +252,7 @@ void WeaponSkins::StandartSkinLayout() {
 	usps = 504;
 	m4a1s = 1001;
 
-	knifeID = 4;
+	knifeID = 5;
 	karambit = 419;
 }
 
