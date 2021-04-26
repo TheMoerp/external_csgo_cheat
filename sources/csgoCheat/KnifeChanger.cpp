@@ -75,6 +75,14 @@ void KnifeChanger::Run() {
 			mem.WriteMemory<DWORD>(weaponID + offsets.m_iViewModelIndex, modelIndex);
 			mem.WriteMemory<int>(weaponID + offsets.m_iEntityQuality, entityQuality);
 		}
+		else if (weaponID == 42 && weaponViewModelID > 0) {
+			modelIndex = weaponViewModelID + 102;  // 96 perfect // 93 perfect // 90 perfect // 99 perfect // 102 perfect
+			//cout << "modelIndex: " << modelIndex << endl;
+			mem.WriteMemory<short>(weaponID + offsets.m_iItemDefinitionIndex, knifeIDef);
+			mem.WriteMemory<DWORD>(weaponID + offsets.m_nModelIndex, modelIndex);
+			mem.WriteMemory<DWORD>(weaponID + offsets.m_iViewModelIndex, modelIndex);
+			mem.WriteMemory<int>(weaponID + offsets.m_iEntityQuality, entityQuality);
+		}
 		else if (weaponID != knifeIDef || modelIndex == 0) {
 			continue;
 		}
