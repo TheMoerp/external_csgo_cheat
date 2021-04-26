@@ -45,6 +45,43 @@ int m249Stock[] = { 902, 496, 900 };
 int negevStock[] = { 763, 483, 432, 317 };
 
 
+int knifeStock[] = { 1, 4, 5, 6, 7, 14, 16 };
+int bayonetStock[] = { 569, 570, 571, 572, 568, 573, 413, 409, 418, 419, 421, 415, 416, 417, 38 };
+int flipStock[] = { 568, 568, 413, 415, 417, 416, 38 };
+int karambitStock[] = { 570, 568, 569, 576, 566, 413, 418, 419, 415, 416, 417, 38, 59 };
+int m9BayonetStock[] = { 569, 570, 568, 577, 413, 418, 419, 421, 415, 416, 417, 409, 38, 12 };
+int huntsmanStock[] = { 413, 419, 415, 416, 417, 12, 38 };
+int falchionStock[] = { 418, 419, 421, 415, 413 };
+int navajaStock[] = { 418, 419, 421, 415 };
+int stilettoStock[] = { 413, 418, 419, 421, 415, 416, 417, 409, 44 };
+
+
+
+int WeaponSkins::GetKnifeSkinID(int _knifeID) {
+	switch (_knifeID){
+	case 0:
+		return bayonet;
+	case 2:
+		return flip;
+	case 4:
+		return karambit;
+	case 5:
+		return m9Bayonet;
+	case 6:
+		return huntsman;
+	case 7:
+		return falchion;
+	case 14:
+		return navaja;
+	case 16:
+		return stiletto;
+	default:
+		break;
+	}
+}
+
+
+
 int WeaponSkins::GetSkinID(int _weaponID) {
 	switch (_weaponID) {
 	case 1:
@@ -118,7 +155,6 @@ int WeaponSkins::GetSkinID(int _weaponID) {
 	}
 }
 
-
 int WeaponSkins::getRandomSkinID(int *_skinStock, int _length) {
 	srand((unsigned)time(0));
 	return _skinStock[rand() % (_length / sizeof(_skinStock[0]))];
@@ -135,6 +171,7 @@ bool WeaponSkins::AliveCheck() {
 		return true;
 	}
 }
+
 
 
 void WeaponSkins::ChangeSkinLayout() {
@@ -169,7 +206,17 @@ void WeaponSkins::ChangeSkinLayout() {
 	negev = getRandomSkinID(negevStock, sizeof(negevStock));
 	usps = getRandomSkinID(uspStock, sizeof(uspStock));
 	m4a1s = getRandomSkinID(m4a1sStock, sizeof(m4a1sStock));
+	
+	knifeID = getRandomSkinID(knifeStock, sizeof(knifeStock));
 
+	bayonet = getRandomSkinID(bayonetStock, sizeof(bayonetStock));
+	flip = getRandomSkinID(flipStock, sizeof(flipStock));
+	karambit = getRandomSkinID(karambitStock, sizeof(karambitStock));
+	m9Bayonet = getRandomSkinID(m9BayonetStock, sizeof(m9BayonetStock));
+	huntsman = getRandomSkinID(huntsmanStock, sizeof(huntsmanStock));
+	falchion = getRandomSkinID(falchionStock, sizeof(falchionStock));
+	navaja = getRandomSkinID(navajaStock, sizeof(navajaStock));
+	stiletto = getRandomSkinID(stilettoStock, sizeof(stilettoStock));
 	cout << "Skin Layout Changed" << endl;
 }
 
@@ -204,6 +251,9 @@ void WeaponSkins::StandartSkinLayout() {
 	negev = 763;
 	usps = 504;
 	m4a1s = 1001;
+
+	knifeID = 4;
+	karambit = 419;
 }
 
 

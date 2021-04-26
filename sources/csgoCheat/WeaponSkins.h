@@ -42,10 +42,24 @@ public:
 	int usps;
 	int m4a1s;
 
+	int knifeID;
+	int bayonet;
+	int flip;
+	int karambit;
+	int m9Bayonet;
+	int huntsman;
+	int falchion;
+	int navaja;
+	int stiletto;
+
+
+	int knifeOffset;
+
 	int GetSkinID(int _weaponID);
 	void ChangeSkinLayout();
 	void RandomSkinChanger();
 	void StandartSkinLayout();
+	int GetKnifeSkinID(int _knifeID);
 };
 
 extern WeaponSkins weaponSkins;
