@@ -19,14 +19,14 @@ bool bhobToggle = false;
 bool rsToggle = false;
 bool aimbotToggle = false;
 
-
+// Initiates the memory process
 void Init() {
     cout << "Initiating engine..." << endl;
     mem.Setup();
     mem.GetModules();
 }
 
-
+// Toggle features
 void toggleFeatures() {
     if (GetKeyState('V') < 0 && triggerToggle == false) {
         triggerToggle = true;
@@ -144,8 +144,9 @@ void KnifeChangerThread() {
 
 int main()
 {
-
     SetConsoleTitle(L"CS:GO Moerper");
+    
+    // Sets window size
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
@@ -159,6 +160,8 @@ int main()
 
     cout << "" << endl;
     cout << "Starting Features..." << endl;
+    
+    // Starts threads
     thread NoDelayThread(NoDelayFeatures);
     thread DelayThread(DelayFeatures);
     thread SkinChangerThread(SkinChangerThread);
