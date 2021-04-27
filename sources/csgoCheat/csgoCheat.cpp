@@ -13,14 +13,13 @@
 
 using namespace std;
 
-bool triggerToggle = false; // triggerbot off/on
+bool triggerToggle = false;
 bool whToggle = false;
 bool bhobToggle = false;
 bool rsToggle = false;
 bool aimbotToggle = false;
 
 
-// initializes the Cheat
 void Init() {
     cout << "Initiating engine..." << endl;
     mem.Setup();
@@ -108,7 +107,6 @@ void DelayFeatures() {
     
  
     while (true) {
-        //knifeChanger.Run();
         if (whToggle) {
             wh.Run();
         }
@@ -138,7 +136,6 @@ void SkinChangerThread() {
 }
 
 void KnifeChangerThread() {
-    //Sleep(50);
     KnifeChanger knifeChanger;
     while (true) {
         knifeChanger.Run();
@@ -152,7 +149,7 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 450, 700, TRUE); // width, height
+    MoveWindow(console, r.left, r.top, 450, 700, TRUE);
 
     cout << "\n                     The Moerper" << endl;
     cout << "----------------------------------------------------" << endl;

@@ -5,11 +5,9 @@
 using namespace std;
 Trigger trigger;
 
-/* This function checks whether there is a player entity in the crosshair. If there is a entity it checks if the player is a team member
-   of the local player. If it is an enemy it fires. The trigger interval in which the weapon shoots depends on the weapon that is used. */
+
 void Trigger::Run()
 {
-	// configs for the mouse inputs
 	INPUT down;
 	down.mi.dx = 0;
 	down.mi.dy = 0;
@@ -27,37 +25,30 @@ void Trigger::Run()
 	up.mi.dwExtraInfo = 0;
 
 
-	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer); // gets the address of the local player
-	DWORD crosshair = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iCrosshairId); // gets the address of the crosshair
-	DWORD crosshairEntity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (crosshair - 1) * 0x10); // gets the address the entity in the crosshair if it is a player
+	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
+	DWORD crosshair = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iCrosshairId);
+	DWORD crosshairEntity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (crosshair - 1) * 0x10);
 
-	int triggerInterval = GetRecoveryTime(localPlayer); // gets the trigger intverval depending on the active weapon   !!!! Broken !!!!
+	int triggerInterval = GetRecoveryTime(localPlayer);
+	if (crosshairEntity != 0) {
+		int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum);
+		int crosshairEntityTeam = mem.ReadMemory<int>(crosshairEntity + offsets.m_iTeamNum);
 
-	if (crosshairEntity != 0) { // checks if there is a player entity in the crosshair
-
-		int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum); // gets the team of the local player
-		int crosshairEntityTeam = mem.ReadMemory<int>(crosshairEntity + offsets.m_iTeamNum); // gets the team of the player the crosshair is pointing at
-		
-		// checks whether the player in the crosshair is an acctually player and if he is no team member of the local player
 		if ((crosshairEntityTeam == 2 || crosshairEntityTeam == 3) && localPlayerTeam != crosshairEntityTeam) {
-
-			// fires the weapon
 			SendInput(1, &down, sizeof(down));
 			Sleep(25);
 			SendInput(1, &up, sizeof(up));
-
-			Sleep(triggerInterval); // time between the shots !!! Broken usually trigerInterval in line 34 !!!
+			Sleep(triggerInterval);
 		}
 	}
 }
 
-// This function returns the matching recovery time for the weapon the active weapon
-int Trigger::GetRecoveryTime(DWORD _localPlayer) {
-	DWORD weaponEntity = mem.ReadMemory<DWORD>(_localPlayer + offsets.m_hActiveWeapon) & 0xFFF; // gets the address of the entity of the active weapon
-	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10); // gets the weapon base of the active weapon
-	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex); // gets the weapon ID of the active weapon
 
-	// returns the recovery time matching to the weapon ID
+int Trigger::GetRecoveryTime(DWORD _localPlayer) {
+	DWORD weaponEntity = mem.ReadMemory<DWORD>(_localPlayer + offsets.m_hActiveWeapon) & 0xFFF; 
+	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10);
+	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex);
+
 	switch (weaponID) { 
 	case 1:
 		return desertEagle;

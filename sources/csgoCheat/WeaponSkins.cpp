@@ -17,6 +17,8 @@ int p2000Stock[] = { 389, 591 };
 int p250Stock[] = { 678, 551, 404, 388, 258, 501 };
 int tec9Stock[] = { 889, 614, 179 };
 int uspStock[] = { 504, 653, 705, 313, 637, 817, 991 };
+int cz75Stock[] = { 270, 643, 543, 350 };
+int revolverStock[] = { 522, 683, 595 };
 
 int ak47Stock[] = { 959, 801, 801, 675, 639, 639, 302, 490, 282, 44, 1018 };
 int augStock[] = { 280, 690, 9, 886, 583 };
@@ -36,6 +38,7 @@ int mp9Stock[] = { 910, 609, 734, 262 };
 int ppBizonStock[] = { 542, 676, 508 };
 int p90Stock[] = { 359, 283, 759, 611 };
 int ump45Stock[] = { 556, 704, 37, 1003 };
+int mp5sdStock[] = { 915, 810, 846 };
 
 int mag7Stock[] = { 948, 737, 961 };
 int novaStock[] = { 537, 62, 356, 746 };
@@ -43,18 +46,6 @@ int sawedOffStock[] = { 256, 720, 638, 638 };
 int xm1014Stock[] = { 850, 393 };
 int m249Stock[] = { 902, 496, 900 };
 int negevStock[] = { 763, 483, 432, 317 };
-
-
-int knifeStock[] = { 1, 4, 5, 6, 7, 14, 16 };
-int bayonetStock[] = { 569, 570, 571, 572, 568, 573, 413, 409, 418, 419, 421, 415, 416, 417, 38 };
-int flipStock[] = { 568, 568, 413, 415, 417, 416, 38 };
-int karambitStock[] = { 570, 568, 569, 576, 566, 413, 418, 419, 415, 416, 417, 38, 59 };
-int m9BayonetStock[] = { 569, 570, 568, 577, 413, 418, 419, 421, 415, 416, 417, 409, 38, 12 };
-int huntsmanStock[] = { 413, 419, 415, 416, 417, 12, 38 };
-int falchionStock[] = { 418, 419, 421, 415, 413 };
-int navajaStock[] = { 418, 419, 421, 415 };
-int stilettoStock[] = { 413, 418, 419, 421, 415, 416, 417, 409, 44 };
-
 
 
 int WeaponSkins::GetKnifeSkinID(int _knifeID) {
@@ -79,7 +70,6 @@ int WeaponSkins::GetKnifeSkinID(int _knifeID) {
 		break;
 	}
 }
-
 
 
 int WeaponSkins::GetSkinID(int _weaponID) {
@@ -112,7 +102,7 @@ int WeaponSkins::GetSkinID(int _weaponID) {
 		return mac10;
 	case 19:
 		return p90;
-	case 23:
+	case 262167:
 		return mp5sd;
 	case 24:
 		return ump45;
@@ -144,18 +134,20 @@ int WeaponSkins::GetSkinID(int _weaponID) {
 		return sg553;
 	case 40:
 		return ssg08;
-	case 63:
+	case 262207:
 		return cz75;
 	case 262205:
 		return usps;
 	case 262204:
 		return m4a1s;
+	case 262208:
+		return revolver;
 	default:
 		return 0;
 	}
 }
 
-int WeaponSkins::getRandomSkinID(int *_skinStock, int _length) {
+int WeaponSkins::GetRandomSkinID(int *_skinStock, int _length) {
 	srand((unsigned)time(0));
 	return _skinStock[rand() % (_length / sizeof(_skinStock[0]))];
 }
@@ -173,87 +165,83 @@ bool WeaponSkins::AliveCheck() {
 }
 
 
-
 void WeaponSkins::ChangeSkinLayout() {
-	desertEagle = getRandomSkinID(desertEagleStock, sizeof(desertEagleStock));
-	dualBerettas = getRandomSkinID(dualBerettasStock, sizeof(dualBerettasStock));
-	fiveSeven = getRandomSkinID(fiveSevenStock, sizeof(fiveSevenStock));
-	glock18 = getRandomSkinID(glock18Stock, sizeof(glock18Stock));
-	p2000 = getRandomSkinID(p2000Stock, sizeof(p2000Stock));
-	p250 = getRandomSkinID(p250Stock, sizeof(p250Stock));
-	tec9 = getRandomSkinID(tec9Stock, sizeof(tec9Stock));
-	ak47 = getRandomSkinID(ak47Stock, sizeof(ak47Stock));
-	aug = getRandomSkinID(augStock, sizeof(augStock));
-	awp = getRandomSkinID(awpStock, sizeof(awpStock));
-	famas = getRandomSkinID(famasStock, sizeof(famasStock));
-	g3sg1 = getRandomSkinID(g3s61Stock, sizeof(g3s61Stock));
-	galilAr = getRandomSkinID(galilArStock, sizeof(galilArStock));
-	m4a4 = getRandomSkinID(m4a4Stock, sizeof(m4a4Stock));
-	scar20 = getRandomSkinID(scar20Stock, sizeof(scar20Stock));
-	sg553 = getRandomSkinID(sg553Stock, sizeof(sg553Stock));
-	ssg08 = getRandomSkinID(ssg09Stock, sizeof(ssg09Stock));
-	mac10 = getRandomSkinID(mac10Stock, sizeof(mac10Stock));
-	mp7 = getRandomSkinID(mp7Stock, sizeof(mp7Stock));
-	mp9 = getRandomSkinID(mp9Stock, sizeof(mp9Stock));
-	ppBizon = getRandomSkinID(ppBizonStock, sizeof(ppBizonStock));
-	p90 = getRandomSkinID(p90Stock, sizeof(p90Stock));
-	ump45 = getRandomSkinID(ump45Stock, sizeof(ump45Stock));
-	mag7 = getRandomSkinID(mag7Stock, sizeof(mag7Stock));
-	nova = getRandomSkinID(novaStock, sizeof(novaStock));
-	sawedOff = getRandomSkinID(sawedOffStock, sizeof(sawedOffStock));
-	xm1014 = getRandomSkinID(xm1014Stock, sizeof(xm1014Stock));
-	m249 = getRandomSkinID(m249Stock, sizeof(m249Stock));
-	negev = getRandomSkinID(negevStock, sizeof(negevStock));
-	usps = getRandomSkinID(uspStock, sizeof(uspStock));
-	m4a1s = getRandomSkinID(m4a1sStock, sizeof(m4a1sStock));
-	
-	knifeID = getRandomSkinID(knifeStock, sizeof(knifeStock));
-
-	bayonet = getRandomSkinID(bayonetStock, sizeof(bayonetStock));
-	flip = getRandomSkinID(flipStock, sizeof(flipStock));
-	karambit = getRandomSkinID(karambitStock, sizeof(karambitStock));
-	m9Bayonet = getRandomSkinID(m9BayonetStock, sizeof(m9BayonetStock));
-	huntsman = getRandomSkinID(huntsmanStock, sizeof(huntsmanStock));
-	falchion = getRandomSkinID(falchionStock, sizeof(falchionStock));
-	navaja = getRandomSkinID(navajaStock, sizeof(navajaStock));
-	stiletto = getRandomSkinID(stilettoStock, sizeof(stilettoStock));
+	desertEagle = GetRandomSkinID(desertEagleStock, sizeof(desertEagleStock));
+	dualBerettas = GetRandomSkinID(dualBerettasStock, sizeof(dualBerettasStock));
+	fiveSeven = GetRandomSkinID(fiveSevenStock, sizeof(fiveSevenStock));
+	glock18 = GetRandomSkinID(glock18Stock, sizeof(glock18Stock));
+	p2000 = GetRandomSkinID(p2000Stock, sizeof(p2000Stock));
+	p250 = GetRandomSkinID(p250Stock, sizeof(p250Stock));
+	tec9 = GetRandomSkinID(tec9Stock, sizeof(tec9Stock));
+	ak47 = GetRandomSkinID(ak47Stock, sizeof(ak47Stock));
+	aug = GetRandomSkinID(augStock, sizeof(augStock));
+	awp = GetRandomSkinID(awpStock, sizeof(awpStock));
+	famas = GetRandomSkinID(famasStock, sizeof(famasStock));
+	g3sg1 = GetRandomSkinID(g3s61Stock, sizeof(g3s61Stock));
+	galilAr = GetRandomSkinID(galilArStock, sizeof(galilArStock));
+	m4a4 = GetRandomSkinID(m4a4Stock, sizeof(m4a4Stock));
+	scar20 = GetRandomSkinID(scar20Stock, sizeof(scar20Stock));
+	sg553 = GetRandomSkinID(sg553Stock, sizeof(sg553Stock));
+	ssg08 = GetRandomSkinID(ssg09Stock, sizeof(ssg09Stock));
+	mac10 = GetRandomSkinID(mac10Stock, sizeof(mac10Stock));
+	mp7 = GetRandomSkinID(mp7Stock, sizeof(mp7Stock));
+	mp9 = GetRandomSkinID(mp9Stock, sizeof(mp9Stock));
+	ppBizon = GetRandomSkinID(ppBizonStock, sizeof(ppBizonStock));
+	p90 = GetRandomSkinID(p90Stock, sizeof(p90Stock));
+	ump45 = GetRandomSkinID(ump45Stock, sizeof(ump45Stock));
+	mag7 = GetRandomSkinID(mag7Stock, sizeof(mag7Stock));
+	nova = GetRandomSkinID(novaStock, sizeof(novaStock));
+	sawedOff = GetRandomSkinID(sawedOffStock, sizeof(sawedOffStock));
+	xm1014 = GetRandomSkinID(xm1014Stock, sizeof(xm1014Stock));
+	m249 = GetRandomSkinID(m249Stock, sizeof(m249Stock));
+	negev = GetRandomSkinID(negevStock, sizeof(negevStock));
+	usps = GetRandomSkinID(uspStock, sizeof(uspStock));
+	m4a1s = GetRandomSkinID(m4a1sStock, sizeof(m4a1sStock));
+	cz75 = GetRandomSkinID(cz75Stock, sizeof(cz75Stock));
+	mp5sd = GetRandomSkinID(mp5sdStock, sizeof(mp5sdStock));
+	revolver = GetRandomSkinID(revolverStock, sizeof(revolverStock));
 	cout << "Skin Layout Changed" << endl;
+	
 }
 
+
 void WeaponSkins::StandartSkinLayout() {
-	desertEagle = 711;
-	dualBerettas = 658;
-	fiveSeven = 660;
-	glock18 = 353;
+	desertEagle = 37;
+	dualBerettas = 625;
+	fiveSeven = 979;
+	glock18 = 988;
 	p2000 = 389;
 	p250 = 678;
-	tec9 = 889;
-	ak47 = 675;
-	aug = 280;
+	tec9 = 179;
+	ak47 = 44;
+	aug = 690;
 	awp = 344;
 	famas = 919;
-	g3sg1 = 628;
-	galilAr = 379;
+	g3sg1 = 712;
+	galilAr = 398;
 	m4a4 = 309;
-	scar20 =487;
-	ssg08 = 624;
-	mac10 = 898;
+	scar20 = 597;
+	ssg08 = 222;
+	mac10 = 433;
 	mp7 = 696;
 	mp9 = 910;
-	ppBizon = 542;
+	ppBizon = 676;
 	p90 = 359;
 	ump45 = 556;
-	mag7 = 948;
+	mag7 = 961;
 	nova = 537;
-	sawedOff = 256;
-	xm1014 = 393;
+	sawedOff = 638;
+	xm1014 = 850;
 	m249 = 902;
 	negev = 763;
 	usps = 504;
-	m4a1s = 1001;
+	m4a1s = 321;
+	cz75 = 270;
+	mp5sd = 915;
+	revolver = 522;
 
-	knifeID = 5;
-	karambit = 419;
+	knifeID = 4;
+	karambit = 44;
 }
 
 

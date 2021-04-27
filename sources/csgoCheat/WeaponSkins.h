@@ -5,7 +5,7 @@ class WeaponSkins {
 private:
 	bool alive = true;
 	
-	int getRandomSkinID(int *_skinStock, int _length);
+	int GetRandomSkinID(int *_skinStock, int _length);
 	bool AliveCheck();
 public:
 	int cz75;
@@ -41,6 +41,7 @@ public:
 	int negev;
 	int usps;
 	int m4a1s;
+	int revolver;
 
 	int knifeID;
 	int bayonet;

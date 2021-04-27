@@ -4,7 +4,7 @@
 
 class SkinChanger {
 private:
-	float wear = 0.0001f; // best wear possible
+	float wear = 0.0001f;
 public:
 	void Run();
 };
