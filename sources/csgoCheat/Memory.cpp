@@ -4,7 +4,7 @@
 Memory mem;
 using namespace std;
 
-
+// Get a process by windowname
 DWORD Memory::GetProcessID(const wchar_t* _windowName) {
 	do {
 		hWnd = FindWindow(0, _windowName);
@@ -18,6 +18,7 @@ DWORD Memory::GetProcessID(const wchar_t* _windowName) {
 	return pID;
 }
 
+// Get a module by name
 MODULEENTRY32 Memory::GetModule(DWORD _pID, const wchar_t* _moduleName) {
 	hSS= CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, _pID);
 	mEntry.dwSize = sizeof(MODULEENTRY32);
@@ -41,6 +42,7 @@ void Memory::Setup() {
 	offsets.hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, offsets.processID);
 }
 
+// Get client.dll and engine.dll
 void Memory::GetModules() {
 	do {
 		offsets.clientBase = (DWORD)GetModule(offsets.processID, L"client.dll").modBaseAddr;

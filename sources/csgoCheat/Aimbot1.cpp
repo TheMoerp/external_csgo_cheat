@@ -8,16 +8,20 @@ using namespace std;
 
 
 void Aimbot::Run() {
+	// Get localplayer data
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum);
+	// Get enginepointer
 	DWORD enginePointer = mem.ReadMemory<DWORD>(offsets.engineBase + offsets.dwClientState);
 
 	oldDistX = 11111111.0;
 	oldDistY = 11111111.0;
 
+	// Iterate through all entitys
 	for (int i = 1; i < 32; i++) {
 		DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);
 
+		// Get entity data
 		if (entity != 0) {
 			try {
 				entityTeam = mem.ReadMemory<int>(entity + offsets.m_iTeamNum);
@@ -29,11 +33,14 @@ void Aimbot::Run() {
 			}
 		}
 
+		// Reset target data
 		target = 0;
 		targetHealth = 0;
 		targetDormant = true;
-		if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
 
+		// Checks if the entity is an enemy
+		if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
+			// Get localangles and localpositions
 			float localXAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
 			float localYAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
 			float localZAngle = mem.ReadMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8);
@@ -41,11 +48,13 @@ void Aimbot::Run() {
 			localPos2 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
 			localPos3 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8) + localZAngle;
 
+			// Get position of the enemy's head
 			DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
 			float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
 			float entityPosY = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
 			float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
 
+			// Calculate angles
 			float deltaX = localPos1 - entityPosX;
 			float deltaY = localPos2 - entityPosY;
 			float deltaZ = localPos3 - entityPosZ;
@@ -56,6 +65,7 @@ void Aimbot::Run() {
 				yaw = yaw + 180.0;
 			}
 
+			// Calculate distance
 			float distX = pitch - localXAngle;
 			if (distX < -89.0) {
 				distX = distX + 360.0;
@@ -77,13 +87,16 @@ void Aimbot::Run() {
 				distY = -distY;
 			}
 
+			// Checks if the enemys head is in FOV range
 			if (distX < (oldDistX - 0.25) && distY < (oldDistY - 0.25) && distX <= AIM_FOV && distY <= AIM_FOV && distX) {
+				// If the bot is ready to target an enemy let the enemy glow
 				DWORD curGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
 				DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
 				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x4, AIM_COLOR_R);
 				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, AIM_COLOR_G);
 				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0xC, AIM_COLOR_B);
 
+				// target = entity
 				oldDistX = distX;
 				oldDistY = distY;
 				target = entity;
@@ -95,9 +108,11 @@ void Aimbot::Run() {
 			}
 		}
 
-
+		// Checks if mouse is clicked
 		if (GetAsyncKeyState(VK_LBUTTON) < 0 && localPlayer != 0) {
+			// Checks if there is a target set
 			if (target != 0 && targetHealth > 0 && targetDormant == false) {
+				// Calculate angles
 				float deltaX = localPos1 - targetPosX;
 				float deltaY = localPos2 - targetPosY;
 				float deltaZ = localPos3 - targetPosZ;
@@ -107,7 +122,8 @@ void Aimbot::Run() {
 				if (deltaX >= 0.0) {
 					yaw = yaw + 180.0;
 				}
-
+				
+				// Normalize angles
 				if (pitch > 89.0) {
 					pitch = pitch - 360.0;
 				}
@@ -121,6 +137,7 @@ void Aimbot::Run() {
 					yaw = yaw + 360.0;
 				}
 
+				// Aim
 				mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
 				mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
 			}
