@@ -8,7 +8,7 @@
 
 using namespace std;
 
-
+// Gets the Index Definition by KnifeID
 int KnifeChanger::GetKnifeIDef(int _knifeID) {
 	switch (_knifeID) {
 	case 0:
@@ -34,32 +34,42 @@ int KnifeChanger::GetKnifeIDef(int _knifeID) {
 
 void KnifeChanger::Run() {
 	while (true) {
+		// Get knife data
 		int knifeID = weaponSkins.knifeID;
 		int knifeIDOffset = knifeID < 10 ? 0 : 1;
 		int knifeIDef = GetKnifeIDef(knifeID);
 		
 		DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
+
+		// checks if the player is ingame
 		if (localPlayer == 0) {
 			modelIndex = 0;
 			continue;
 		}
+
+		// checks if the player joined a new game
 		else if (localPlayer != cachedPlayer) {
 			modelIndex = 0;
 			cachedPlayer = localPlayer;
 		}
-		DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hMyWeapons + 0 * 0x4) & 0xfff;
-		curWeapon = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (curWeapon - 1) * 0x10);
-		short weaponID = mem.ReadMemory<short>(curWeapon + offsets.m_iItemDefinitionIndex);
-		int knifeSkinId = weaponSkins.GetKnifeSkinID(knifeID);
-		if (weaponID == 42 || weaponID == 59 || weaponID == knifeIDef) {
-			if (modelIndex > 0) {
-				mem.WriteMemory<short>(curWeapon + offsets.m_iItemDefinitionIndex, knifeIDef);
-				mem.WriteMemory<int>(curWeapon + offsets.m_nFallbackPaintKit, knifeSkinId);
-				mem.WriteMemory<int>(curWeapon + offsets.m_nFallbackSeed, 442);
-				mem.WriteMemory<DWORD>(curWeapon + offsets.m_nModelIndex, modelIndex);
-				mem.WriteMemory<DWORD>(curWeapon + offsets.m_iViewModelIndex, modelIndex);
-				mem.WriteMemory<int>(curWeapon + offsets.m_iItemIDHigh, -1);
-				mem.WriteMemory<float>(curWeapon + offsets.m_flFallbackWear, 0.0001f);
+
+		short weaponID;
+		// Sets the knife skin and Index Definition
+		for (int i = 0; i < 13; i++) {
+			DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hMyWeapons + i * 0x4) & 0xfff;
+			curWeapon = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (curWeapon - 1) * 0x10);
+			weaponID = mem.ReadMemory<short>(curWeapon + offsets.m_iItemDefinitionIndex);
+			int knifeSkinId = weaponSkins.GetKnifeSkinID(knifeID);
+			if (weaponID == 42 || weaponID == 59 || weaponID == knifeIDef) {
+				if (modelIndex > 0) {
+					mem.WriteMemory<short>(curWeapon + offsets.m_iItemDefinitionIndex, knifeIDef);
+					mem.WriteMemory<int>(curWeapon + offsets.m_nFallbackPaintKit, knifeSkinId);
+					mem.WriteMemory<int>(curWeapon + offsets.m_nFallbackSeed, 412);
+					mem.WriteMemory<DWORD>(curWeapon + offsets.m_nModelIndex, modelIndex);
+					mem.WriteMemory<DWORD>(curWeapon + offsets.m_iViewModelIndex, modelIndex);
+					mem.WriteMemory<int>(curWeapon + offsets.m_iItemIDHigh, -1);
+					mem.WriteMemory<float>(curWeapon + offsets.m_flFallbackWear, 0.0001f);
+				}
 			}
 		}
 	

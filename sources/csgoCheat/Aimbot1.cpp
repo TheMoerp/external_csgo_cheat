@@ -140,6 +140,7 @@ void Aimbot::Run() {
 				// Aim
 				mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, pitch);
 				mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, yaw);
+				Sleep(1);
 			}
 		}
 	}
