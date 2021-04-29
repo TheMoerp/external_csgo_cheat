@@ -25,20 +25,20 @@ public:
 	DWORD m_iItemIDHigh = 0x2FC0;
 	DWORD m_szCustomName = 0x303C;
 	DWORD m_hActiveWeapon = 0x2EF8;
-	DWORD dwEntityList = 0x4DA3F9C;
-	DWORD dwForceJump = 0x524DEDC;
-	DWORD dwGlowObjectManager = 0x52EC580;
-	DWORD dwLocalPlayer = 0xD8C2BC;
-	DWORD dwbSendPackets = 0xD749A;
+	DWORD dwEntityList = 0x4DA4F8C;
+	DWORD dwForceJump = 0x524EECC;
+	DWORD dwGlowObjectManager = 0x52ED560;
+	DWORD dwLocalPlayer = 0xD8D2BC;
+	DWORD dwbSendPackets = 0xD75EA;
 	DWORD m_bDormant = 0xED;
-	DWORD model_ambient_min = 0x58C05C;
+	DWORD model_ambient_min = 0x58D05C;
 	DWORD m_hViewModel = 0x32F8;
 	DWORD m_iViewModelIndex = 0x3240;
 	DWORD m_nModelIndex = 0x258;
 	DWORD m_vecOrigin = 0x138;
 	DWORD m_vecViewOffset = 0x108;
 	DWORD m_dwBoneMatrix = 0x26A8;
-	DWORD dwClientState = 0x588FE4;
+	DWORD dwClientState = 0x589FE4;
 	DWORD dwClientState_ViewAngles = 0x4D90;
 	DWORD m_aimPunchAngle = 0x302C;
 

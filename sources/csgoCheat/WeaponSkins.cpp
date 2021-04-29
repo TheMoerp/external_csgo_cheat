@@ -240,8 +240,8 @@ void WeaponSkins::StandartSkinLayout() {
 	mp5sd = 915;
 	revolver = 522;
 
-	knifeID = 4; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
-	karambit = 561;
+	knifeID = 5; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
+	m9Bayonet = 421;
 }
 
 
