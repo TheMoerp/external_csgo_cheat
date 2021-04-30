@@ -206,16 +206,16 @@ void WeaponSkins::ChangeSkinLayout() {
 
 
 void WeaponSkins::StandartSkinLayout() {
-	desertEagle = 37;
+	desertEagle = 962;
 	dualBerettas = 625;
 	fiveSeven = 979;
-	glock18 = 988;
+	glock18 = 415;
 	p2000 = 389;
 	p250 = 678;
 	tec9 = 179;
 	ak47 = 44;
 	aug = 690;
-	awp = 344;
+	awp = 917;
 	famas = 919;
 	g3sg1 = 712;
 	galilAr = 398;
@@ -240,8 +240,8 @@ void WeaponSkins::StandartSkinLayout() {
 	mp5sd = 915;
 	revolver = 522;
 
-	knifeID = 5; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
-	m9Bayonet = 421;
+	knifeID = 4; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
+	karambit = 572;
 }
 
 

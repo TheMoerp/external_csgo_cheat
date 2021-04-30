@@ -61,7 +61,7 @@ void Aimbot::Run() {
 			float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
 			float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
 			float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
-			if (deltaX >= 0.0) {
+			if (deltaX >= 0.0) {																
 				yaw = yaw + 180.0;
 			}
 
