@@ -249,55 +249,6 @@ void WeaponSkins::StandartSkinLayout() {
 	falchion = config.falchion;
 	navaja = config.navaja;
 	stiletto = config.stiletto;
-
-
-	// Weapons
-	/*
-	desertEagle = 37;
-	dualBerettas = 625;
-	fiveSeven = 979;
-	glock18 = 957;
-	p2000 = 389;
-	p250 = 678;
-	tec9 = 179;
-	ak47 = 44;
-	aug = 690;
-	awp = 344;
-	famas = 919;
-	g3sg1 = 712;
-	galilAr = 1038;
-	m4a4 = 309;
-	scar20 = 597;
-	ssg08 = 1048;
-	mac10 = 433;
-	mp7 = 696;
-	mp9 = 1037;
-	ppBizon = 676;
-	p90 = 359;
-	ump45 = 556;
-	mag7 = 961;
-	nova = 537;
-	sawedOff = 638;
-	xm1014 = 850;
-	m249 = 902;
-	negev = 763;
-	usps = 1040;
-	m4a1s = 587;
-	cz75 = 270;
-	mp5sd = 915;
-	revolver = 522;
-
-	// Knifes
-	knifeID = 5;
-	m9Bayonet = 572; // 5
-	bayonet = 572;   // 0
-	flip = 572;      // 2
-	karambit = 572;  // 4
-	huntsman = 572;  //
-	falchion = 572;  // 7
-	navaja = 572;    //
-	stiletto = 572;  // 16
-	*/
 }
 
 
