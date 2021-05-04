@@ -88,13 +88,13 @@ void Aimbot::Run() {
 			}
 
 			// Checks if the enemys head is in FOV range
-			if (distX < (oldDistX - 0.25) && distY < (oldDistY - 0.25) && distX <= AIM_FOV && distY <= AIM_FOV && distX) {
+			if (distX < (oldDistX - 0.25) && distY < (oldDistY - 0.25) && distX <= config.aFOV && distY <= config.aFOV && distX) {
 				// If the bot is ready to target an enemy let the enemy glow
 				DWORD curGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
 				DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
-				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x4, AIM_COLOR_R);
-				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, AIM_COLOR_G);
-				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0xC, AIM_COLOR_B);
+				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x4, config.alR);
+				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, config.alG);
+				mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0xC, config.alB);
 
 				// target = entity
 				oldDistX = distX;

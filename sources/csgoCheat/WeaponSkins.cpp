@@ -206,6 +206,53 @@ void WeaponSkins::ChangeSkinLayout() {
 
 
 void WeaponSkins::StandartSkinLayout() {
+	cz75 = config.cz75;
+	desertEagle = config.desertEagle;
+	dualBerettas = config.dualBerettas;
+	fiveSeven = config.fiveSeven;
+	glock18 = config.glock18;
+	p2000 = config.p2000;
+	p250 = config.p250;
+	tec9 = config.tec9;
+	ak47 = config.ak47;
+	aug = config.aug;
+	awp = config.awp;
+	famas = config.famas;
+	g3sg1 = config.g3sg1;
+	galilAr = config.galilAr;
+	m4a4 = config.m4a4;
+	scar20 = config.scar20;
+	sg553 = config.sg553;
+	ssg08 = config.ssg08;
+	mac10 = config.mac10;
+	mp5sd = config.mp5sd;
+	mp7 = config.mp7;
+	mp9 = config.mp9;
+	ppBizon = config.ppBizon;
+	p90 = config.p90;
+	ump45 = config.ump45;
+	mag7 = config.mag7;
+	nova = config.nova;
+	sawedOff = config.sawedOff;
+	xm1014 = config.xm1014;
+	m249 = config.m249;
+	negev = config.negev;
+	usps = config.usps;
+	m4a1s = config.m4a1s;
+	revolver = config.revolver;
+	knifeID = config.knifeID;
+	bayonet = config.bayonet;
+	flip = config.flip;
+	karambit = config.karambit;
+	m9Bayonet = config.m9Bayonet;
+	huntsman = config.huntsman;
+	falchion = config.falchion;
+	navaja = config.navaja;
+	stiletto = config.stiletto;
+
+
+	// Weapons
+	/*
 	desertEagle = 37;
 	dualBerettas = 625;
 	fiveSeven = 979;
@@ -240,8 +287,17 @@ void WeaponSkins::StandartSkinLayout() {
 	mp5sd = 915;
 	revolver = 522;
 
-	knifeID = 5; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
-	m9Bayonet = 572;
+	// Knifes
+	knifeID = 5;
+	m9Bayonet = 572; // 5
+	bayonet = 572;   // 0
+	flip = 572;      // 2
+	karambit = 572;  // 4
+	huntsman = 572;  //
+	falchion = 572;  // 7
+	navaja = 572;    //
+	stiletto = 572;  // 16
+	*/
 }
 
 

@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="csgoCheat.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Memory.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -43,6 +40,12 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="KnifeChanger.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="CsgoCheat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -72,6 +75,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="KnifeChanger.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

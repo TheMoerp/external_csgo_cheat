@@ -141,7 +141,8 @@
   <ItemGroup>
     <ClCompile Include="Aimbot1.cpp" />
     <ClCompile Include="Bhob.cpp" />
-    <ClCompile Include="csgoCheat.cpp" />
+    <ClCompile Include="config.cpp" />
+    <ClCompile Include="CsgoCheat.cpp" />
     <ClCompile Include="KnifeChanger.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Offsets.cpp" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClInclude Include="Aimbot1.h" />
     <ClInclude Include="Bhop.h" />
+    <ClInclude Include="config.h" />
     <ClInclude Include="KnifeChanger.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Offsets.h" />

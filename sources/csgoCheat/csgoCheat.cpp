@@ -10,6 +10,7 @@
 #include "WeaponSkins.h"
 #include "Aimbot1.h"
 #include "KnifeChanger.h"
+#include "config.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ void Init() {
     cout << "Initiating engine..." << endl;
     mem.Setup();
     mem.GetModules();
+    config.LoadConfigs();
 }
 
 // Toggle features
