@@ -21,6 +21,7 @@ If everything is compiled and ready, you need to start cs:go and then start the 
 The cheat will grab the running process and you're ready to go.
 Since this is an external cheat some features can be glitchy at times.
 
+In case the cheat doesn't work check the offsets at [frk1/hazedumper](https://github.com/frk1/hazedumper/blob/master/csgo.cs)
 
 ##### Wallhack
 Toggle the wallhack with the key **NUM_0**. Enemys will glow red.
