@@ -28,10 +28,6 @@ Toggle the wallhack with the key **NUM_0**. Enemys will glow red.
 ##### Autoaim/Aimbot
 Toggle the autoaim with the key **NUM_1**. When the crosshair is near the enemy's head and you leftclick, it will automatically shoot the enemy's head. It's most efficient when triggerbot and autoaim aren't on at the same time.
 
-You can change the FOV in which the enemy has to be to trigger the autobot in the file *Aimbot1.h*:
-
-    const int AIM_FOV = 5;
-
 ##### Triggerbot
 Toggle the triggerbot with the key **NUM_2**. It will shoot if you hover over an enemy hitbox. The shooting interval equals the recovery time of the current weapon.
 
@@ -54,21 +50,6 @@ Since the knifechanger can be pretty glitchy I recomment to create a autoconfig 
 Then save it and rename the file to *autoexec.cvg*.
 
 Now everytime the knifemodel or the skins won't load just press *F4* to force update.
-
-If you wish you can adjust the skinlayouts in the *WeaponSkins.cpp* file.
-
-    void WeaponSkins::StandartSkinLayout() {
-    // Weapons
-	desertEagle = 37;
-	dualBerettas = 625;
-	[...]
-	revolver = 522;
-	
-	// Knifes
-	knifeID = 5;
-	m9Bayonet = 572;  // KID: 5
-	[...]
-	}
 
 Just look up the skin IDs at [csgostash](https://csgostash.com/).
 
