@@ -83,7 +83,6 @@ void KnifeChanger::Run() {
 
 		if (weaponID == 42) {
 			modelIndex = weaponViewModelID + precache_bayonet_ct + knifeID * 3 + knifeIDOffset;
-			cout << modelIndex << endl;
 		}
 		if (weaponID == 59) {
 			modelIndex = weaponViewModelID +  precache_bayonet_t + knifeID * 3 + knifeIDOffset;

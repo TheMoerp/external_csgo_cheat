@@ -17,10 +17,10 @@ int p2000Stock[] = { 389, 591 };
 int p250Stock[] = { 678, 551, 404, 388, 258, 501 };
 int tec9Stock[] = { 889, 614, 179 };
 int uspStock[] = { 504, 653, 705, 313, 637, 817, 991 };
-int cz75Stock[] = { 270, 643, 543, 350 };
+int cz75Stock[] = { 270, 643, 543, 350, 1036 };
 int revolverStock[] = { 522, 683, 595 };
 
-int ak47Stock[] = { 959, 801, 801, 675, 639, 639, 302, 490, 282, 44, 1018 };
+int ak47Stock[] = { 959, 801, 801, 675, 639, 639, 302, 490, 282, 44, 1018, 1035 };
 int augStock[] = { 280, 690, 9, 886, 583 };
 int awpStock[] = { 887, 917, 803, 475, 279, 756, 736, 446, 344, 691, 838, 975 };
 int galilArStock[] = { 398, 661, 647, 379, 1013, 981 };
@@ -28,7 +28,7 @@ int famasStock[] = { 919, 604, 723, 626, 529, 999 };
 int g3s61Stock[] = { 511, 712, 628 };
 int m4a4Stock[] = { 309, 844, 512, 255, 971, 664, 588, 400, 449, 384, 167, 985 };
 int scar20Stock[] = { 597, 391, 312, 232 };
-int sg553Stock[] = { 897, 487, 750, 955 };
+int sg553Stock[] = { 897, 487, 750, 955, 1048 };
 int ssg09Stock[] = { 624, 222, 899 };
 int m4a1sStock[] = { 946, 587, 548, 497, 681, 301, 430, 360, 1001, 714, 644, 1017, 321, 440, 631, 984 };
 
@@ -206,25 +206,25 @@ void WeaponSkins::ChangeSkinLayout() {
 
 
 void WeaponSkins::StandartSkinLayout() {
-	desertEagle = 962;
+	desertEagle = 37;
 	dualBerettas = 625;
 	fiveSeven = 979;
-	glock18 = 415;
+	glock18 = 957;
 	p2000 = 389;
 	p250 = 678;
 	tec9 = 179;
 	ak47 = 44;
 	aug = 690;
-	awp = 917;
+	awp = 344;
 	famas = 919;
 	g3sg1 = 712;
-	galilAr = 398;
+	galilAr = 1038;
 	m4a4 = 309;
 	scar20 = 597;
-	ssg08 = 222;
+	ssg08 = 1048;
 	mac10 = 433;
 	mp7 = 696;
-	mp9 = 910;
+	mp9 = 1037;
 	ppBizon = 676;
 	p90 = 359;
 	ump45 = 556;
@@ -234,14 +234,14 @@ void WeaponSkins::StandartSkinLayout() {
 	xm1014 = 850;
 	m249 = 902;
 	negev = 763;
-	usps = 504;
-	m4a1s = 321;
+	usps = 1040;
+	m4a1s = 587;
 	cz75 = 270;
 	mp5sd = 915;
 	revolver = 522;
 
-	knifeID = 4; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
-	karambit = 417;
+	knifeID = 5; //16 = stiletto //4 = Karambit //0 = bayonet //2 = flip //5 = m9
+	m9Bayonet = 572;
 }
 
 

@@ -28,52 +28,52 @@ void Init() {
 
 // Toggle features
 void toggleFeatures() {
-    if (GetKeyState('V') < 0 && triggerToggle == false) {
+    if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == false) {
         triggerToggle = true;
         cout << "Triggerbot on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('V') < 0 && triggerToggle == true) {
+    else if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == true) {
         triggerToggle = false;
         cout << "Triggerbot off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('X') < 0 && whToggle == false) {
+    else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == false) {
         whToggle = true;
         cout << "Wallhack on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('X') < 0 && whToggle == true) {
+    else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == true) {
         whToggle = false;
         cout << "Wallhack off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('N') < 0 && bhobToggle == false) {
+    else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == false) {
         bhobToggle = true;
         cout << "Bhop on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('N') < 0 && bhobToggle == true) {
+    else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == true) {
         bhobToggle = false;
         cout << "Bhop off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('L') < 0 && rsToggle == false) {
+    else if (GetKeyState(VK_MULTIPLY) < 0 && rsToggle == false) {
         rsToggle = true;
         cout << "Random skinchanger on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('L') < 0 && rsToggle == true) {
+    else if (GetKeyState(VK_MULTIPLY) < 0 && rsToggle == true) {
         rsToggle = false;
         cout << "Random skinchanger off" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('C') < 0 && aimbotToggle == false) {
+    else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == false) {
         aimbotToggle = true;
         cout << "Aimbot on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState('C') < 0 && aimbotToggle == true) {
+    else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == true) {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
         Sleep(50);
@@ -82,9 +82,9 @@ void toggleFeatures() {
 
 
 void NoDelayFeatures() {
-    cout << "--> Triggerbot ready      (Toggle it with V)" << endl;
-    cout << "--> Autoaim ready         (Toggle it with C)" << endl;
-    cout << "--> Bhop ready            (Toggle it with N)" << endl;
+    cout << "--> Triggerbot ready      (Toggle it with NUM_2)" << endl;
+    cout << "--> Autoaim ready         (Toggle it with NUM_1)" << endl;
+    cout << "--> Bhop ready            (Toggle it with NUM_4)" << endl;
 
     Aimbot aimbot;
     while (true) {
@@ -103,7 +103,7 @@ void NoDelayFeatures() {
 
 void DelayFeatures() {
     Sleep(10);
-    cout << "--> Wallhack ready        (Toggle it with X)" << endl;
+    cout << "--> Wallhack ready        (Toggle it with NUM_0)" << endl;
     
  
     while (true) {
@@ -123,11 +123,11 @@ void DelayFeatures() {
 
 void SkinChangerThread() {
     Sleep(30);
-    cout << "--> Skinchanger activated (Toggle Randomness with L)" << endl;
+    cout << "--> Skinchanger activated (Toggle Randomness with NUM_x)" << endl;
     cout << "" << endl;
-    cout << "----------------------------------------------------" << endl;
+    cout << "----------------------------------------------------------" << endl;
     cout << "\n\n\n                      Toggle Log" << endl;
-    cout << "----------------------------------------------------\n" << endl;
+    cout << "----------------------------------------------------------\n" << endl;
     cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
     
     while (true) {
@@ -150,10 +150,10 @@ int main()
     HWND console = GetConsoleWindow();
     RECT r;
     GetWindowRect(console, &r);
-    MoveWindow(console, r.left, r.top, 450, 700, TRUE);
+    MoveWindow(console, r.left, r.top, 500, 700, TRUE);
 
     cout << "\n                     The Moerper" << endl;
-    cout << "----------------------------------------------------" << endl;
+    cout << "----------------------------------------------------------" << endl;
     cout << "waiting for CS:GO..." << endl;
 
     Init();
