@@ -1,6 +1,7 @@
 #include "Wallhack.h"
+#include "iostream"
 
-
+using namespace std;
 Wallhack wh;
 
 void Wallhack::Run() {

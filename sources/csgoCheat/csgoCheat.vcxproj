@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Aimbot1.cpp" />
+    <ClCompile Include="Antiflash.cpp" />
     <ClCompile Include="Bhob.cpp" />
     <ClCompile Include="config.cpp" />
     <ClCompile Include="CsgoCheat.cpp" />
@@ -153,6 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Aimbot1.h" />
+    <ClInclude Include="Antiflash.h" />
     <ClInclude Include="Bhop.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="KnifeChanger.h" />

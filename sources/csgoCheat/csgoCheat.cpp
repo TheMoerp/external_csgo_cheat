@@ -11,6 +11,7 @@
 #include "Aimbot1.h"
 #include "KnifeChanger.h"
 #include "config.h"
+#include "Antiflash.h"
 
 using namespace std;
 
@@ -86,7 +87,7 @@ void toggleFeatures() {
 void NoDelayFeatures() {
     cout << "--> Triggerbot ready      (Toggle it with NUM_2)" << endl;
     cout << "--> Autoaim ready         (Toggle it with NUM_1)" << endl;
-    cout << "--> Bhop ready            (Toggle it with NUM_4)" << endl;
+    cout << "--> Bhop ready            (Toggle it with NUM_3)" << endl;
 
     Aimbot aimbot;
     while (true) {
@@ -100,6 +101,7 @@ void NoDelayFeatures() {
         if (aimbotToggle) {
             aimbot.Run();
         }
+        
     }
 }
 
@@ -118,6 +120,7 @@ void DelayFeatures() {
         else {
             weaponSkins.StandartSkinLayout();
         }
+        antiflash();
         Sleep(1);
     }
 }
