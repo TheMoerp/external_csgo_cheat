@@ -103,7 +103,7 @@ void NoDelayFeatures() {
     Aimbot aimbot;
     while (true) {
         if (antirecoilToggle) {
-            antirecoil();
+            antirecoil(); // you can't move the mouse while spraying. external...
         }
         if (triggerToggle) {
             trigger.Run();
