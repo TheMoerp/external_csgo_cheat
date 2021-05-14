@@ -12,6 +12,7 @@
 #include "KnifeChanger.h"
 #include "config.h"
 #include "Antiflash.h"
+#include "antirecoil.h"
 
 using namespace std;
 
@@ -91,7 +92,7 @@ void NoDelayFeatures() {
 
     Aimbot aimbot;
     while (true) {
-        
+        antirecoil();
         if (triggerToggle) {
             trigger.Run();
         }

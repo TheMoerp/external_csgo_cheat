@@ -51,6 +51,9 @@
     <ClCompile Include="Antiflash.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="antirecoil.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Memory.h">
@@ -84,6 +87,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Antiflash.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="antirecoil.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

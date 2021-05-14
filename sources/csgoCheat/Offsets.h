@@ -25,23 +25,24 @@ public:
 	DWORD m_iItemIDHigh = 0x2FC0;
 	DWORD m_szCustomName = 0x303C;
 	DWORD m_hActiveWeapon = 0x2EF8;
-	DWORD dwEntityList = 0x4DA521C;
-	DWORD dwForceJump = 0x524EFFC;
-	DWORD dwGlowObjectManager = 0x52ED6A8;
-	DWORD dwLocalPlayer = 0xD8D2CC;
-	DWORD dwbSendPackets = 0xD76CA;
 	DWORD m_bDormant = 0xED;
-	DWORD model_ambient_min = 0x58D05C;
 	DWORD m_hViewModel = 0x32F8;
 	DWORD m_iViewModelIndex = 0x3240;
 	DWORD m_nModelIndex = 0x258;
 	DWORD m_vecOrigin = 0x138;
 	DWORD m_vecViewOffset = 0x108;
 	DWORD m_dwBoneMatrix = 0x26A8;
-	DWORD dwClientState = 0x589FE4;
-	DWORD dwClientState_ViewAngles = 0x4D90;
 	DWORD m_aimPunchAngle = 0x302C;
+	DWORD m_iShotsFired = 0xA390;
+	DWORD model_ambient_min = 0x58D05C;
 
+	DWORD dwClientState_ViewAngles = 0x4D90;
+	DWORD dwClientState = 0x589FE4;
+	DWORD dwLocalPlayer = 0xD8E2CC;
+	DWORD dwbSendPackets = 0xD779A;
+	DWORD dwEntityList = 0x4DA720C;
+	DWORD dwForceJump = 0x5250FFC;
+	DWORD dwGlowObjectManager = 0x52EF6B0;
 	// every variable offset
 	DWORD processID = 0;
 	HANDLE hProcess = 0;
