@@ -21,6 +21,7 @@ bool whToggle = false;
 bool bhobToggle = false;
 bool rsToggle = false;
 bool aimbotToggle = false;
+bool antirecoilToggle = false;
 
 // Initiates the memory process
 void Init() {
@@ -81,6 +82,15 @@ void toggleFeatures() {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
         Sleep(50);
+    }else if (GetKeyState(VK_NUMPAD1) < 0 && antirecoilToggle == false) {
+        antirecoilToggle = true;
+        cout << "Antirecoil on" << endl;
+        Sleep(50);
+    }
+    else if (GetKeyState(VK_NUMPAD1) < 0 && antirecoilToggle == true) {
+        antirecoilToggle = false;
+        cout << "Antirecoil off" << endl;
+        Sleep(50);
     }
 }
 
@@ -92,7 +102,9 @@ void NoDelayFeatures() {
 
     Aimbot aimbot;
     while (true) {
-        antirecoil();
+        if (antirecoilToggle) {
+            antirecoil();
+        }
         if (triggerToggle) {
             trigger.Run();
         }
