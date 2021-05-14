@@ -82,12 +82,12 @@ void toggleFeatures() {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
         Sleep(50);
-    }else if (GetKeyState(VK_NUMPAD1) < 0 && antirecoilToggle == false) {
+    }else if (GetKeyState(VK_NUMPAD4) < 0 && antirecoilToggle == false) {
         antirecoilToggle = true;
         cout << "Antirecoil on" << endl;
         Sleep(50);
     }
-    else if (GetKeyState(VK_NUMPAD1) < 0 && antirecoilToggle == true) {
+    else if (GetKeyState(VK_NUMPAD4) < 0 && antirecoilToggle == true) {
         antirecoilToggle = false;
         cout << "Antirecoil off" << endl;
         Sleep(50);

@@ -52,7 +52,7 @@ void antirecoil() {
 		cout << "nAngle -- x: " << nAngle.x << " y: " << nAngle.y << " z: " << nAngle.z << endl;
 		mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0, nAngle.x);
 		mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0, nAngle.y);
-		mem.WriteMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8, nAngle.z);
+		//mem.WriteMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8, nAngle.z);
 	}
 	oPunch = punchAngle;
 }
