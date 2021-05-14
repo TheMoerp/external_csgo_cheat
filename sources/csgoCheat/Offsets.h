@@ -43,7 +43,8 @@ public:
 	DWORD dwEntityList = 0x4DA720C;
 	DWORD dwForceJump = 0x5250FFC;
 	DWORD dwGlowObjectManager = 0x52EF6B0;
-	// every variable offset
+
+
 	DWORD processID = 0;
 	HANDLE hProcess = 0;
 	DWORD clientBase = 0;
