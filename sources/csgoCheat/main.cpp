@@ -20,6 +20,7 @@ bool whToggle = false;
 bool bhobToggle = false;
 bool aimbotToggle = false;
 bool antiflashToggle = false;
+bool radarToggle = false;
 
 
 // Initiates the memory process
@@ -83,6 +84,16 @@ void toggleFeatures() {
         cout << "Antiflash off" << endl;
         Sleep(100);
     }
+    else if (GetKeyState(VK_NUMPAD5) < 0 && radarToggle == false) {
+        radarToggle = true;
+        cout << "Radar on" << endl;
+        Sleep(100);
+    }
+    else if (GetKeyState(VK_NUMPAD5) < 0 && radarToggle == true) {
+        radarToggle = false;
+        cout << "Radar off" << endl;
+        Sleep(100);
+    }
 }
 
 
@@ -109,6 +120,7 @@ void NoDelayFeatures() {
 void DelayFeatures() {
     Sleep(10);
     cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << endl;
+    cout << "--> Radar ready                    (Toggle it with NUM_5)" << endl;
     cout << "--> Antiflash ready                (Toggle it with NUM_4)" << endl;
     
  
@@ -116,10 +128,12 @@ void DelayFeatures() {
         if (whToggle) {
             Wallhack();
         }
+        if (radarToggle) {
+            Radar();
+        }
         if (antiflashToggle) {
             antiflash();
         }
-        Radar();
         Sleep(1);
     }
 }
@@ -132,7 +146,7 @@ void SkinChangerThread() {
     cout << "----------------------------------------------------------" << endl;
     cout << "\n\n\n                         Toggle Log" << endl;
     cout << "----------------------------------------------------------\n" << endl;
-    cout << "Triggerbot off\nWallhack off\nAntiflash off\nAutoaim off\nBhop off" << endl;
+    cout << "Triggerbot off\nAntiflash off\nWallhack off\nAutoaim off\nRadar off\nBhop off" << endl;
 
     LoadSkinConfig();
     while (true) {
