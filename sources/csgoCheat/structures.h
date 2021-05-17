@@ -2,6 +2,8 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
+
+// 2D Vector
 class Vec2 {
 public:
 	float x, y;
@@ -13,7 +15,7 @@ public:
 	void Normalize();
 };
 
-
+// 3DVector
 class Vec3 {
 public:
 	float x, y, z;
@@ -27,6 +29,7 @@ public:
 };
 
 
+// Item class (for weapons)
 class Item {
 public:
 	int skinID;

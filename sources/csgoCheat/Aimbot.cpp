@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+// 8 = head
 const int TARGET_BONE = 8;
 
 void Aimbot() {
@@ -37,17 +37,20 @@ void Aimbot() {
 
 			// Checks if the entity is an enemy
 			if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
+
 				// Get localangles
 				Vec3 localAngle, entityPos;
 				localAngle.x = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
 				localAngle.y = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
 				localAngle.z = mem.ReadMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8);
+
 				// Get localposition
 				localPos.x = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x0);
 				localPos.y = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
 				localPos.z = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8) + localAngle.z;
 
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
+
 				// Get position of the enemy's head
 				entityPos.x = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x0C);
 				entityPos.y = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
@@ -82,6 +85,7 @@ void Aimbot() {
 
 				// Checks if the enemys head is in FOV range
 				if (distX < (oldDistX - 0.25) && distY < (oldDistY - 0.25) && distX <= config.aFOV && distY <= config.aFOV && distX) {
+
 					// If the bot is ready to target an enemy let the enemy glow
 					DWORD curGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
 					DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
@@ -101,8 +105,10 @@ void Aimbot() {
 
 			// Checks if mouse is clicked
 			if (GetAsyncKeyState(VK_LBUTTON) < 0 && localPlayer != 0) {
+
 				// Checks if there is a target set
 				if (target != 0 && targetHealth > 0 && targetDormant == false) {
+
 					// Calculate angles
 					Vec3 tmp = localPos - targetPos;
 					Vec2 angleVec = tmp.CalculateAngles();
@@ -114,7 +120,6 @@ void Aimbot() {
 					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, angleVec.x);
 					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, angleVec.y);
 
-					// maybe not necessary
 					Sleep(1);
 				}
 			}

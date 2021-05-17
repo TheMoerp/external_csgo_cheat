@@ -7,6 +7,7 @@
 
 #include "memory.h"
 
+
 class Config {
 private:
 	void ReadConfigs();

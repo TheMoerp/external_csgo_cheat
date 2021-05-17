@@ -11,7 +11,7 @@ Item mag7, nova, sawedOff, xm1014, m249, negev;
 Item bayonet, flip, karambit, m9Bayonet, huntsman, falchion, navaja, stiletto;
 
 
-
+// Returns an Item object matching to the paramter id
 Item GetItemByID(int itemID) {
 	Item unknownItem;
 	unknownItem.skinID = 0;
@@ -103,6 +103,8 @@ Item GetItemByID(int itemID) {
 	}
 }
 
+
+// Returns the DefinitionID of a knife
 int GetKnifeItemDefinitionID(int knifeID) {
 	switch (knifeID) {
 	case 0:
@@ -127,6 +129,7 @@ int GetKnifeItemDefinitionID(int knifeID) {
 }
 
 
+// Loads skin config
 void LoadSkinConfig() {
 	cz75.rstTime = 243;
 	desertEagle.rstTime = 812;
@@ -202,5 +205,4 @@ void LoadSkinConfig() {
 	falchion.skinID = config.falchion;
 	navaja.skinID = config.navaja;
 	stiletto.skinID = config.stiletto;
-
 }
