@@ -1,6 +1,6 @@
 #pragma once
-#include <iostream>
 #define _USE_MATH_DEFINES
+#include <iostream>
 #include <math.h>
 
 #include "memory.h"

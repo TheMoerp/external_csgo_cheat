@@ -97,6 +97,7 @@ void toggleFeatures() {
 }
 
 
+// Fast features
 void NoDelayFeatures() {
     cout << "--> Triggerbot ready               (Toggle it with NUM_2)" << endl;
     cout << "--> Autoaim ready                  (Toggle it with NUM_1)" << endl;
@@ -117,12 +118,12 @@ void NoDelayFeatures() {
 }
 
 
+// Not so fast features
 void DelayFeatures() {
     Sleep(10);
     cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << endl;
     cout << "--> Radar ready                    (Toggle it with NUM_5)" << endl;
     cout << "--> Antiflash ready                (Toggle it with NUM_4)" << endl;
-    
  
     while (true) {
         if (whToggle) {
@@ -138,7 +139,7 @@ void DelayFeatures() {
     }
 }
 
-
+// The skinchanger has to be very fast in order to work properly
 void SkinChangerThread() {
     Sleep(30);
     cout << "--> Skinchanger activated" << endl;

@@ -113,6 +113,8 @@ void Aimbot() {
 					// Aim
 					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, angleVec.x);
 					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4, angleVec.y);
+
+					// maybe not necessary
 					Sleep(1);
 				}
 			}
