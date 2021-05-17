@@ -149,6 +149,7 @@
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Offsets.cpp" />
     <ClCompile Include="SkinChanger.cpp" />
+    <ClCompile Include="structures.cpp" />
     <ClCompile Include="Trigger.cpp" />
     <ClCompile Include="Wallhack.cpp" />
     <ClCompile Include="WeaponSkins.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Offsets.h" />
     <ClInclude Include="SkinChanger.h" />
+    <ClInclude Include="structures.h" />
     <ClInclude Include="Trigger.h" />
     <ClInclude Include="Wallhack.h" />
     <ClInclude Include="WeaponSkins.h" />

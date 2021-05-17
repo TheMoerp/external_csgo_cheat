@@ -7,7 +7,17 @@
 using namespace std;
 
 
-void Aimbot::Run() {
+const int TARGET_BONE = 8;
+//int fov = 5;
+//float highlightColorR = 0.0;
+//float highlightColorG = 2.0;
+//float highlightColorB = 0.0;
+
+
+
+
+
+void aimbot() {
 	// Get localplayer data
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum);
