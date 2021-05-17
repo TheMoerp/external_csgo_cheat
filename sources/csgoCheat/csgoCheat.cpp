@@ -17,8 +17,9 @@ using namespace std;
 bool triggerToggle = false;
 bool whToggle = false;
 bool bhobToggle = false;
-bool rsToggle = false;
 bool aimbotToggle = false;
+bool antiflashToggle = false;
+
 
 // Initiates the memory process
 void Init() {
@@ -28,57 +29,59 @@ void Init() {
     config.LoadConfigs();
 }
 
+
 // Toggle features
 void toggleFeatures() {
     if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == false) {
         triggerToggle = true;
         cout << "Triggerbot on" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == true) {
         triggerToggle = false;
         cout << "Triggerbot off" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == false) {
         whToggle = true;
         cout << "Wallhack on" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == true) {
         whToggle = false;
         cout << "Wallhack off" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == false) {
         bhobToggle = true;
         cout << "Bhop on" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == true) {
         bhobToggle = false;
         cout << "Bhop off" << endl;
-        Sleep(50);
-    }
-    else if (GetKeyState(VK_MULTIPLY) < 0 && rsToggle == false) {
-        rsToggle = true;
-        cout << "Random skinchanger on" << endl;
-        Sleep(50);
-    }
-    else if (GetKeyState(VK_MULTIPLY) < 0 && rsToggle == true) {
-        rsToggle = false;
-        cout << "Random skinchanger off" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == false) {
         aimbotToggle = true;
         cout << "Aimbot on" << endl;
-        Sleep(50);
+        Sleep(100);
     }
     else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == true) {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
-        Sleep(50);
+        Sleep(100);
+    }
+    else if (GetKeyState(VK_NUMPAD4) < 0 && antiflashToggle == false) {
+        antiflashToggle = true;
+        cout << "Antiflash on" << endl;
+        Sleep(100);
+    }
+    else if (GetKeyState(VK_NUMPAD4) < 0 && antiflashToggle == true) {
+        antiflashToggle = false;
+        cout << "Antiflash off" << endl;
+        Sleep(100);
+    }
 }
 
 
@@ -101,16 +104,20 @@ void NoDelayFeatures() {
     }
 }
 
+
 void DelayFeatures() {
     Sleep(10);
     cout << "--> Wallhack ready        (Toggle it with NUM_0)" << endl;
+    cout << "--> Antiflash ready       (Toggle it with NUM_4)" << endl;
     
  
     while (true) {
         if (whToggle) {
             Wallhack();
         }
-        antiflash();
+        if (antiflashToggle) {
+            antiflash();
+        }
         Sleep(1);
     }
 }
@@ -118,7 +125,7 @@ void DelayFeatures() {
 
 void SkinChangerThread() {
     Sleep(30);
-    cout << "--> Skinchanger activated (Toggle Randomness with NUM_x)" << endl;
+    cout << "--> Skinchanger activated" << endl;
     cout << "" << endl;
     cout << "----------------------------------------------------------" << endl;
     cout << "\n\n\n                      Toggle Log" << endl;
