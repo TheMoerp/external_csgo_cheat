@@ -8,6 +8,7 @@ CS:GO Moerper is an external multicheat. It's just an experimental project and i
 
 ### Features
 - Wallhack
+- Radar
 - Autoaim/Aimbot
 - Triggerbot
 - Bhop script
@@ -26,6 +27,9 @@ There is no patternscan implemented yet you have to update the offsets manually.
 ##### Wallhack
 Toggle the wallhack with the key **NUM_0**. Enemys will glow red.
 
+##### Radar
+Toggle the radar with the key **NUM_5**. Enemys will be marked as spotted on the radar.
+
 ##### Autoaim/Aimbot
 Toggle the autoaim with the key **NUM_1**. When the crosshair is near the enemy's head and you leftclick, it will automatically shoot the enemy's head. It's most efficient when triggerbot and autoaim aren't on at the same time.
 
@@ -36,7 +40,7 @@ Toggle the triggerbot with the key **NUM_2**. It will shoot if you hover over an
 Toggle the bhop script with the key **NUM_3**. Just keep pressing **Space** an start bhopping.
 
 ##### Antiflash
-Antiflash is turned on by default and there is no toggle key.
+Toggle the antiflash with the key **NUM_4**. No more looking away for you :).
 
 ##### Skinchanger
 Since the knifechanger can be pretty glitchy I recomment to create a autoconfig file for csgo. Just create a file named *autoexec.txt* in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
