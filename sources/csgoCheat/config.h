@@ -13,14 +13,6 @@ private:
 	void SetConfig(std::string name, std::string value);
 	void CreateConfig();
 public:
-	int value;
-
-	float whR;
-	float whG;
-	float whB;
-	float alR;
-	float alG;
-	float alB;
 	int aFOV;
 
 	int cz75;
