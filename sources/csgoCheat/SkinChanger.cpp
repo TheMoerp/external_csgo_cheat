@@ -1,5 +1,8 @@
 #include "SkinChanger.h"
 
+#define precache_bayonet_ct 90
+#define precache_bayonet_t 65
+
 using namespace std;
 
 
@@ -12,11 +15,11 @@ void Skinchanger() {
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	if (localPlayer) {
 		for (int i = 0; i < 3; i++) {
-			DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offset.m_hMyWeapons + i * 0x4) & 0xFFF;
-			DWORD curWeaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offset.dwEntityList + (curWeapon - 1) * 0x10);
+			DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hMyWeapons + i * 0x4) & 0xFFF;
+			DWORD curWeaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (curWeapon - 1) * 0x10);
 
 			if (curWeaponBase != 0) {
-				short curWaeponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
+				short curWeaponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
 
 				Item curItem = GetItemByID(curWeaponID);
 

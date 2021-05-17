@@ -13,8 +13,8 @@ void Aimbot() {
 		// Get enginepointer
 		DWORD enginePointer = mem.ReadMemory<DWORD>(offsets.engineBase + offsets.dwClientState);
 
-		oldDistX = 11111111.0;
-		oldDistY = 11111111.0;
+		float oldDistX = 11111111.0;
+		float oldDistY = 11111111.0;
 
 		// Iterate through all entitys
 		for (int i = 1; i < 32; i++) {
@@ -127,7 +127,7 @@ void Aimbot() {
 				// Checks if there is a target set
 				if (target != 0 && targetHealth > 0 && targetDormant == false) {
 					// Calculate angles
-					Vec2 angleVec = (localPos - entityPos).CalculateAngles();
+					Vec2 angleVec = (localPos - targetPos).CalculateAngles();
 					/*float deltaX = localPos1 - targetPosX;
 					float deltaY = localPos2 - targetPosY;
 					float deltaZ = localPos3 - targetPosZ;

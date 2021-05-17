@@ -7,7 +7,7 @@
 
 int knifeID;
 
-int GetItemByID(int itemID);
+Item GetItemByID(int itemID);
 
 int GetKnifeItemDefinitionID(int knifeID);
 

@@ -1,4 +1,6 @@
 #pragma once
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 class Vec2 {
 public:
@@ -14,7 +16,7 @@ public:
 
 class Vec3 {
 public:
-	float x, y, z ;
+	float x, y, z;
 
 	Vec3 operator+(Vec3 d);
 	Vec3 operator-(Vec3 d);
@@ -27,6 +29,7 @@ public:
 
 class Item {
 public:
+	//Item() :skinID(0),seed(0),rstTime(r) {}
 	int skinID;
 	int seed;
 	

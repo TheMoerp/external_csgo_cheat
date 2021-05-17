@@ -10,38 +10,6 @@ Item mac10, mp5sd, mp7, mp9, ppBizon, p90, ump45;
 Item mag7, nova, sawedOff, xm1014, m249, negev;
 Item bayonet, flip, karambit, m9Bayonet, huntsman, falchion, navaja, stiletto;
 
-cz75.rstTime = 243;
-desertEagle.rstTime = 812;
-dualBerettas.rstTime = 525;
-fiveSeven.rstTime = 201;
-glock18.rstTime = 201;
-p2000.rstTime = 350;
-p250.rstTime = 346;
-usps.rstTime = 392;
-ak47.rstTime = 350;
-aug.rstTime = 369;
-awp.rstTime = 430;
-famas.rstTime = 350;
-g3sg1.rstTime = 251;
-galilAr.rstTime = 545;
-m4a4.rstTime = 301;
-m4a1s.rstTime = 339;
-scar20.rstTime = 545;
-sg553.rstTime = 453;
-ssg08.rstTime = 143;
-mac10.rstTime = 400;
-mp5sd.rstTime = 438;
-mp7.rstTime = 438;
-mp9.rstTime = 258;
-ppBizon.rstTime = 332;
-p90.rstTime = 350;
-ump45.rstTime = 400;
-mag7.rstTime = 461;
-nova.rstTime = 461;
-sawedOff.rstTime = 506;
-m249.rstTime = 829;
-negev.rstTime = 301;
-
 
 
 Item GetItemByID(int itemID) {
@@ -129,7 +97,7 @@ Item GetItemByID(int itemID) {
 	case 509:
 		return huntsman;
 	default:
-		return 0;
+		break;
 	}
 }
 
@@ -158,6 +126,38 @@ int GetKnifeItemDefinitionID(int knifeID) {
 
 
 void LoadSkinConfig() {
+	cz75.rstTime = 243;
+	desertEagle.rstTime = 812;
+	dualBerettas.rstTime = 525;
+	fiveSeven.rstTime = 201;
+	glock18.rstTime = 201;
+	p2000.rstTime = 350;
+	p250.rstTime = 346;
+	usps.rstTime = 392;
+	ak47.rstTime = 350;
+	aug.rstTime = 369;
+	awp.rstTime = 430;
+	famas.rstTime = 350;
+	g3sg1.rstTime = 251;
+	galilAr.rstTime = 545;
+	m4a4.rstTime = 301;
+	m4a1s.rstTime = 339;
+	scar20.rstTime = 545;
+	sg553.rstTime = 453;
+	ssg08.rstTime = 143;
+	mac10.rstTime = 400;
+	mp5sd.rstTime = 438;
+	mp7.rstTime = 438;
+	mp9.rstTime = 258;
+	ppBizon.rstTime = 332;
+	p90.rstTime = 350;
+	ump45.rstTime = 400;
+	mag7.rstTime = 461;
+	nova.rstTime = 461;
+	sawedOff.rstTime = 506;
+	m249.rstTime = 829;
+	negev.rstTime = 301;
+
 	cz75.skinID = config.cz75;
 	desertEagle.skinID = config.desertEagle;
 	dualBerettas.skinID = config.dualBerettas;
@@ -169,7 +169,7 @@ void LoadSkinConfig() {
 	ak47.skinID = config.ak47;
 	aug.skinID = config.aug;
 	awp.skinID = config.awp;
-	famas = config.famas;
+	famas.skinID = config.famas;
 	g3sg1.skinID = config.g3sg1;
 	galilAr.skinID = config.galilAr;
 	m4a4.skinID = config.m4a4;

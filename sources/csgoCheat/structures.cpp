@@ -84,5 +84,3 @@ Vec2 Vec3::CalculateAngles() {
 
 	return { pitch, yaw };
 }
-
-Item::seed = 661;
