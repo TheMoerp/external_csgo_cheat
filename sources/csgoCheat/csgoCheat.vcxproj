@@ -147,6 +147,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="memory.cpp" />
     <ClCompile Include="offsets.cpp" />
+    <ClCompile Include="radar.cpp" />
     <ClCompile Include="skinchanger.cpp" />
     <ClCompile Include="structures.cpp" />
     <ClCompile Include="triggerbot.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="config.h" />
     <ClInclude Include="memory.h" />
     <ClInclude Include="offsets.h" />
+    <ClInclude Include="radar.h" />
     <ClInclude Include="skinchanger.h" />
     <ClInclude Include="structures.h" />
     <ClInclude Include="triggerbot.h" />

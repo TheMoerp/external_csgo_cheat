@@ -11,6 +11,7 @@
 #include "aimbot.h"
 #include "config.h"
 #include "antiflash.h"
+#include "radar.h"
 
 using namespace std;
 
@@ -118,6 +119,7 @@ void DelayFeatures() {
         if (antiflashToggle) {
             antiflash();
         }
+        Radar();
         Sleep(1);
     }
 }
