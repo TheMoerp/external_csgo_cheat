@@ -5,7 +5,6 @@ class Offsets
 {
 
 public:
-	// every const offset
 	DWORD m_bSpotted = 0x93D;
 	DWORD m_clrRender = 0x70;
 	DWORD m_fFlags = 0x104;

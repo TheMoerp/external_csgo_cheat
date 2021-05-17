@@ -1,7 +1,7 @@
 #include "Bhop.h"
 
-
 using namespace std;
+
 
 void Bhop() {
 	// Get flag

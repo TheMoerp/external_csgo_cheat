@@ -9,10 +9,8 @@
 #include "SkinChanger.h"
 #include "weapon.h"
 #include "aimbot.h"
-//#include "KnifeChanger.h"
 #include "config.h"
 #include "Antiflash.h"
-//#include "antirecoil.h"
 
 using namespace std;
 
@@ -21,7 +19,6 @@ bool whToggle = false;
 bool bhobToggle = false;
 bool rsToggle = false;
 bool aimbotToggle = false;
-bool antirecoilToggle = false;
 
 // Initiates the memory process
 void Init() {
@@ -82,16 +79,6 @@ void toggleFeatures() {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
         Sleep(50);
-    }else if (GetKeyState(VK_NUMPAD4) < 0 && antirecoilToggle == false) {
-        antirecoilToggle = true;
-        cout << "Antirecoil on" << endl;
-        Sleep(50);
-    }
-    else if (GetKeyState(VK_NUMPAD4) < 0 && antirecoilToggle == true) {
-        antirecoilToggle = false;
-        cout << "Antirecoil off" << endl;
-        Sleep(50);
-    }
 }
 
 
@@ -101,9 +88,6 @@ void NoDelayFeatures() {
     cout << "--> Bhop ready            (Toggle it with NUM_3)" << endl;
 
     while (true) {
-        //if (antirecoilToggle) {
-        //    antirecoil(); // you can't move the mouse while spraying. external...
-        //}
         if (triggerToggle) {
             Triggerbot();
         }
@@ -126,12 +110,6 @@ void DelayFeatures() {
         if (whToggle) {
             Wallhack();
         }
-        /*if (rsToggle) {
-            weaponSkins.RandomSkinChanger();
-        }*/
-        /*else {
-            weaponSkins.StandartSkinLayout();
-        }*/
         antiflash();
         Sleep(1);
     }
@@ -153,12 +131,6 @@ void SkinChangerThread() {
     }
 }
 
-//void KnifeChangerThread() {
-//    KnifeChanger knifeChanger;
-//    while (true) {
-//        knifeChanger.Run();
-//    }
-//}
 
 int main()
 {
@@ -183,7 +155,6 @@ int main()
     thread NoDelayThread(NoDelayFeatures);
     thread DelayThread(DelayFeatures);
     thread SkinChangerThread(SkinChangerThread);
-    //thread KnifeChangerThread(KnifeChangerThread);
 
     Sleep(20);
     while (true) {

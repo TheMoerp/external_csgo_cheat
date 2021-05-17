@@ -29,7 +29,6 @@ public:
 
 class Item {
 public:
-	//Item() :skinID(0),seed(0),rstTime(r) {}
 	int skinID;
 	int seed;
 	

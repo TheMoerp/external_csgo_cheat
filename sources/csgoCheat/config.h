@@ -3,7 +3,6 @@
 
 class Config {
 public:
-	//string configName;
 	int value;
 
 	float whR;

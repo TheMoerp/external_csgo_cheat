@@ -1,7 +1,7 @@
 #include "Wallhack.h"
 
-
 using namespace std;
+
 
 void Wallhack() {
 
