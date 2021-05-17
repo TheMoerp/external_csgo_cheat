@@ -5,5 +5,3 @@
 #include "structures.h"
 
 void Skinchanger();
-
-extern SkinChanger skinChanger;

@@ -51,10 +51,10 @@
     <ClCompile Include="aimbot.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="mem.cpp">
+    <ClCompile Include="weapon.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="weapon.cpp">
+    <ClCompile Include="Memory.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,10 +92,10 @@
     <ClInclude Include="aimbot.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="mem.h">
+    <ClInclude Include="weapon.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="weapon.h">
+    <ClInclude Include="Memory.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

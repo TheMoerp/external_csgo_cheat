@@ -146,7 +146,7 @@
     <ClCompile Include="config.cpp" />
     <ClCompile Include="CsgoCheat.cpp" />
     <ClCompile Include="KnifeChanger.cpp" />
-    <ClCompile Include="mem.cpp" />
+    <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Offsets.cpp" />
     <ClCompile Include="SkinChanger.cpp" />
     <ClCompile Include="structures.cpp" />
@@ -161,7 +161,7 @@
     <ClInclude Include="Bhop.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="KnifeChanger.h" />
-    <ClInclude Include="mem.h" />
+    <ClInclude Include="Memory.h" />
     <ClInclude Include="Offsets.h" />
     <ClInclude Include="SkinChanger.h" />
     <ClInclude Include="structures.h" />

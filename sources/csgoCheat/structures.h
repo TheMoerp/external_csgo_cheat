@@ -30,5 +30,5 @@ public:
 	int skinID;
 	int seed;
 	
-	float rstTime;
+	int rstTime;
 };

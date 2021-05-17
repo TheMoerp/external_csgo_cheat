@@ -2,7 +2,7 @@
 #include <iostream>
 #include "Memory.h"
 
-void Bhop;
+void Bhop();
 
 //class Bhop {
 //public:

@@ -100,7 +100,6 @@ void NoDelayFeatures() {
     cout << "--> Autoaim ready         (Toggle it with NUM_1)" << endl;
     cout << "--> Bhop ready            (Toggle it with NUM_3)" << endl;
 
-    Aimbot aimbot;
     while (true) {
         if (antirecoilToggle) {
             antirecoil(); // you can't move the mouse while spraying. external...

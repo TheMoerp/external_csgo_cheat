@@ -1,11 +1,6 @@
-#include <iostream>
-#include <ctime>
-#include <cstdlib>
-
-#include "WeaponSkins.h"
+#include "weapon.h"
 
 
-WeaponSkins weaponSkins;
 using namespace std;
 
 

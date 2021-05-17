@@ -35,9 +35,9 @@ void Aimbot() {
 			}
 
 			// Reset target data
-			target = 0;
-			targetHealth = 0;
-			targetDormant = true;
+			int target = 0;
+			int targetHealth = 0;
+			bool targetDormant = true;
 			Vec3 targetPos, localPos;
 
 			// Checks if the entity is an enemy
@@ -115,7 +115,7 @@ void Aimbot() {
 					target = entity;
 					targetHealth = entityHealth;
 					targetDormant = entityDormant;
-					targetPos = entityPos
+					targetPos = entityPos;
 					/*targetPosX = entityPosX;
 					targetPosY = entityPosY;
 					targetPosZ = entityPosZ;*/

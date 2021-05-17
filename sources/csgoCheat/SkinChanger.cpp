@@ -3,7 +3,7 @@
 using namespace std;
 
 
-modelIndex = 0;
+int modelIndex = 0;
 
 void Skinchanger() {
 	int knifeIDOffset = knifeID < 10 ? 0 : 1;
@@ -85,4 +85,3 @@ void Skinchanger() {
 	//	mem.WriteMemory<float>(weaponBase + offsets.m_flFallbackWear, wear);
 	//	mem.WriteMemory<int>(weaponBase + offsets.m_iItemIDHigh, -1);
 	//}
-}

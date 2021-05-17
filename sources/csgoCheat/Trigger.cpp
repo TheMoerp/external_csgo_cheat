@@ -3,8 +3,7 @@
 using namespace std;
 
 
-void Triggerbot()
-{
+void Triggerbot() {
 	INPUT down;
 	down.mi.dx = 0;
 	down.mi.dy = 0;
@@ -30,7 +29,8 @@ void Triggerbot()
 	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10);
 	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex);
 	
-	int triggerInterval = GetItemByID(weaponID).rstTime;
+	Item curWeapon = GetItemByID(weaponID);
+	int triggerInterval = curWeapon.rstTime;
 
 	if (crosshairEntity != 0) {
 		int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum);
