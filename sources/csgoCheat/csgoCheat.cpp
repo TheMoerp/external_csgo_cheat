@@ -146,7 +146,8 @@ void SkinChangerThread() {
     cout << "\n\n\n                      Toggle Log" << endl;
     cout << "----------------------------------------------------------\n" << endl;
     cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
-    
+
+    LoadSkinConfig();
     while (true) {
         Skinchanger();
     }

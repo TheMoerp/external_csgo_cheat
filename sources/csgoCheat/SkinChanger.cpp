@@ -15,20 +15,12 @@ void Skinchanger() {
 
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	if (localPlayer) {
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 8; i++) {
 			DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hMyWeapons + i * 0x4) & 0xFFF;
 			DWORD curWeaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (curWeapon - 1) * 0x10);
 
 			if (curWeaponBase != 0) {
 				short curWeaponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
-				cout << curWeaponID << endl;
-				Item curItem;
-				try {
-					curItem = GetItemByID(curWeaponID);
-				}
-				catch (...) {
-					continue;
-				}
 
 				mem.WriteMemory<int>(curWeaponBase + offsets.m_iItemIDHigh, -1);
 				mem.WriteMemory<float>(curWeaponBase + offsets.m_flFallbackWear, 0.00001f);
@@ -37,6 +29,7 @@ void Skinchanger() {
 
 					if (modelIndex > 0) {
 						Item curItem = GetItemByID(knifeItemID);
+
 						int paintKit = curItem.skinID;
 
 						mem.WriteMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex, knifeItemID);
@@ -47,10 +40,12 @@ void Skinchanger() {
 				}
 				else {
 					Item curItem = GetItemByID(curWeaponID);
-					int paintKit = curItem.skinID;
+					if (curItem.skinID != 0) {
+						int paintKit = curItem.skinID;
 
-					mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, 661);
-					mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackPaintKit, paintKit);
+						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, 661);
+						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackPaintKit, paintKit);
+					}
 				}
 			}
 		}
@@ -64,8 +59,11 @@ void Skinchanger() {
 			if (activeWeaponID == 42) {
 				modelIndex = weaponViewModelID + precache_bayonet_ct + knifeID * 3 + knifeIDOffset;
 			}
-			if (activeWeaponID == 59) {
+			else if (activeWeaponID == 59) {
 				modelIndex = weaponViewModelID + precache_bayonet_t + knifeID * 3 + knifeIDOffset;
+			}
+			else if (activeWeaponID != knifeItemID) {
+				return;
 			}
 
 			DWORD knifeViewModel = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hViewModel) & 0xFFF;

@@ -13,6 +13,8 @@ Item bayonet, flip, karambit, m9Bayonet, huntsman, falchion, navaja, stiletto;
 
 
 Item GetItemByID(int itemID) {
+	Item unknownItem;
+	unknownItem.skinID = 0;
 	switch (itemID) {
 	case 1:
 		return desertEagle;
@@ -97,8 +99,7 @@ Item GetItemByID(int itemID) {
 	case 509:
 		return huntsman;
 	default:
-		cout << "break--------------------" << endl;
-		break;
+		return unknownItem;
 	}
 }
 
