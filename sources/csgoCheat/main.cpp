@@ -86,9 +86,9 @@ void toggleFeatures() {
 
 
 void NoDelayFeatures() {
-    cout << "--> Triggerbot ready      (Toggle it with NUM_2)" << endl;
-    cout << "--> Autoaim ready         (Toggle it with NUM_1)" << endl;
-    cout << "--> Bhop ready            (Toggle it with NUM_3)" << endl;
+    cout << "--> Triggerbot ready               (Toggle it with NUM_2)" << endl;
+    cout << "--> Autoaim ready                  (Toggle it with NUM_1)" << endl;
+    cout << "--> Bhop ready                     (Toggle it with NUM_3)" << endl;
 
     while (true) {
         if (triggerToggle) {
@@ -107,8 +107,8 @@ void NoDelayFeatures() {
 
 void DelayFeatures() {
     Sleep(10);
-    cout << "--> Wallhack ready        (Toggle it with NUM_0)" << endl;
-    cout << "--> Antiflash ready       (Toggle it with NUM_4)" << endl;
+    cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << endl;
+    cout << "--> Antiflash ready                (Toggle it with NUM_4)" << endl;
     
  
     while (true) {
@@ -128,9 +128,9 @@ void SkinChangerThread() {
     cout << "--> Skinchanger activated" << endl;
     cout << "" << endl;
     cout << "----------------------------------------------------------" << endl;
-    cout << "\n\n\n                      Toggle Log" << endl;
+    cout << "\n\n\n                         Toggle Log" << endl;
     cout << "----------------------------------------------------------\n" << endl;
-    cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
+    cout << "Triggerbot off\nWallhack off\nAntiflash off\nAutoaim off\nBhop off" << endl;
 
     LoadSkinConfig();
     while (true) {
@@ -141,7 +141,7 @@ void SkinChangerThread() {
 
 int main()
 {
-    SetConsoleTitle(L"CS:GO Moerper");
+    SetConsoleTitle(L"TheMoerper - external");
     
     // Sets window size
     HWND console = GetConsoleWindow();
@@ -149,7 +149,7 @@ int main()
     GetWindowRect(console, &r);
     MoveWindow(console, r.left, r.top, 500, 700, TRUE);
 
-    cout << "\n                     The Moerper" << endl;
+    cout << "\n                   The Moerper - external" << endl;
     cout << "----------------------------------------------------------" << endl;
     cout << "waiting for CS:GO..." << endl;
 
