@@ -85,4 +85,4 @@ Vec2 Vec3::CalculateAngles() {
 	return { pitch, yaw };
 }
 
-Item::skinID = 661;
+Item::seed = 661;

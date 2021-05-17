@@ -197,7 +197,6 @@ void LoadSkinConfig() {
 	usps.skinID = config.usps;
 	m4a1s.skinID = config.m4a1s;
 	revolver.skinID = config.revolver;
-	knifeID.skinID = config.knifeID;
 	bayonet.skinID = config.bayonet;
 	flip.skinID = config.flip;
 	karambit.skinID = config.karambit;
@@ -206,6 +205,8 @@ void LoadSkinConfig() {
 	falchion.skinID = config.falchion;
 	navaja.skinID = config.navaja;
 	stiletto.skinID = config.stiletto;
+
+	knifeID = config.knifeID;
 }
 
 

@@ -1,7 +1,6 @@
 #include "Trigger.h"
 
 using namespace std;
-Trigger trigger;
 
 
 void Triggerbot()

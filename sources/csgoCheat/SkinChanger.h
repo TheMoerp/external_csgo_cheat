@@ -1,12 +1,9 @@
 #pragma once
+#include <iostream>
 #include "Memory.h"
-#include "WeaponSkins.h"
+#include "weapon.h"
+#include "structures.h"
 
-class SkinChanger {
-private:
-	float wear = 0.0001f;
-public:
-	void Run();
-};
+void Skinchanger();
 
 extern SkinChanger skinChanger;

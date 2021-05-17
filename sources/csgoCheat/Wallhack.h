@@ -1,9 +1,5 @@
 #pragma once
+#include "iostream"
 #include "Memory.h"
 
-class Wallhack {
-public:
-	void Run();
-};
-
-extern Wallhack wh;
+void Wallhack();

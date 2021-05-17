@@ -1,10 +1,9 @@
 #include "Wallhack.h"
-#include "iostream"
+
 
 using namespace std;
-Wallhack wh;
 
-void Wallhack::Run() {
+void Wallhack() {
 
 	DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
 	DWORD localTeam = mem.ReadMemory<DWORD>(mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer) + offsets.m_iTeamNum);
