@@ -30,9 +30,6 @@
     <ClCompile Include="SkinChanger.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="KnifeChanger.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="CsgoCheat.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -40,9 +37,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Antiflash.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="antirecoil.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="structures.cpp">
@@ -74,16 +68,10 @@
     <ClInclude Include="SkinChanger.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="KnifeChanger.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="config.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="Antiflash.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="antirecoil.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="structures.h">

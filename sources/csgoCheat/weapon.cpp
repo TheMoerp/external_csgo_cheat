@@ -97,6 +97,7 @@ Item GetItemByID(int itemID) {
 	case 509:
 		return huntsman;
 	default:
+		cout << "break--------------------" << endl;
 		break;
 	}
 }
@@ -201,7 +202,7 @@ void LoadSkinConfig() {
 	navaja.skinID = config.navaja;
 	stiletto.skinID = config.stiletto;
 
-	knifeID = config.knifeID;
+	//knifeID = config.knifeID;
 }
 
 

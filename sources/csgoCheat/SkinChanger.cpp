@@ -7,6 +7,7 @@ using namespace std;
 
 
 int modelIndex = 0;
+int knifeID = 0;
 
 void Skinchanger() {
 	int knifeIDOffset = knifeID < 10 ? 0 : 1;
@@ -20,8 +21,13 @@ void Skinchanger() {
 
 			if (curWeaponBase != 0) {
 				short curWeaponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
-
-				Item curItem = GetItemByID(curWeaponID);
+				Item curItem;
+				try {
+					curItem = GetItemByID(curWeaponID);
+				}
+				catch (...) {
+					continue;
+				}
 
 				mem.WriteMemory<int>(curWeaponBase + offsets.m_iItemIDHigh, -1);
 				mem.WriteMemory<float>(curWeaponBase + offsets.m_flFallbackWear, 0.00001f);
@@ -33,16 +39,16 @@ void Skinchanger() {
 						int paintKit = curItem.skinID;
 
 						mem.WriteMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex, knifeItemID);
-						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, curItem.seed);
+						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, 661);
 						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackPaintKit, paintKit);
 						mem.WriteMemory<int>(curWeaponBase + offsets.m_nModelIndex, modelIndex);
 					}
 				}
 				else {
-					Item curItem = GetItemByID(curWaeponID);
+					Item curItem = GetItemByID(curWeaponID);
 					int paintKit = curItem.skinID;
 
-					mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, curItem.seed);
+					mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, 661);
 					mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackPaintKit, paintKit);
 				}
 			}

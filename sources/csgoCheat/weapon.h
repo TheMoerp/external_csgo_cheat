@@ -5,7 +5,7 @@
 #include "config.h"
 
 
-int knifeID;
+//int knifeID;
 
 Item GetItemByID(int itemID);
 

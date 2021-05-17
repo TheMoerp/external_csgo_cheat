@@ -12,7 +12,7 @@
 //#include "KnifeChanger.h"
 #include "config.h"
 #include "Antiflash.h"
-#include "antirecoil.h"
+//#include "antirecoil.h"
 
 using namespace std;
 
@@ -101,9 +101,9 @@ void NoDelayFeatures() {
     cout << "--> Bhop ready            (Toggle it with NUM_3)" << endl;
 
     while (true) {
-        if (antirecoilToggle) {
-            antirecoil(); // you can't move the mouse while spraying. external...
-        }
+        //if (antirecoilToggle) {
+        //    antirecoil(); // you can't move the mouse while spraying. external...
+        //}
         if (triggerToggle) {
             Triggerbot();
         }

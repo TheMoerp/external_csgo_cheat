@@ -140,12 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aimbot.cpp" />
-    <ClCompile Include="antirecoil.cpp" />
     <ClCompile Include="Antiflash.cpp" />
     <ClCompile Include="Bhob.cpp" />
     <ClCompile Include="config.cpp" />
     <ClCompile Include="CsgoCheat.cpp" />
-    <ClCompile Include="KnifeChanger.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Offsets.cpp" />
     <ClCompile Include="SkinChanger.cpp" />
@@ -157,10 +155,8 @@
   <ItemGroup>
     <ClInclude Include="aimbot.h" />
     <ClInclude Include="Antiflash.h" />
-    <ClInclude Include="antirecoil.h" />
     <ClInclude Include="Bhop.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="KnifeChanger.h" />
     <ClInclude Include="Memory.h" />
     <ClInclude Include="Offsets.h" />
     <ClInclude Include="SkinChanger.h" />
