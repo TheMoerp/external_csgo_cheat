@@ -11,6 +11,9 @@ int GetItemByID(int itemID);
 int GetKnifeItemDefinitionID(int knifeID);
 
 void LoadSkinConfig();
+
+
+
 //class WeaponSkins {
 //private:
 //	bool alive = true;

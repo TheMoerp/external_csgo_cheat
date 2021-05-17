@@ -1,6 +1,5 @@
 #include "SkinChanger.h"
 
-SkinChanger skinChanger;
 using namespace std;
 
 

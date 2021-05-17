@@ -7,9 +7,9 @@
 #include "Trigger.h"
 #include "Wallhack.h"
 #include "SkinChanger.h"
-#include "WeaponSkins.h"
-#include "Aimbot1.h"
-#include "KnifeChanger.h"
+#include "weapon.h"
+#include "aimbot.h"
+//#include "KnifeChanger.h"
 #include "config.h"
 #include "Antiflash.h"
 #include "antirecoil.h"
@@ -106,13 +106,13 @@ void NoDelayFeatures() {
             antirecoil(); // you can't move the mouse while spraying. external...
         }
         if (triggerToggle) {
-            trigger.Run();
+            Triggerbot();
         }
         if (bhobToggle) {
-            bhop.Run();
+            Bhop();
         }
         if (aimbotToggle) {
-            aimbot.Run();
+            Aimbot();
         }
         
     }
@@ -125,14 +125,14 @@ void DelayFeatures() {
  
     while (true) {
         if (whToggle) {
-            wh.Run();
+            Wallhack();
         }
-        if (rsToggle) {
+        /*if (rsToggle) {
             weaponSkins.RandomSkinChanger();
-        }
-        else {
+        }*/
+        /*else {
             weaponSkins.StandartSkinLayout();
-        }
+        }*/
         antiflash();
         Sleep(1);
     }
@@ -149,16 +149,16 @@ void SkinChangerThread() {
     cout << "Triggerbot off\nWallhack off\nAutoaim off\nBhop off" << endl;
     
     while (true) {
-        skinChanger.Run();
+        Skinchanger();
     }
 }
 
-void KnifeChangerThread() {
-    KnifeChanger knifeChanger;
-    while (true) {
-        knifeChanger.Run();
-    }
-}
+//void KnifeChangerThread() {
+//    KnifeChanger knifeChanger;
+//    while (true) {
+//        knifeChanger.Run();
+//    }
+//}
 
 int main()
 {
@@ -183,7 +183,7 @@ int main()
     thread NoDelayThread(NoDelayFeatures);
     thread DelayThread(DelayFeatures);
     thread SkinChangerThread(SkinChangerThread);
-    thread KnifeChangerThread(KnifeChangerThread);
+    //thread KnifeChangerThread(KnifeChangerThread);
 
     Sleep(20);
     while (true) {

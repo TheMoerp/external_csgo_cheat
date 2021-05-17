@@ -26,7 +26,7 @@ void Triggerbot()
 	DWORD crosshair = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iCrosshairId);
 	DWORD crosshairEntity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (crosshair - 1) * 0x10);
 
-	DWORD weaponEntity = mem.ReadMemory<DWORD>(_localPlayer + offsets.m_hActiveWeapon) & 0xFFF;
+	DWORD weaponEntity = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hActiveWeapon) & 0xFFF;
 	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10);
 	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex);
 	

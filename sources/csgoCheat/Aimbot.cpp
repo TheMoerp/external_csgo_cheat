@@ -4,14 +4,6 @@ using namespace std;
 
 
 const int TARGET_BONE = 8;
-//int fov = 5;
-//float highlightColorR = 0.0;
-//float highlightColorG = 2.0;
-//float highlightColorB = 0.0;
-
-
-
-
 
 void Aimbot() {
 	// Get localplayer data
