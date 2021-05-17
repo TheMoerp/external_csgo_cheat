@@ -29,9 +29,9 @@ void Wallhack() {
 		DWORD currentGlowIndex = mem.ReadMemory<DWORD>(playerEntity + offsets.m_iGlowIndex);
 
 		if (teamID != localTeam) {
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x4, config.whR);	
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, config.whG);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0xC, config.whB);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x4, 2.0);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, 0.0);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0xC, 0.0);
 			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x10, 1);
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x24, true);
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x25, false);

@@ -1,7 +1,17 @@
 #pragma once
+#include <iostream>
+#include <fstream>
+#include <algorithm>
+#include <string>
+#include <sstream> 
+
 #include "memory.h"
 
 class Config {
+private:
+	void ReadConfigs();
+	void SetConfig(std::string name, std::string value);
+	void CreateConfig();
 public:
 	int value;
 
@@ -57,6 +67,7 @@ public:
 	int falchion;
 	int navaja;
 	int stiletto;
+
 	void LoadConfigs();
 };
 
