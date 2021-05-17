@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Memory.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="Bhob.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -34,9 +31,6 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="WeaponSkins.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Aimbot1.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="KnifeChanger.cpp">
@@ -57,11 +51,14 @@
     <ClCompile Include="structures.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="aimbot.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="mem.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Memory.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Bhop.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -80,9 +77,6 @@
     <ClInclude Include="WeaponSkins.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Aimbot1.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="KnifeChanger.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -96,6 +90,12 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="structures.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="aimbot.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="mem.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

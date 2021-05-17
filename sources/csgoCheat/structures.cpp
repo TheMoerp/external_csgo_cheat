@@ -73,7 +73,7 @@ void Vec3::Normalize() {
 	}
 }
 
-Vec2 Vec3::calculateAngles() {
+Vec2 Vec3::CalculateAngles() {
 	float pitch, yaw;
 	float hypotenuse = sqrt(x * x + y * y + z * z);
 	pitch = ((double)atan(z / hypotenuse) * 180.0) / M_PI;
