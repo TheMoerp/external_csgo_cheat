@@ -2,3 +2,6 @@ build/
 .vs
 Debug
 x64
+.*.swp
+.*~
+*~
