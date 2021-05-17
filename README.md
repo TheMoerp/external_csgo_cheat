@@ -13,16 +13,15 @@ CS:GO Moerper is an external multicheat. It's just an experimental project and i
 - Bhop script
 - Antiflash 
 - Skinchanger
-- Antirecoil (broken)
  
 ## Usage
 
 To use it you have to install *Visual Studio* with the Workload *Desktop development with C++*.
-If everything is compiled and ready, you need to start cs:go and then start the *csgoCheat.exe*.
+If everything is compiled and ready, you need to start cs:go and then run the *csgoCheat.exe*. *csgoCheat.exe* must be in the same directory as *config.txt*.
 The cheat will grab the running process and you're ready to go.
 Since this is an external cheat some features can be glitchy at times.
 
-In case the cheat doesn't work check the offsets at [frk1/hazedumper](https://github.com/frk1/hazedumper/blob/master/csgo.cs)
+There is no patternscan implemented yet you have to update the offsets manually. You can reverse them by hand or look them up at [frk1/hazedumper](https://github.com/frk1/hazedumper/blob/master/csgo.cs) since most of the used offsets are included in this list.
 
 ##### Wallhack
 Toggle the wallhack with the key **NUM_0**. Enemys will glow red.
@@ -40,28 +39,19 @@ Toggle the bhop script with the key **NUM_3**. Just keep pressing **Space** an s
 Antiflash is turned on by default and there is no toggle key.
 
 ##### Skinchanger
-The standart skinlayout is set my some nice skins. You can also get a new random skinlayout everytime you die. To toggle the randomness press **NUM_x**.
-
-##### Antirecoil
-Toggle the Antirecoil with the key **NUM_4**. Currently you can't move the mouse why spraying.
-  
-
-Since the knifechanger can be pretty glitchy I recomment to create a autoconfig file for csgo. Just create a file named autoexec.txt in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
-
+Since the knifechanger can be pretty glitchy I recomment to create a autoconfig file for csgo. Just create a file named *autoexec.txt* in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
     
 
     bind f4 "record 1;stop;"
     host_writeconfig
 
   
-
 Then save it and rename the file to *autoexec.cvg*.
 
-Now everytime the knifemodel or the skins won't load just press *F4* to force update.
+Now everytime the knifemodel or the skins won't load just press **F4** to force update.
 
-Just look up the skin IDs at [csgostash](https://csgostash.com/).
-
-  
+To change the skinlayout or change other configurations use the file *config.txt*.
+You can look up skin IDs at [csgostash.com](https://csgostash.com/).
   
 
 #### USE AT YOUR OWN RISK!!!
