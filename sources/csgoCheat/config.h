@@ -1,5 +1,5 @@
 #pragma once
-#include "Memory.h"
+#include "memory.h"
 
 class Config {
 public:

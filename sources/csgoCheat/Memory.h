@@ -1,9 +1,10 @@
 #pragma once
+#include <iostream>
 #include <Windows.h>
 #include <TlHelp32.h>
 
 #include "config.h"
-#include "Offsets.h"
+#include "offsets.h"
 
 
 class Memory {

@@ -1,4 +1,4 @@
-#include "Antiflash.h"
+#include "antiflash.h"
 
 
 int flashDur = 0;

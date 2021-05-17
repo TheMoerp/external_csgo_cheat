@@ -24,6 +24,7 @@
     <ProjectGuid>{67223e84-1478-41a5-891a-958280a0063b}</ProjectGuid>
     <RootNamespace>csgoCheat</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TheMoerper_external</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -140,29 +141,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="aimbot.cpp" />
-    <ClCompile Include="Antiflash.cpp" />
-    <ClCompile Include="Bhob.cpp" />
+    <ClCompile Include="antiflash.cpp" />
+    <ClCompile Include="bhop.cpp" />
     <ClCompile Include="config.cpp" />
-    <ClCompile Include="CsgoCheat.cpp" />
-    <ClCompile Include="Memory.cpp" />
-    <ClCompile Include="Offsets.cpp" />
-    <ClCompile Include="SkinChanger.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="memory.cpp" />
+    <ClCompile Include="offsets.cpp" />
+    <ClCompile Include="skinchanger.cpp" />
     <ClCompile Include="structures.cpp" />
-    <ClCompile Include="Trigger.cpp" />
-    <ClCompile Include="Wallhack.cpp" />
+    <ClCompile Include="triggerbot.cpp" />
+    <ClCompile Include="wallhack.cpp" />
     <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aimbot.h" />
-    <ClInclude Include="Antiflash.h" />
-    <ClInclude Include="Bhop.h" />
+    <ClInclude Include="antiflash.h" />
+    <ClInclude Include="bhop.h" />
     <ClInclude Include="config.h" />
-    <ClInclude Include="Memory.h" />
-    <ClInclude Include="Offsets.h" />
-    <ClInclude Include="SkinChanger.h" />
+    <ClInclude Include="memory.h" />
+    <ClInclude Include="offsets.h" />
+    <ClInclude Include="skinchanger.h" />
     <ClInclude Include="structures.h" />
-    <ClInclude Include="Trigger.h" />
-    <ClInclude Include="Wallhack.h" />
+    <ClInclude Include="triggerbot.h" />
+    <ClInclude Include="wallhack.h" />
     <ClInclude Include="weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

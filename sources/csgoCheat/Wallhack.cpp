@@ -1,4 +1,4 @@
-#include "Wallhack.h"
+#include "wallhack.h"
 
 using namespace std;
 

@@ -1,5 +1,4 @@
-#include "Memory.h"
-#include <iostream>
+#include "memory.h"
 
 Memory mem;
 using namespace std;

@@ -1,5 +1,5 @@
 #pragma once
 #include <Windows.h>
-#include "Memory.h"
+#include "memory.h"
 
 void antiflash();

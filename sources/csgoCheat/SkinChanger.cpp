@@ -1,4 +1,4 @@
-#include "SkinChanger.h"
+#include "skinchanger.h"
 
 #define precache_bayonet_ct 90
 #define precache_bayonet_t 65

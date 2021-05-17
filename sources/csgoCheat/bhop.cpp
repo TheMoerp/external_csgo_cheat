@@ -1,4 +1,4 @@
-#include "Bhop.h"
+#include "bhop.h"
 
 using namespace std;
 

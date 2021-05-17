@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Memory.h"
+#include "memory.h"
 #include "structures.h"
 #include "config.h"
 

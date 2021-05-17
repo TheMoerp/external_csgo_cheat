@@ -1,4 +1,4 @@
-#include "Trigger.h"
+#include "triggerbot.h"
 
 using namespace std;
 

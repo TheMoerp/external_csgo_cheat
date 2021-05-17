@@ -2,15 +2,15 @@
 #include <thread>
 #include <windows.h>
 
-#include "Memory.h"
-#include "Bhop.h"
-#include "Trigger.h"
-#include "Wallhack.h"
-#include "SkinChanger.h"
+#include "memory.h"
+#include "bhop.h"
+#include "triggerbot.h"
+#include "wallhack.h"
+#include "skinchanger.h"
 #include "weapon.h"
 #include "aimbot.h"
 #include "config.h"
-#include "Antiflash.h"
+#include "antiflash.h"
 
 using namespace std;
 
