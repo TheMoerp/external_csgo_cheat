@@ -24,15 +24,10 @@ void Aimbot() {
 			if (entity == 0) {
 				continue;
 			}
-				//try {
+
 			int entityTeam = mem.ReadMemory<int>(entity + offsets.m_iTeamNum);
 			int entityHealth = mem.ReadMemory<int>(entity + offsets.m_iHealth);
 			bool entityDormant = mem.ReadMemory<bool>(entity + offsets.m_bDormant);
-				/*}
-				catch (...) {
-					continue;
-				}*/
-			
 
 			// Reset target data
 			int target = 0;
@@ -42,43 +37,26 @@ void Aimbot() {
 
 			// Checks if the entity is an enemy
 			if ((localPlayerTeam != entityTeam) && (entityHealth > 0)) {
-				// Get localangles and localpositions
+				// Get localangles
 				Vec3 localAngle, entityPos;
 				localAngle.x = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
 				localAngle.y = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
 				localAngle.z = mem.ReadMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8);
-				/*float localXAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x0);
-				float localYAngle = mem.ReadMemory<float>(enginePointer + offsets.dwClientState_ViewAngles + 0x4);
-				float localZAngle = mem.ReadMemory<float>(localPlayer + offsets.m_vecViewOffset + 0x8);*/
+				// Get localposition
 				localPos.x = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x0);
 				localPos.y = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
 				localPos.z = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8) + localAngle.z;
-				/*localPos1 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x0);
-				localPos2 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x4);
-				localPos3 = mem.ReadMemory<float>(localPlayer + offsets.m_vecOrigin + 0x8) + localZAngle;*/
 
-				// Get position of the enemy's head
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
+				// Get position of the enemy's head
 				entityPos.x = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x0C);
 				entityPos.y = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
 				entityPos.z = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
-				/*float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
-				float entityPosY = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
-				float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);*/
+
 
 				// Calculate angles
-				//Vec2 angleVec = (localPos - entityPos).CalculateAngles();
 				Vec3 tmp = localPos - entityPos;
 				Vec2 angleVec = tmp.CalculateAngles();
-				/*float deltaX = localPos1 - entityPosX;
-				float deltaY = localPos2 - entityPosY;
-				float deltaZ = localPos3 - entityPosZ;
-				float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-				float pitch = (float)atan(deltaZ / hypotenuse) * 180.0 / M_PI;
-				float yaw = (float)atan(deltaY / deltaX) * 180.0 / M_PI;
-				if (deltaX >= 0.0) {
-					yaw = yaw + 180.0;
-				}*/
 
 				// Calculate distance
 				float distX = angleVec.x - localAngle.x;
@@ -118,9 +96,6 @@ void Aimbot() {
 					targetHealth = entityHealth;
 					targetDormant = entityDormant;
 					targetPos = entityPos;
-					/*targetPosX = entityPosX;
-					targetPosY = entityPosY;
-					targetPosZ = entityPosZ;*/
 				}
 			}
 
@@ -129,33 +104,11 @@ void Aimbot() {
 				// Checks if there is a target set
 				if (target != 0 && targetHealth > 0 && targetDormant == false) {
 					// Calculate angles
-					//Vec2 angleVec = (localPos - targetPos).CalculateAngles();
 					Vec3 tmp = localPos - targetPos;
 					Vec2 angleVec = tmp.CalculateAngles();
-					/*float deltaX = localPos1 - targetPosX;
-					float deltaY = localPos2 - targetPosY;
-					float deltaZ = localPos3 - targetPosZ;
-					float hypotenuse = sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
-					float pitch = ((double)atan(deltaZ / hypotenuse) * 180.0) / M_PI;
-					float yaw = ((double)atan(deltaY / deltaX) * 180.0) / M_PI;
-					if (deltaX >= 0.0) {
-						yaw = yaw + 180.0;
-					}*/
 
 					// Normalize angles
 					angleVec.Normalize();
-					/*if (pitch > 89.0) {
-						pitch = pitch - 360.0;
-					}
-					if (pitch < -89.0) {
-						pitch = pitch + 360.0;
-					}
-					if (yaw > 180.0) {
-						yaw = yaw - 360.0;
-					}
-					if (yaw < -180.0) {
-						yaw = yaw + 360.0;
-					}*/
 
 					// Aim
 					mem.WriteMemory<float>(enginePointer + offsets.dwClientState_ViewAngles, angleVec.x);
