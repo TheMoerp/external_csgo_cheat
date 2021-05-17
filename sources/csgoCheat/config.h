@@ -15,6 +15,12 @@ private:
 	void CreateConfig();
 public:
 	int aFOV;
+	int triggerKey;
+	int aimbotKey;
+	int wallhackKey;
+	int antiflashKey;
+	int radarKey;
+	int bhopKey;
 
 	int cz75;
 	int desertEagle;

@@ -34,62 +34,62 @@ void Init() {
 
 // Toggle features
 void toggleFeatures() {
-    if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == false) {
+    if (GetKeyState(config.triggerKey) < 0 && triggerToggle == false) {
         triggerToggle = true;
         cout << "Triggerbot on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD2) < 0 && triggerToggle == true) {
+    else if (GetKeyState(config.triggerKey) < 0 && triggerToggle == true) {
         triggerToggle = false;
         cout << "Triggerbot off" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == false) {
+    else if (GetKeyState(config.wallhackKey) < 0 && whToggle == false) {
         whToggle = true;
         cout << "Wallhack on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD0) < 0 && whToggle == true) {
+    else if (GetKeyState(config.wallhackKey) < 0 && whToggle == true) {
         whToggle = false;
         cout << "Wallhack off" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == false) {
+    else if (GetKeyState(config.bhopKey) < 0 && bhobToggle == false) {
         bhobToggle = true;
         cout << "Bhop on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD3) < 0 && bhobToggle == true) {
+    else if (GetKeyState(config.bhopKey) < 0 && bhobToggle == true) {
         bhobToggle = false;
         cout << "Bhop off" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == false) {
+    else if (GetKeyState(config.aimbotKey) < 0 && aimbotToggle == false) {
         aimbotToggle = true;
         cout << "Aimbot on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD1) < 0 && aimbotToggle == true) {
+    else if (GetKeyState(config.aimbotKey) < 0 && aimbotToggle == true) {
         aimbotToggle = false;
         cout << "Aimbot off" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD4) < 0 && antiflashToggle == false) {
+    else if (GetKeyState(config.antiflashKey) < 0 && antiflashToggle == false) {
         antiflashToggle = true;
         cout << "Antiflash on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD4) < 0 && antiflashToggle == true) {
+    else if (GetKeyState(config.antiflashKey) < 0 && antiflashToggle == true) {
         antiflashToggle = false;
         cout << "Antiflash off" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD5) < 0 && radarToggle == false) {
+    else if (GetKeyState(config.radarKey) < 0 && radarToggle == false) {
         radarToggle = true;
         cout << "Radar on" << endl;
         Sleep(100);
     }
-    else if (GetKeyState(VK_NUMPAD5) < 0 && radarToggle == true) {
+    else if (GetKeyState(config.radarKey) < 0 && radarToggle == true) {
         radarToggle = false;
         cout << "Radar off" << endl;
         Sleep(100);

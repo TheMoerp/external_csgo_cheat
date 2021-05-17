@@ -172,6 +172,30 @@ void Config::SetConfig(std::string name, std::string value) {
 	else if (name == "stiletto") {
 		val >> stiletto;
 	}
+	else if (name == "triggerKey") {
+		val << std::hex;
+		val >> triggerKey;
+	}
+	else if (name == "aimbotKey") {
+		val << std::hex;
+		val >> aimbotKey;
+	}
+	else if (name == "wallhackKey") {
+		val << std::hex;
+		val >> wallhackKey;
+	}
+	else if (name == "antiflashKey") {
+		val << std::hex;
+		val >> antiflashKey;
+	}
+	else if (name == "radarKey") {
+		val << std::hex;
+		val >> radarKey;
+	}
+	else if (name == "bhopKey") {
+		val << std::hex;
+		val >> bhopKey;
+	}
 }
 
 
@@ -180,6 +204,14 @@ void Config::CreateConfig() {
 	std::ofstream cfgFile("config.txt");
 
 	string cfgText =
+		// keybinds
+		"triggerKey = 0x62\n"
+		"aimbotKey = 0x61\n"
+		"wallhackKey = 0x60\n"
+		"bhopKey = 0x63\n"
+		"radarKey = 0x64\n"
+		"antiflashKey = 0x65\n"
+		"\n"
 		"// autoaim FOV\n"
 		"aimbot_fov = 5\n"
 		"\n"
