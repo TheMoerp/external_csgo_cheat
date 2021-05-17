@@ -54,7 +54,7 @@ Then save it and rename the file to *autoexec.cvg*.
 
 Now everytime the knifemodel or the skins won't load just press **F4** to force update.
 
-To change the skinlayout or change other configurations use the file *config.txt*.
+You can set custom hotkeys and change the skinlayout in the file *config.txt*.
 You can look up skin IDs at [csgostash.com](https://csgostash.com/).
   
 
