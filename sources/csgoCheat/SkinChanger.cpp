@@ -21,6 +21,7 @@ void Skinchanger() {
 
 			if (curWeaponBase != 0) {
 				short curWeaponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
+				cout << curWeaponID << endl;
 				Item curItem;
 				try {
 					curItem = GetItemByID(curWeaponID);
