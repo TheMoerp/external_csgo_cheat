@@ -20,19 +20,19 @@ void Aimbot() {
 		for (int i = 1; i < 32; i++) {
 			DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);
 
-			int entityTeam, entityHealth;
-			bool entityDormant;
 			// Get entity data
-			if (entity != 0) {
-				try {
-					entityTeam = mem.ReadMemory<int>(entity + offsets.m_iTeamNum);
-					entityHealth = mem.ReadMemory<int>(entity + offsets.m_iHealth);
-					entityDormant = mem.ReadMemory<bool>(entity + offsets.m_bDormant);
-				}
+			if (entity == 0) {
+				continue;
+			}
+				//try {
+			int entityTeam = mem.ReadMemory<int>(entity + offsets.m_iTeamNum);
+			int entityHealth = mem.ReadMemory<int>(entity + offsets.m_iHealth);
+			bool entityDormant = mem.ReadMemory<bool>(entity + offsets.m_bDormant);
+				/*}
 				catch (...) {
 					continue;
-				}
-			}
+				}*/
+			
 
 			// Reset target data
 			int target = 0;
@@ -59,7 +59,7 @@ void Aimbot() {
 
 				// Get position of the enemy's head
 				DWORD entityBones = mem.ReadMemory<DWORD>(entity + offsets.m_dwBoneMatrix);
-				entityPos.x = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
+				entityPos.x = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x0C);
 				entityPos.y = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x1C);
 				entityPos.z = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);
 				/*float entityPosX = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0xC);
@@ -67,7 +67,9 @@ void Aimbot() {
 				float entityPosZ = mem.ReadMemory<float>(entityBones + 0x30 * TARGET_BONE + 0x2C);*/
 
 				// Calculate angles
-				Vec2 angleVec = (localPos - entityPos).CalculateAngles();
+				//Vec2 angleVec = (localPos - entityPos).CalculateAngles();
+				Vec3 tmp = localPos - entityPos;
+				Vec2 angleVec = tmp.CalculateAngles();
 				/*float deltaX = localPos1 - entityPosX;
 				float deltaY = localPos2 - entityPosY;
 				float deltaZ = localPos3 - entityPosZ;
@@ -81,20 +83,20 @@ void Aimbot() {
 				// Calculate distance
 				float distX = angleVec.x - localAngle.x;
 				if (distX < -89.0) {
-					distX = distX + 360.0;
+					distX += 360.0;
 				}
 				else if (distX > 89.0) {
-					distX = distX - 360.0;
+					distX -=  360.0;
 				}
 				if (distX < 0.0) {
 					distX = -distX;
 				}
 				float distY = angleVec.y - localAngle.y;
 				if (distY < -180.0) {
-					distY = distY + 360.0;
+					distY +=  360.0;
 				}
 				else if (distY > 180.0) {
-					distY = distY - 360.0;
+					distY -= 360.0;
 				}
 				if (distY < 0.0) {
 					distY = -distY;
@@ -127,7 +129,9 @@ void Aimbot() {
 				// Checks if there is a target set
 				if (target != 0 && targetHealth > 0 && targetDormant == false) {
 					// Calculate angles
-					Vec2 angleVec = (localPos - targetPos).CalculateAngles();
+					//Vec2 angleVec = (localPos - targetPos).CalculateAngles();
+					Vec3 tmp = localPos - targetPos;
+					Vec2 angleVec = tmp.CalculateAngles();
 					/*float deltaX = localPos1 - targetPosX;
 					float deltaY = localPos2 - targetPosY;
 					float deltaZ = localPos3 - targetPosZ;
