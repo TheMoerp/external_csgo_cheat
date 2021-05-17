@@ -13,7 +13,7 @@ const int TARGET_BONE = 8;
 
 
 
-void aimbot() {
+void Aimbot() {
 	// Get localplayer data
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	if (localPlayer) {

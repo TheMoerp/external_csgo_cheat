@@ -1,12 +1,10 @@
-#include <iostream>
-
 #include "Trigger.h"
 
 using namespace std;
 Trigger trigger;
 
 
-void Trigger::Run()
+void Triggerbot()
 {
 	INPUT down;
 	down.mi.dx = 0;
@@ -29,7 +27,11 @@ void Trigger::Run()
 	DWORD crosshair = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iCrosshairId);
 	DWORD crosshairEntity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (crosshair - 1) * 0x10);
 
-	int triggerInterval = GetRecoveryTime(localPlayer);
+	DWORD weaponEntity = mem.ReadMemory<DWORD>(_localPlayer + offsets.m_hActiveWeapon) & 0xFFF;
+	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10);
+	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex);
+	
+	int triggerInterval = 
 	if (crosshairEntity != 0) {
 		int localPlayerTeam = mem.ReadMemory<int>(localPlayer + offsets.m_iTeamNum);
 		int crosshairEntityTeam = mem.ReadMemory<int>(crosshairEntity + offsets.m_iTeamNum);

@@ -11,6 +11,7 @@ public:
 	void Normalize();
 };
 
+
 class Vec3 {
 public:
 	float x, y, z ;
@@ -21,4 +22,13 @@ public:
 
 	void Normalize();
 	Vec2 CalculateAngles();
+};
+
+
+class Item {
+public:
+	int skinID;
+	int seed;
+	
+	float rstTime;
 };

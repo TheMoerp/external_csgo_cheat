@@ -1,12 +1,9 @@
-#include <iostream>
-
 #include "Bhop.h"
 
-Bhop bhop;
 
 using namespace std;
 
-void Bhop::Run() {
+void Bhop() {
 	// Get flag
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	int flags = mem.ReadMemory<int>(localPlayer + offsets.m_fFlags);

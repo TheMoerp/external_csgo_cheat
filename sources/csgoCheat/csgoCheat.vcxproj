@@ -152,7 +152,7 @@
     <ClCompile Include="structures.cpp" />
     <ClCompile Include="Trigger.cpp" />
     <ClCompile Include="Wallhack.cpp" />
-    <ClCompile Include="WeaponSkins.cpp" />
+    <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="aimbot.h" />
@@ -167,7 +167,7 @@
     <ClInclude Include="structures.h" />
     <ClInclude Include="Trigger.h" />
     <ClInclude Include="Wallhack.h" />
-    <ClInclude Include="WeaponSkins.h" />
+    <ClInclude Include="weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

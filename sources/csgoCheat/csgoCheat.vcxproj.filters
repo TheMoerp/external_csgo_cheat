@@ -30,9 +30,6 @@
     <ClCompile Include="SkinChanger.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="WeaponSkins.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
     <ClCompile Include="KnifeChanger.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
@@ -57,6 +54,9 @@
     <ClCompile Include="mem.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bhop.h">
@@ -72,9 +72,6 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="SkinChanger.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="WeaponSkins.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="KnifeChanger.h">
@@ -96,6 +93,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="mem.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

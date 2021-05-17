@@ -7,7 +7,7 @@
 #include "memory.h"
 #include "structures.h"
 
-void aimbot();
+void Aimbot();
 
 
 
