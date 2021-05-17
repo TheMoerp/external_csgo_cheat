@@ -3,6 +3,7 @@
 Memory mem;
 using namespace std;
 
+
 // Get a process by windowname
 DWORD Memory::GetProcessID(const wchar_t* _windowName) {
 	do {
@@ -16,6 +17,7 @@ DWORD Memory::GetProcessID(const wchar_t* _windowName) {
 	cout << "" << endl;
 	return pID;
 }
+
 
 // Get a module by name
 MODULEENTRY32 Memory::GetModule(DWORD _pID, const wchar_t* _moduleName) {
@@ -36,10 +38,12 @@ MODULEENTRY32 Memory::GetModule(DWORD _pID, const wchar_t* _moduleName) {
 	return mEntry;
 }
 
+
 void Memory::Setup() {
 	offsets.processID = GetProcessID(L"Counter-Strike: Global Offensive");
 	offsets.hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, offsets.processID);
 }
+
 
 // Get client.dll and engine.dll
 void Memory::GetModules() {
