@@ -4,7 +4,7 @@
 
 CS:GO Moerper is a lightweight external multicheat. It's just an experimental project and it's not intended for cheating in competitive matchmaking. Nobody likes tryhard cheater!
 
-  
+![Preview](https://github.com/TheMoerp/external_csgo_cheat/blob/master/images/themoerper_ext_preview.png)
 
 ### Features
 - Wallhack
