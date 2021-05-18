@@ -5,9 +5,9 @@ using namespace std;
 
 
 // Get a process by windowname
-DWORD Memory::GetProcessID(const wchar_t* _windowName) {
+DWORD Memory::GetProcessID(const wchar_t* windowName) {
 	do {
-		hWnd = FindWindow(0, _windowName);
+		hWnd = FindWindow(0, windowName);
 		Sleep(50);
 	} while (!hWnd); 
 
@@ -20,14 +20,14 @@ DWORD Memory::GetProcessID(const wchar_t* _windowName) {
 
 
 // Get a module by name
-MODULEENTRY32 Memory::GetModule(DWORD _pID, const wchar_t* _moduleName) {
-	hSS= CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, _pID);
+MODULEENTRY32 Memory::GetModule(DWORD pID, const wchar_t* moduleName) {
+	hSS= CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, pID);
 	mEntry.dwSize = sizeof(MODULEENTRY32);
 
 	if (hSS!= INVALID_HANDLE_VALUE) {
 		if (Module32First(hSS, &mEntry)) {
 			do {
-				if (!wcscmp((const wchar_t*)mEntry.szModule, _moduleName)) {
+				if (!wcscmp((const wchar_t*)mEntry.szModule, moduleName)) {
 					break;
 				}
 			} while (Module32Next(hSS, &mEntry));
@@ -56,4 +56,18 @@ void Memory::GetModules() {
 		offsets.engineBase = (DWORD)GetModule(offsets.processID, L"engine.dll").modBaseAddr;
 		Sleep(50);
 	} while (!offsets.engineBase);
+}
+
+// Read string from memory
+std::string Memory::ReadStringMemory(DWORD address) {
+	string str;
+	StringChar_t tmp = ReadMemory<StringChar_t>(address);
+
+	for (int i = 0; i < sizeof(StringChar_t); i++) {
+		if (tmp.buffer[i] == '\0') {
+			break;
+		}
+		str += tmp.buffer[i];
+	}
+	return str;
 }
