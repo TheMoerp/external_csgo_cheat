@@ -1,6 +1,8 @@
 build/
 .vs
 Debug
+Debug/
+Release/
 x64
 .*.swp
 .*~
