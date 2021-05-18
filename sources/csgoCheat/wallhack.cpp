@@ -2,6 +2,11 @@
 
 using namespace std;
 
+string 
+
+
+
+
 
 void Wallhack() {
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
