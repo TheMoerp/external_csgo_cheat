@@ -17,7 +17,6 @@
  
 ## Usage
 
-To use it you have to install [Visual Studio](https://visualstudio.microsoft.com/de/downloads/) with the Workload *Desktop development with C++*.
 Compile with the *x86* option. If everything is compiled and ready, you need to start cs:go and then run the *TheMoerper_external.exe*.
 The cheat will grab the running process and you're ready to go.
 Since this is an external cheat some features can be glitchy at times.
