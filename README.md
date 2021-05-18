@@ -36,13 +36,13 @@ Toggle the autoaim with the key **NUM_1**. When the crosshair is near the enemy'
 Toggle the triggerbot with the key **NUM_2**. It will shoot if you hover over an enemy hitbox. The shooting interval equals the recovery time of the current weapon.
 
 ##### Bhop script
-Toggle the bhop script with the key **NUM_3**. Just keep pressing **Space** an start bhopping.
+Toggle the bhop script with the key **NUM_3**. Just keep pressing **Space** and start bhopping.
 
 ##### Antiflash
 Toggle the antiflash with the key **NUM_4**. No more looking away for you :).
 
 ##### Skinchanger
-Since the knifechanger can be pretty glitchy I recomment to create a autoconfig file for csgo. Just create a file named *autoexec.txt* in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
+Since the knifechanger can be pretty glitchy I recommend to create a autoconfig file for csgo. Just create a file named *autoexec.txt* in `Programm Files (x86)/Steam/steamapps/common/Counter-Strike Global Offensive/csgo/csfg` and write the following lines:
     
 
     bind f4 "record 1;stop;"
