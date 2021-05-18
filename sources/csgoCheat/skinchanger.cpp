@@ -11,12 +11,14 @@ int modelIndex = 0;
 
 void Skinchanger() {
 	int knifeID = config.knifeID;
+
 	// The offsets of knifemodels differs after the tenth knife
 	int knifeIDOffset = knifeID < 10 ? 0 : 1;
 	int knifeItemID = GetKnifeItemDefinitionID(knifeID);
 
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	if (localPlayer) {
+
 		// Iterates to every weapon slot (primary, secondary, knife). If the player holds a bomb for example it's set into an weapon slot
 		for (int i = 0; i < 8; i++) {
 			DWORD curWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hMyWeapons + i * 0x4) & 0xFFF;

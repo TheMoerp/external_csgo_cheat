@@ -33,7 +33,8 @@ public:
 class Item {
 public:
 	int skinID;
-	int seed;
+	int seed; // Currently not in use
 	
+	// Recovery Time
 	int rstTime;
 };

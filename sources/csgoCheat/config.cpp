@@ -40,7 +40,6 @@ void Config::ReadConfigs() {
 	}
 }
 
-
 void Config::SetConfig(std::string name, std::string value) {
 	stringstream val(value);
 	if (name == "aimbot_fov") {
@@ -204,7 +203,7 @@ void Config::CreateConfig() {
 	std::ofstream cfgFile("config.txt");
 
 	string cfgText =
-		// keybinds
+		"// keybinds\n"
 		"triggerKey = 0x62\n"
 		"aimbotKey = 0x61\n"
 		"wallhackKey = 0x60\n"
