@@ -1,8 +1,8 @@
-# CS:GO Moerper
+# TheMoerper external
 
   
 
-CS:GO Moerper is a lightweight external multicheat. It's just an experimental project and it's not intended for cheating in competitive matchmaking. Nobody likes tryhard cheater!
+*TheMoerper external* is a lightweight external multicheat. It's just an experimental project and it's not intended for cheating in competitive matchmaking. Nobody likes tryhard cheater!
 
 ![Preview](https://github.com/TheMoerp/external_csgo_cheat/blob/master/images/themoerper_ext_preview.png)
 
@@ -55,7 +55,7 @@ Then save it and rename the file to *autoexec.cvg*.
 Now everytime the knifemodel or the skins won't load just press **F4** to force update.
 
 You can set custom hotkeys and change the skinlayout in the file *config.txt*.
-You can look up skin IDs at [csgostash.com](https://csgostash.com/).
+You can look up skin IDs at [csgostash.com](https://csgostash.com/) and Virtual-Key Codes at [docs.microsoft.com](https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes).
   
 
 #### USE AT YOUR OWN RISK!!!
