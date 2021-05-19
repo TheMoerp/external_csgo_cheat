@@ -1,0 +1,56 @@
+// keybinds
+triggerKey = 0x62
+aimbotKey = 0x61
+wallhackKey = 0x60
+bhopKey = 0x63
+radarKey = 0x64
+antiflashKey = 0x65
+
+// autoaim FOV
+aimbot_fov = 5
+
+// knife ID (bayonet = 0, flip = 2, karambit = 4, m9bayonet = 5, huntsman = 6, falchion = 7, navaja = 14, stiletto = 16)
+knife_id = 5
+
+// skin layout
+desertEagle = 37
+dualBerettas = 625
+fiveSeven = 979
+glock18 = 957
+p2000 = 389
+p250 = 678
+tec9 = 179
+ak47 = 44
+aug = 690
+awp = 736
+famas = 919
+g3sg1 = 712
+galilAr = 1038
+m4a4 = 309
+scar20 = 597
+ssg08 = 1048
+mac10 = 433
+mp7 = 696
+mp9 = 1037
+ppBizon = 676
+p90 = 359
+ump45 = 556
+mag7 = 961
+nova = 537
+sawedOff = 638
+xm1014 = 850
+m249 = 902
+negev = 763
+usps = 1040
+m4a1s = 587
+cz75 = 270
+mp5sd = 915
+revolver = 522
+m9Bayonet = 577
+bayonet = 417
+flip = 572
+karambit = 38
+huntsman = 572
+falchion = 572
+navaja = 572
+stiletto = 572

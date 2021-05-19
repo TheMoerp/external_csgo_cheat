@@ -2,11 +2,6 @@
 
 using namespace std;
 
-string 
-
-
-
-
 
 void Wallhack() {
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
@@ -39,12 +34,11 @@ void Wallhack() {
 
 		// Checks if the entity is an enemy
 		if (teamID != localTeam) {
-
 			// Sets the glowing color 
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x4, 2.0);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, 0.0);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0xC, 0.0);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x10, 1);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x4, 2.0f);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, 0.0f);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0xC, 0.0f);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x10, 1.0f);
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x24, true);
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x25, false);
 		}

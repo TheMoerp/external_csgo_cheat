@@ -59,15 +59,15 @@ void Memory::GetModules() {
 }
 
 // Read string from memory
-std::string Memory::ReadStringMemory(DWORD address) {
-	string str;
-	StringChar_t tmp = ReadMemory<StringChar_t>(address);
-
-	for (int i = 0; i < sizeof(StringChar_t); i++) {
-		if (tmp.buffer[i] == '\0') {
-			break;
-		}
-		str += tmp.buffer[i];
-	}
-	return str;
-}
+//std::string Memory::ReadStringMemory(DWORD address) {
+//	string str;
+//	StringChar_t tmp = ReadMemory<StringChar_t>(address);
+//
+//	for (int i = 0; i < sizeof(StringChar_t); i++) {
+//		if (tmp.buffer[i] == '\0') {
+//			break;
+//		}
+//		str += tmp.buffer[i];
+//	}
+//	return str;
+//}

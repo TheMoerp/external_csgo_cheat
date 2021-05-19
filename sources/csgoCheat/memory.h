@@ -27,7 +27,7 @@ public:
 
 	// Read value from memory
 	template <typename T>
-	T ReadMemory(DWORD address) {
+	T ReadMemory(DWORD _address) {
 		T buffer;
 		ReadProcessMemory(offsets.hProcess, (LPVOID)_address, &buffer, sizeof(buffer), NULL);
 		return buffer;
@@ -36,13 +36,13 @@ public:
 	
 	// Write value from memory
 	template <typename T>
-	void WriteMemory(DWORD address, T val) {
-		WriteProcessMemory(offsets.hProcess, (LPVOID)address, &val, sizeof(val), NULL);
+	void WriteMemory(DWORD _address, T val) {
+		WriteProcessMemory(offsets.hProcess, (LPVOID)_address, &val, sizeof(val), NULL);
 	}
 
 	
 	// Read string from memory
-	std::string ReadStringMemory(DWORD address);
+	/*std::string ReadStringMemory(DWORD address);*/
 };
 
 
