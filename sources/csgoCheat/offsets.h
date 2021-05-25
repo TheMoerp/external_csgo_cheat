@@ -37,12 +37,12 @@ public:
 	DWORD model_ambient_min = 0x58D05C;
 
 	DWORD dwClientState_ViewAngles = 0x4D90;
-	DWORD dwClientState = 0x589FE4;
-	DWORD dwLocalPlayer = 0xD8E2CC;
+	DWORD dwClientState = 0x587FE4;
+	DWORD dwLocalPlayer = 0xD892CC;
 	DWORD dwbSendPackets = 0xD779A;
-	DWORD dwEntityList = 0x4DA720C;
-	DWORD dwForceJump = 0x5250FFC;
-	DWORD dwGlowObjectManager = 0x52EF6C8;//0x52EF6B0;
+	DWORD dwEntityList = 0x4DA20DC;
+	DWORD dwForceJump = 0x524BECC;
+	DWORD dwGlowObjectManager = 0x52EA550;
 
 
 	DWORD processID = 0;
