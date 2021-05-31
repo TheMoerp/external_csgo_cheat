@@ -71,7 +71,7 @@ QCheckBox:rgb(255, 255, 255);</string>
      <string>radar</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labMain">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -98,7 +98,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>The Moerper external</string>
     </property>
    </widget>
-   <widget class="Line" name="line">
+   <widget class="Line" name="lineH1">
     <property name="geometry">
      <rect>
       <x>-10</x>
@@ -111,7 +111,7 @@ border-color: rgb(255, 255, 255);</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="Line" name="line_2">
+   <widget class="Line" name="lineV1">
     <property name="geometry">
      <rect>
       <x>103</x>
@@ -124,7 +124,7 @@ border-color: rgb(255, 255, 255);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="labVisuals_2">
+   <widget class="QLabel" name="labShooting">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -146,7 +146,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>Shooting</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="checkAimbot">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -164,7 +164,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>aimbot</string>
     </property>
    </widget>
-   <widget class="Line" name="line_3">
+   <widget class="Line" name="lineV2">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -177,7 +177,7 @@ border-color: rgb(255, 255, 255);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="labVisuals_3">
+   <widget class="QLabel" name="labMisc">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -199,7 +199,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>Misc</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labVisuals_4">
+   <widget class="QLabel" name="labSkinchanger">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -221,7 +221,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>Skinchanger</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="checkSkinchanger">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -239,7 +239,7 @@ border-color: rgb(255, 255, 255);</string>
      <string>skinchanger</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_3">
+   <widget class="QCheckBox" name="checkKnifechnager">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -264,7 +264,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>knifechanger</string>
     </property>
    </widget>
-   <widget class="Line" name="line_4">
+   <widget class="Line" name="lineV3">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -277,7 +277,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_4">
+   <widget class="QCheckBox" name="checkBhop">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -295,7 +295,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>bhop</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_5">
+   <widget class="QCheckBox" name="checkNoflash">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -313,7 +313,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>noflash</string>
     </property>
    </widget>
-   <widget class="Line" name="line_5">
+   <widget class="Line" name="lineH2">
     <property name="geometry">
      <rect>
       <x>-10</x>
@@ -326,7 +326,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushChangeSkin">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -344,7 +344,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>change skinlayout</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushChangeKeys">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -362,7 +362,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>change hotkeys</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkRadar_2">
+   <widget class="QCheckBox" name="checkWallhack">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -380,7 +380,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>wallhack</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_6">
+   <widget class="QCheckBox" name="checkTrigger">
     <property name="geometry">
      <rect>
       <x>130</x>
@@ -398,7 +398,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>triggerbot</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton">
+   <widget class="QRadioButton" name="radioRed">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -416,7 +416,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>red</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_2">
+   <widget class="QRadioButton" name="radioGreen">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -434,7 +434,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>green</string>
     </property>
    </widget>
-   <widget class="QRadioButton" name="radioButton_3">
+   <widget class="QRadioButton" name="radioBlue">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -452,7 +452,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>blue</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushQuit">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -470,7 +470,7 @@ gridline-color: rgb(255, 255, 255);</string>
      <string>Quit</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushReset">
     <property name="geometry">
      <rect>
       <x>300</x>
