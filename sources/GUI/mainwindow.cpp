@@ -59,6 +59,38 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::CheckboxChanged() {
+   wallhackToggle = checkWallhack->isChecked();
+   radarToggle = checkWallhack->isChecked();
+   aimbotToggle = checkWallhack->isChecked();
+   triggerToggle = checkWallhack->isChecked();
+   skinchangerToggle = checkWallhack->isChecked();
+   knifechangerToggle = checkWallhack->isChecked();
+   bhopToggle = checkWallhack->isChecked();
+   noflashToggle = checkWallhack->isChecked();
+
+   bool whRedToggle = radioRed->isChecked();
+   bool whGreenToggle = radioGreen->isChecked();
+   bool whBlueToggle = radioBlue->isChecked();
+
+   if (whRedToggle) {
+       whRed = 2.0;
+       whGreen = 0.0;
+       whBlue = 0.0;
+   }
+   else if (whGreenToggle) {
+       whRed = 0.0;
+       whGreen = 2.0;
+       whBlue = 0.0;
+   }
+   else if (whBlueToggle) {
+       whRed = 0.0;
+       whGreen = 0.0;
+       whBlue = 2.0;
+   }
+}
+
+
+void MainWindow::CheckboxStatus() {
 
 }
 
@@ -78,9 +110,5 @@ void MainWindow::Resetproccess() {
 }
 
 void MainWindow::Quit() {
-
-}
-
-void MainWindow::CheckboxStatus() {
 
 }
