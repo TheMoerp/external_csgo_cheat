@@ -81,7 +81,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineDesartEagle">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -219,7 +219,7 @@ border-radius: 3px;</string>
     <string>P250</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineDualBerettas">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -233,7 +233,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineFiveSeven">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -247,7 +247,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineGlock18">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -261,7 +261,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineTec9">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -329,7 +329,7 @@ border-radius: 3px;</string>
     <string>R8 Revolver</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="lineP2000">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -343,7 +343,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="lineP250">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -357,7 +357,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
+  <widget class="QLineEdit" name="lineUSPS">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -371,7 +371,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
+  <widget class="QLineEdit" name="lineCZ75">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -385,7 +385,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_10">
+  <widget class="QLineEdit" name="lineRevolver">
    <property name="geometry">
     <rect>
      <x>90</x>
@@ -418,7 +418,7 @@ border-radius: 3px;</string>
     <string>Pistols</string>
    </property>
   </widget>
-  <widget class="Line" name="line_2">
+  <widget class="Line" name="lineV1">
    <property name="geometry">
     <rect>
      <x>143</x>
@@ -642,7 +642,7 @@ border-radius: 3px;</string>
     <string>M4A1-S</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_11">
+  <widget class="QLineEdit" name="lineAK47">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -656,7 +656,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_12">
+  <widget class="QLineEdit" name="lineAUG">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -670,7 +670,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_13">
+  <widget class="QLineEdit" name="lineAWP">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -684,7 +684,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_14">
+  <widget class="QLineEdit" name="lineFAMAS">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -698,7 +698,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_15">
+  <widget class="QLineEdit" name="lineG35G1">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -712,7 +712,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_16">
+  <widget class="QLineEdit" name="lineGalilAR">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -726,7 +726,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_17">
+  <widget class="QLineEdit" name="lineM249">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -740,7 +740,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_18">
+  <widget class="QLineEdit" name="lineM4A4">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -754,7 +754,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_19">
+  <widget class="QLineEdit" name="lineSCAR20">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -768,7 +768,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_20">
+  <widget class="QLineEdit" name="lineSG553">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -782,7 +782,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_21">
+  <widget class="QLineEdit" name="lineSSG08">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -796,7 +796,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_22">
+  <widget class="QLineEdit" name="lineM4A1S">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -829,7 +829,7 @@ border-radius: 3px;</string>
     <string>SMGs</string>
    </property>
   </widget>
-  <widget class="Line" name="line_3">
+  <widget class="Line" name="lineV2">
    <property name="geometry">
     <rect>
      <x>290</x>
@@ -954,7 +954,7 @@ border-radius: 3px;</string>
     <string>MP9</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_23">
+  <widget class="QLineEdit" name="lineMAC10">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -968,7 +968,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_24">
+  <widget class="QLineEdit" name="lineP90">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -982,7 +982,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_25">
+  <widget class="QLineEdit" name="lineMP5SD">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -996,7 +996,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_26">
+  <widget class="QLineEdit" name="lineUMP45">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -1010,7 +1010,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_27">
+  <widget class="QLineEdit" name="linePPBizon">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -1024,7 +1024,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_28">
+  <widget class="QLineEdit" name="lineMP7">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -1038,7 +1038,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_29">
+  <widget class="QLineEdit" name="lineMP9">
    <property name="geometry">
     <rect>
      <x>380</x>
@@ -1052,7 +1052,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="Line" name="line_4">
+  <widget class="Line" name="lineV3">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1180,7 +1180,7 @@ border-radius: 3px;</string>
     <string>M249</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_30">
+  <widget class="QLineEdit" name="lineSawedOff">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1194,7 +1194,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_31">
+  <widget class="QLineEdit" name="lineMAG7">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1208,7 +1208,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_32">
+  <widget class="QLineEdit" name="lineNova">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1222,7 +1222,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_33">
+  <widget class="QLineEdit" name="lineXM1014">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1236,7 +1236,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_34">
+  <widget class="QLineEdit" name="lineNegev">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1250,7 +1250,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_35">
+  <widget class="QLineEdit" name="lineM249_2">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1264,7 +1264,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="Line" name="line_5">
+  <widget class="Line" name="lineH3">
    <property name="geometry">
     <rect>
      <x>-10</x>
@@ -1277,7 +1277,7 @@ border-radius: 3px;</string>
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushSave">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -1287,10 +1287,10 @@ border-radius: 3px;</string>
     </rect>
    </property>
    <property name="text">
-    <string>Load Configs</string>
+    <string>Save Layout</string>
    </property>
   </widget>
-  <widget class="Line" name="line_6">
+  <widget class="Line" name="lineH2">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -1322,7 +1322,7 @@ border-radius: 3px;</string>
     <string>Knife</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="comboKnifeModel">
    <property name="geometry">
     <rect>
      <x>510</x>
@@ -1369,7 +1369,7 @@ border-radius: 3px;</string>
     <string>Skin</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_36">
+  <widget class="QLineEdit" name="lineKnifeSkin">
    <property name="geometry">
     <rect>
      <x>510</x>
