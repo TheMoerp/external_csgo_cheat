@@ -98,7 +98,7 @@ QCheckBox:rgb(255, 255, 255);</string>
 border-radius: 3px;</string>
    </property>
    <property name="inputMask">
-    <string>0000</string>
+    <string/>
    </property>
    <property name="clearButtonEnabled">
     <bool>false</bool>

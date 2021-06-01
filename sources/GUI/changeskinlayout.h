@@ -5,6 +5,11 @@
 #include <QLineEdit>
 #include <QComboBox>
 #include <QDialogButtonBox>
+#include <fstream>
+#include <algorithm>
+#include <string>
+#include <iostream>
+#include <sstream>
 #include "ui_changeskinlayout.h"
 
 class QLineEdit;
@@ -24,8 +29,12 @@ public:
     QComboBox *comboKnife;
     QDialogButtonBox *pushConfirm;
 
+    void LoadSkinConfig();
+
 private:
     Ui::ChangeSkinLayout ui;
+
+    void SaveSkinLayout();
 };
 
 #endif // CHANGESKINLAYOUT_H

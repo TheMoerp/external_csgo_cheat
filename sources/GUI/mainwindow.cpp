@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent)
     changeSkinLayout = new ChangeSkinLayout(this);
     changeHotkeys = new class ChangeHotkeys(this);
 
+    changeSkinLayout->LoadSkinConfig();
+
     // Get Objects
     checkWallhack = ui->checkWallhack;
     checkRadar = ui->checkRadar;
@@ -31,6 +33,14 @@ MainWindow::MainWindow(QWidget *parent)
     pushChangeKeys = ui->pushChangeKeys;
     pushReset = ui->pushReset;
     pushQuit = ui->pushQuit;
+
+    connect(checkWallhack, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
+    connect(checkRadar, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
+    connect(checkAimbot, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
+    connect(pushChangeKeys, SIGNAL(clicked()), this, SLOT(ChangeHotkeys()));
+    connect(pushReset, SIGNAL(clicked()), this, SLOT(Resetproccess()));
+    connect(pushQuit, SIGNAL(clicked()), this, SLOT(Quit()));
+    connect(pushChangeSkin, SIGNAL(clicked()), this, SLOT(ChangeSkinlayout()));
 
     connect(changeSkinLayout->pushConfirm, SIGNAL(accepted()), this, SLOT(SkinlayoutChanged()));
 }

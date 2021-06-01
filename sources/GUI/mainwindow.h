@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include "changeskinlayout.h"
 #include "changehotkeys.h"
+#include <QPushButton>
 
 
 class QPushButton;
