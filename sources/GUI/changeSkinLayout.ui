@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>ChangeSkinLayout</class>
+ <widget class="QDialog" name="ChangeSkinLayout">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -10,11 +10,23 @@
     <height>533</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>629</width>
+    <height>533</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>629</width>
+    <height>533</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(48, 48, 48);
+   <string notr="true">background-color: rgb(61, 61, 61);
 color: rgb(255, 255, 255);
 QCheckBox:rgb(255, 255, 255);</string>
   </property>
@@ -38,9 +50,9 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>0</y>
      <width>181</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
@@ -78,6 +90,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -104,6 +120,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="text">
     <string>Dual Berettas</string>
    </property>
@@ -116,6 +137,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="text">
     <string>Five-Seven</string>
@@ -130,6 +156,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="text">
     <string>Glock-18</string>
    </property>
@@ -142,6 +173,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="text">
     <string>Tec-9</string>
@@ -156,6 +192,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="text">
     <string>P2000</string>
    </property>
@@ -168,6 +209,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="text">
     <string>P250</string>
@@ -182,6 +228,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_3">
    <property name="geometry">
@@ -191,6 +241,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_4">
@@ -202,6 +256,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_5">
    <property name="geometry">
@@ -212,6 +270,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLabel" name="label_9">
    <property name="geometry">
@@ -221,6 +283,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="text">
     <string>USP-S</string>
@@ -235,6 +302,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>16</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="text">
     <string>CZ75-Auto</string>
    </property>
@@ -247,6 +319,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>71</width>
      <height>16</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="text">
     <string>R8 Revolver</string>
@@ -261,6 +338,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_7">
    <property name="geometry">
@@ -270,6 +351,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_8">
@@ -281,6 +366,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_9">
    <property name="geometry">
@@ -291,6 +380,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_10">
    <property name="geometry">
@@ -300,6 +393,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -554,6 +651,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_12">
    <property name="geometry">
@@ -563,6 +664,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_13">
@@ -574,6 +679,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_14">
    <property name="geometry">
@@ -583,6 +692,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_15">
@@ -594,6 +707,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_16">
    <property name="geometry">
@@ -603,6 +720,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_17">
@@ -614,6 +735,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_18">
    <property name="geometry">
@@ -623,6 +748,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_19">
@@ -634,6 +763,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_20">
    <property name="geometry">
@@ -643,6 +776,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_21">
@@ -654,6 +791,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_22">
    <property name="geometry">
@@ -663,6 +804,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_26">
@@ -818,6 +963,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_24">
    <property name="geometry">
@@ -827,6 +976,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_25">
@@ -838,6 +991,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_26">
    <property name="geometry">
@@ -847,6 +1004,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_27">
@@ -858,6 +1019,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_28">
    <property name="geometry">
@@ -868,6 +1033,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_29">
    <property name="geometry">
@@ -877,6 +1046,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="Line" name="line_4">
@@ -1016,6 +1189,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_31">
    <property name="geometry">
@@ -1025,6 +1202,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_32">
@@ -1036,6 +1217,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_33">
    <property name="geometry">
@@ -1045,6 +1230,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_34">
@@ -1056,6 +1245,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_35">
    <property name="geometry">
@@ -1065,6 +1258,10 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>41</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
    </property>
   </widget>
   <widget class="Line" name="line_5">
@@ -1093,13 +1290,106 @@ QCheckBox:rgb(255, 255, 255);</string>
     <string>Load Configs</string>
    </property>
   </widget>
+  <widget class="Line" name="line_6">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>300</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_41">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>320</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Knife</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>370</y>
+     <width>91</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>M9 Bayonet</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_42">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>370</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;Microsoft PhagsPa&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Model</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_43">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>410</y>
+     <width>41</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 8pt &quot;Microsoft PhagsPa&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Skin</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_36">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>410</y>
+     <width>41</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 1px solid rgb(130, 130, 130);
+border-radius: 3px;</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>ChangeSkinLayout</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -1115,7 +1405,7 @@ QCheckBox:rgb(255, 255, 255);</string>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>ChangeSkinLayout</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

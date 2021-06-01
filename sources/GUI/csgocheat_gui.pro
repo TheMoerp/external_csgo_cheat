@@ -18,6 +18,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    Hotkeys.ui \
     changeSkinLayout.ui \
     mainwindow.ui
 

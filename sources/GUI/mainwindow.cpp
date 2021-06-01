@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "changeskinlayout.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -7,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("The Moerper external");
+
+    changeSkinLayout = new ChangeSkinLayout(this);
 
     // Get Objects
     checkWallhack = ui->checkWallhack;
@@ -59,7 +62,8 @@ void MainWindow::CheckboxChanged() {
 
 
 void MainWindow::ChangeSkinlayout() {
-
+   changeSkinLayout->show();
+   changeSkinLayout->activateWindow();
 }
 
 void MainWindow::ChangeHotkeys() {
@@ -74,3 +78,6 @@ void MainWindow::Quit() {
 
 }
 
+void MainWindow::CheckboxStatus() {
+
+}

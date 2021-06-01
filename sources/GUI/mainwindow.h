@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "changeskinlayout.h"
+#include <QCheckBox>
 
 class QPushButton;
 class QCheckBox;
@@ -21,6 +23,7 @@ public:
 
 private slots:
     void CheckboxChanged();
+    void CheckboxStatus();
     void ChangeHotkeys();
     void Resetproccess();
     void Quit();
@@ -28,6 +31,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    ChangeSkinLayout *changeSkinLayout;
 
     QCheckBox *checkWallhack, *checkRadar, *checkAimbot, *checkTrigger,
               *checkSkinchanger, *checkKnifechanger, *checkBhop, *checkNoflash;

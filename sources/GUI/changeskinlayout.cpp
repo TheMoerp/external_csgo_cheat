@@ -1,6 +1,9 @@
 #include "changeskinlayout.h"
+#include <QScreen>
 
-ChangeSkinLayout::ChangeSkinLayout()
+ChangeSkinLayout::ChangeSkinLayout(QWidget *parent)
+    : QDialog(parent)
 {
-
+    ui.setupUi(this);
+    setWindowTitle("Skinlayout");
 }
