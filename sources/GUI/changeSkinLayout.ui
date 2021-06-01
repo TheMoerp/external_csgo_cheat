@@ -34,7 +34,7 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>490</y>
+     <y>470</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -424,7 +424,7 @@ border-radius: 3px;</string>
      <x>143</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -546,27 +546,11 @@ border-radius: 3px;</string>
     <string>Galil AR</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_20">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>290</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 8pt &quot;Microsoft PhagsPa&quot;;</string>
-   </property>
-   <property name="text">
-    <string>M249</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_21">
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>320</y>
+     <y>290</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -582,7 +566,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>350</y>
+     <y>320</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -598,7 +582,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>380</y>
+     <y>350</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -614,7 +598,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>410</y>
+     <y>380</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -630,7 +614,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>440</y>
+     <y>410</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -726,7 +710,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineM249">
+  <widget class="QLineEdit" name="lineM4A4">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -740,7 +724,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineM4A4">
+  <widget class="QLineEdit" name="lineSCAR20">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -754,7 +738,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineSCAR20">
+  <widget class="QLineEdit" name="lineSG553">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -768,7 +752,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineSG553">
+  <widget class="QLineEdit" name="lineSSG08">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -782,25 +766,11 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineSSG08">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>410</y>
-     <width>41</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid rgb(130, 130, 130);
-border-radius: 3px;</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineM4A1S">
    <property name="geometry">
     <rect>
      <x>230</x>
-     <y>440</y>
+     <y>410</y>
      <width>41</width>
      <height>21</height>
     </rect>
@@ -835,7 +805,7 @@ border-radius: 3px;</string>
      <x>290</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -1058,7 +1028,7 @@ border-radius: 3px;</string>
      <x>430</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -1250,7 +1220,7 @@ border-radius: 3px;</string>
 border-radius: 3px;</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineM249_2">
+  <widget class="QLineEdit" name="lineM249">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1268,7 +1238,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>-10</x>
-     <y>470</y>
+     <y>450</y>
      <width>641</width>
      <height>20</height>
     </rect>
@@ -1281,7 +1251,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>490</y>
+     <y>470</y>
      <width>80</width>
      <height>21</height>
     </rect>
