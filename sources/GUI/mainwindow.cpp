@@ -52,3 +52,25 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::CheckboxChanged() {
+
+}
+
+
+void MainWindow::ChangeSkinlayout() {
+
+}
+
+void MainWindow::ChangeHotkeys() {
+
+}
+
+void MainWindow::Resetproccess() {
+
+}
+
+void MainWindow::Quit() {
+
+}
+
