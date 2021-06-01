@@ -41,4 +41,7 @@ ChangeSkinLayout::ChangeSkinLayout(QWidget *parent)
     lineUMP45 = ui.lineUMP45;
     lineUSPS = ui.lineUSPS;
     lineXM1014 = ui.lineXM1014;
+    lineKnife = ui.lineKnifeSkin;
+
+    comboKnife = ui.comboKnifeModel;
 }

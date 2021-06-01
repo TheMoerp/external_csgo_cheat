@@ -676,7 +676,7 @@ border-radius: 3px;</string>
     <set>Qt::ImhDigitsOnly</set>
    </property>
    <property name="inputMask">
-    <string/>
+    <string>0000</string>
    </property>
    <property name="placeholderText">
     <string/>
@@ -1415,9 +1415,36 @@ border-radius: 3px;</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft JhengHei UI Light</family>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtCurrent</enum>
+   </property>
    <item>
     <property name="text">
      <string>M9 Bayonet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Flip knife</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bayonet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Karambit</string>
     </property>
    </item>
   </widget>
