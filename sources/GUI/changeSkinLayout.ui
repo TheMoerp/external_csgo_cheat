@@ -94,6 +94,12 @@ QCheckBox:rgb(255, 255, 255);</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
@@ -232,6 +238,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineFiveSeven">
    <property name="geometry">
@@ -245,6 +254,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineGlock18">
@@ -260,6 +272,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineTec9">
    <property name="geometry">
@@ -273,6 +288,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -342,6 +360,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineP250">
    <property name="geometry">
@@ -355,6 +376,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineUSPS">
@@ -370,6 +394,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineCZ75">
    <property name="geometry">
@@ -384,6 +411,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineRevolver">
    <property name="geometry">
@@ -397,6 +427,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -639,6 +672,18 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineAUG">
    <property name="geometry">
@@ -652,6 +697,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineAWP">
@@ -667,6 +715,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineFAMAS">
    <property name="geometry">
@@ -680,6 +731,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineG35G1">
@@ -695,6 +749,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineGalilAR">
    <property name="geometry">
@@ -708,6 +765,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineM4A4">
@@ -723,6 +783,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineSCAR20">
    <property name="geometry">
@@ -736,6 +799,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineSG553">
@@ -751,6 +817,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineSSG08">
    <property name="geometry">
@@ -765,6 +834,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineM4A1S">
    <property name="geometry">
@@ -778,6 +850,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_26">
@@ -937,6 +1012,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineP90">
    <property name="geometry">
@@ -950,6 +1028,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineMP5SD">
@@ -965,6 +1046,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineUMP45">
    <property name="geometry">
@@ -978,6 +1062,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="linePPBizon">
@@ -993,6 +1080,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineMP7">
    <property name="geometry">
@@ -1007,6 +1097,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineMP9">
    <property name="geometry">
@@ -1020,6 +1113,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="Line" name="lineV3">
@@ -1163,6 +1259,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineMAG7">
    <property name="geometry">
@@ -1176,6 +1275,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineNova">
@@ -1191,6 +1293,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineXM1014">
    <property name="geometry">
@@ -1204,6 +1309,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineNegev">
@@ -1219,6 +1327,9 @@ border-radius: 3px;</string>
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineM249">
    <property name="geometry">
@@ -1232,6 +1343,9 @@ border-radius: 3px;</string>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="Line" name="lineH3">
