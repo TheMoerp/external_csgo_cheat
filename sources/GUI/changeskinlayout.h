@@ -4,10 +4,12 @@
 #include <QDialog>
 #include <QLineEdit>
 #include <QComboBox>
+#include <QDialogButtonBox>
 #include "ui_changeskinlayout.h"
 
 class QLineEdit;
 class QComboBox;
+class QDialogButtonBox;
 
 class ChangeSkinLayout : public QDialog {
     Q_OBJECT
@@ -20,6 +22,7 @@ public:
               *lineMP5SD, *lineMP7, *lineMP9, *lineNegev, *lineNova, *lineP2000, *lineP250, *lineP90, *linePPBizon, *lineRevolver,
               *lineSCAR20, *lineSG553, *lineSSG08, *lineSawedOff, *lineTec9, *lineUMP45, *lineUSPS, *lineXM1014, *lineKnife;
     QComboBox *comboKnife;
+    QDialogButtonBox *pushConfirm;
 
 private:
     Ui::ChangeSkinLayout ui;

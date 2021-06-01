@@ -44,4 +44,8 @@ ChangeSkinLayout::ChangeSkinLayout(QWidget *parent)
     lineKnife = ui.lineKnifeSkin;
 
     comboKnife = ui.comboKnifeModel;
+
+    pushConfirm = ui.pushConfirm;
 }
+
+

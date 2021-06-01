@@ -33,6 +33,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>32</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -245,6 +248,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_2">
    <property name="geometry">
@@ -254,6 +260,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_3">
@@ -265,6 +274,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_4">
    <property name="geometry">
@@ -274,6 +286,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_5">
@@ -285,6 +300,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_6">
    <property name="geometry">
@@ -295,6 +313,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_7">
    <property name="geometry">
@@ -304,6 +325,9 @@ QCheckBox:rgb(255, 255, 255);</string>
      <width>113</width>
      <height>22</height>
     </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
   <widget class="QKeySequenceEdit" name="keySequenceEdit_8">
@@ -319,6 +343,9 @@ QCheckBox:rgb(255, 255, 255);</string>
     <font>
      <family>Microsoft PhagsPa</family>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
   <widget class="Line" name="line_2">
