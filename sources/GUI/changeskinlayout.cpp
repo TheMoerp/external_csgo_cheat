@@ -52,7 +52,7 @@ ChangeSkinLayout::ChangeSkinLayout(QWidget *parent)
 
 
 void ChangeSkinLayout::LoadSkinConfig() {
-    ifstream skinlayout("skinlayout.txt");
+    ifstream skinlayout("C:/Users/matth/Documents/Workspace/Game_Cheats/external_csgo_cheat/sources/GUI/skinlayout.txt");
 
     if (skinlayout.good()) {
 
