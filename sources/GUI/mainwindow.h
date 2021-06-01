@@ -46,6 +46,8 @@ private slots:
     void Quit();
     void ChangeSkinlayout();
 
+    void SkinlayoutChanged();
+
 private:
     Ui::MainWindow *ui;
 

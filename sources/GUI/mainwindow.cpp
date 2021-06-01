@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent)
     pushReset = ui->pushReset;
     pushQuit = ui->pushQuit;
 
-    // Connections
+    // mainwindow connections
     connect(checkWallhack, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
     connect(checkRadar, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
     connect(checkAimbot, SIGNAL(stateChanged(int)), this, SLOT(CheckboxChanged()));
@@ -50,6 +50,43 @@ MainWindow::MainWindow(QWidget *parent)
     connect(pushChangeKeys, SIGNAL(clicked()), this, SLOT(ChangeHotkeys()));
     connect(pushReset, SIGNAL(clicked()), this, SLOT(Resetproccess()));
     connect(pushQuit, SIGNAL(clicked()), this, SLOT(Quit()));
+
+    // changeSkinLayout connections
+    connect(changeSkinLayout->lineAK47, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineAUG, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineAWP, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineCZ75, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineDesartEagle, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineDualBerettas, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineFAMAS, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineFiveSeven, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineG35G1, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineGalilAR, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineGlock18, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineKnifeSkin, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineM249, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineM4A1S, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineM4A4, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineMAC10, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineMAG7, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineMP5SD, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineMP7, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineMP9, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineNegev, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineNova, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineP2000, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineP250, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineP90, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->linePPBizon, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineRevolver, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineSCAR20, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineSG553, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineSSG08, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineSawedOff, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineTec9, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineUMP45, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineUSPS, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
+    connect(changeSkinLayout->lineXM1014, SIGNAL(editingFinished()), this, SLOT(SkinlayoutChanged()));
 }
 
 MainWindow::~MainWindow()
@@ -110,5 +147,10 @@ void MainWindow::Resetproccess() {
 }
 
 void MainWindow::Quit() {
+
+}
+
+
+void MainWindow::SkinlayoutChanged() {
 
 }
