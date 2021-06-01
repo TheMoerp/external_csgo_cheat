@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "changeskinlayout.h"
+#include "changehotkeys.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     setWindowTitle("The Moerper external");
 
     changeSkinLayout = new ChangeSkinLayout(this);
+    changeHotkeys = new class ChangeHotkeys(this);
 
     // Get Objects
     checkWallhack = ui->checkWallhack;
@@ -67,7 +69,8 @@ void MainWindow::ChangeSkinlayout() {
 }
 
 void MainWindow::ChangeHotkeys() {
-
+    changeHotkeys->show();
+    changeHotkeys->activateWindow();
 }
 
 void MainWindow::Resetproccess() {

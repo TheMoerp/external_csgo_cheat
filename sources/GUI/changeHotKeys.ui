@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>ChangeHotkeys</class>
+ <widget class="QDialog" name="ChangeHotkeys">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -81,6 +81,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -99,6 +101,9 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -117,6 +122,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -135,6 +142,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -153,6 +162,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -171,6 +182,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -189,6 +202,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -207,6 +222,8 @@ QCheckBox:rgb(255, 255, 255);</string>
    <property name="font">
     <font>
      <family>Microsoft PhagsPa</family>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -292,6 +309,11 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
   </widget>
   <widget class="Line" name="line_2">
    <property name="geometry">
@@ -312,7 +334,7 @@ QCheckBox:rgb(255, 255, 255);</string>
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>ChangeHotkeys</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -328,7 +350,7 @@ QCheckBox:rgb(255, 255, 255);</string>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>ChangeHotkeys</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

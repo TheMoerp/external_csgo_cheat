@@ -1,5 +1,4 @@
 #include "changeskinlayout.h"
-#include <QScreen>
 
 ChangeSkinLayout::ChangeSkinLayout(QWidget *parent)
     : QDialog(parent)

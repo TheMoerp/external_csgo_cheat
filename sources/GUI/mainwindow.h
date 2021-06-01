@@ -1,13 +1,16 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QCheckBox>
 #include <QMainWindow>
 #include "changeskinlayout.h"
-#include <QCheckBox>
+#include "changehotkeys.h"
+
 
 class QPushButton;
 class QCheckBox;
 class QRadioButton;
+class ChangeHotkeys;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,6 +36,7 @@ private:
     Ui::MainWindow *ui;
 
     ChangeSkinLayout *changeSkinLayout;
+    class ChangeHotkeys *changeHotkeys;
 
     QCheckBox *checkWallhack, *checkRadar, *checkAimbot, *checkTrigger,
               *checkSkinchanger, *checkKnifechanger, *checkBhop, *checkNoflash;
