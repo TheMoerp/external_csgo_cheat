@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(61, 61, 61);
+   <string notr="true">background-color: rgb(50, 50, 50);
 color: rgb(255, 255, 255);
 QCheckBox:rgb(255, 255, 255);</string>
   </property>
