@@ -6,6 +6,7 @@ Offsets offsets;
 
 using namespace std;
 
+
 void Offsets::OffsetUpdate() {
 	DWORD tmp1 = 0, tmp2 = 0;
 
