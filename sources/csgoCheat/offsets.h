@@ -36,8 +36,8 @@ public:
 	DWORD m_iShotsFired = 0xA390;
 	DWORD model_ambient_min = 0x58D05C;
 
-	DWORD dwClientState_ViewAngles = 0x4D90;
-	DWORD dwClientState = 0x588FE4;
+	DWORD dwClientState_ViewAngles = 0;//= 0x4D90;
+	DWORD dwClientState = 0;// 0x588FE4;
 	DWORD dwLocalPlayer = 0;// = 0xD892CC;
 	DWORD dwEntityList = 0;// = 0x4DA20DC;
 	DWORD dwForceJump = 0; //= 0x524BECC;
