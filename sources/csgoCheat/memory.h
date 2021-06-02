@@ -41,8 +41,7 @@ public:
 	}
 
 	
-	// Read string from memory
-	/*std::string ReadStringMemory(DWORD address);*/
+	int ReadInt(int address);
 };
 
 
