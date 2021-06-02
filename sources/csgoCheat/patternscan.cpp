@@ -42,3 +42,24 @@ DWORD FindAddress(HANDLE hProcess, wchar_t* moduleName, char* pattern, char* mas
 }
 
 
+DWORD FindPattern(char* base, size_t size, char* pattern, char* mask) {
+	size_t patternLen = strlen(mask);
+
+	for (DWORD i = 0; i < size - patternLen; i++) {
+		bool found = true;
+
+		for (DWORD j = 0; j < patternLen; j++) {
+
+			if (mask[j] != '?' && pattern[j] != *(base + i + j)) {
+				found = false;
+				break;
+			}
+		}
+
+		if (found) {
+			return (DWORD)(base + i);
+		}
+	}
+
+	return NULL;
+}
