@@ -36,12 +36,12 @@ public:
 	DWORD m_iShotsFired = 0xA390;
 	DWORD model_ambient_min = 0x58D05C;
 
-	DWORD dwClientState_ViewAngles = 0;//= 0x4D90;
-	DWORD dwClientState = 0;// 0x588FE4;
-	DWORD dwLocalPlayer = 0;// = 0xD892CC;
-	DWORD dwEntityList = 0;// = 0x4DA20DC;
-	DWORD dwForceJump = 0; //= 0x524BECC;
-	DWORD dwGlowObjectManager = 0;//= 0x52EA570;
+	DWORD dwClientState_ViewAngles = 0x4D90;
+	DWORD dwClientState = 0;		// patternscan
+	DWORD dwLocalPlayer = 0;		// patternscan
+	DWORD dwEntityList = 0;			// patternscan
+	DWORD dwForceJump = 0;			// patternscan
+	DWORD dwGlowObjectManager = 0;  // patternscan
 
 
 	DWORD processID = 0;
