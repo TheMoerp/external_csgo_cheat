@@ -25,23 +25,43 @@ public:
 	void Setup();
 	void GetModules();
 
+	int ReadInt(int address);
+
 	// Read value from memory
 	template <typename T>
-	T ReadMemory(DWORD _address) {
+	T ReadMemory(DWORD address) {
 		T buffer;
-		ReadProcessMemory(offsets.hProcess, (LPVOID)_address, &buffer, sizeof(buffer), NULL);
+		ReadProcessMemory(offsets.hProcess, (LPVOID)address, &buffer, sizeof(buffer), NULL);
 		return buffer;
 	}
 
 	
 	// Write value from memory
 	template <typename T>
-	void WriteMemory(DWORD _address, T val) {
-		WriteProcessMemory(offsets.hProcess, (LPVOID)_address, &val, sizeof(val), NULL);
+	void WriteMemory(DWORD address, T val) {
+		WriteProcessMemory(offsets.hProcess, (LPVOID)address, &val, sizeof(val), NULL);
 	}
 
-	
-	int ReadInt(int address);
+	int BytesToInt32(unsigned char input[], int startOffset)
+	{
+		return (input[startOffset]) | (input[startOffset + 1] << 8) |
+			(input[startOffset + 2] << 16) | (input[startOffset + 3] << 24);
+	}
+
+	template <typename IntegerType>
+	IntegerType BytesToInt32(IntegerType& result, unsigned char bytes[], bool isLittleEndian = true)
+	{
+		result = 0;
+
+		if (little_endian)
+			for (int n = sizeof(result); n >= 0; n--)
+				result = (result << 8) + bytes[n];
+		else
+			for (unsigned n = 0; n < sizeof(result); n++)
+				result = (result << 8) + bytes[n];
+
+		return result;
+	}
 };
 
 
