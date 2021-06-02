@@ -30,14 +30,22 @@
 color: rgb(255, 255, 255);
 QCheckBox:rgb(255, 255, 255);</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
+  <widget class="QDialogButtonBox" name="pushConfirm">
    <property name="geometry">
     <rect>
      <x>270</x>
-     <y>490</y>
+     <y>470</y>
      <width>341</width>
      <height>32</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
@@ -90,9 +98,23 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
@@ -228,9 +250,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineFiveSeven">
@@ -242,9 +275,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineGlock18">
@@ -256,9 +300,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineTec9">
@@ -270,9 +325,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
@@ -338,9 +404,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineP250">
@@ -352,9 +429,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineUSPS">
@@ -366,9 +454,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineCZ75">
@@ -380,9 +479,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineRevolver">
@@ -394,9 +504,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_12">
@@ -424,7 +545,7 @@ border-radius: 3px;</string>
      <x>143</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -546,27 +667,11 @@ border-radius: 3px;</string>
     <string>Galil AR</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_20">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>290</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 8pt &quot;Microsoft PhagsPa&quot;;</string>
-   </property>
-   <property name="text">
-    <string>M249</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_21">
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>320</y>
+     <y>290</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -582,7 +687,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>350</y>
+     <y>320</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -598,7 +703,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>380</y>
+     <y>350</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -614,7 +719,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>410</y>
+     <y>380</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -630,7 +735,7 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>440</y>
+     <y>410</y>
      <width>71</width>
      <height>16</height>
     </rect>
@@ -651,9 +756,29 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhDigitsOnly</set>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="placeholderText">
+    <string/>
+   </property>
+   <property name="cursorMoveStyle">
+    <enum>Qt::LogicalMoveStyle</enum>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineAUG">
@@ -665,9 +790,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineAWP">
@@ -679,9 +815,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineFAMAS">
@@ -693,9 +840,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineG35G1">
@@ -707,9 +865,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineGalilAR">
@@ -721,12 +890,23 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineM249">
+  <widget class="QLineEdit" name="lineM4A4">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -735,12 +915,23 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineM4A4">
+  <widget class="QLineEdit" name="lineSCAR20">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -749,12 +940,23 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineSCAR20">
+  <widget class="QLineEdit" name="lineSG553">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -763,12 +965,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineSG553">
+  <widget class="QLineEdit" name="lineSSG08">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -777,12 +987,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineSSG08">
+  <widget class="QLineEdit" name="lineM4A1S">
    <property name="geometry">
     <rect>
      <x>230</x>
@@ -791,23 +1009,17 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid rgb(130, 130, 130);
-border-radius: 3px;</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineM4A1S">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>440</y>
-     <width>41</width>
-     <height>21</height>
-    </rect>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_26">
@@ -835,7 +1047,7 @@ border-radius: 3px;</string>
      <x>290</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -963,9 +1175,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineP90">
@@ -977,9 +1200,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineMP5SD">
@@ -991,9 +1225,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineUMP45">
@@ -1005,9 +1250,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="linePPBizon">
@@ -1019,9 +1275,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineMP7">
@@ -1033,9 +1300,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineMP9">
@@ -1047,9 +1325,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="Line" name="lineV3">
@@ -1058,7 +1347,7 @@ border-radius: 3px;</string>
      <x>430</x>
      <y>60</y>
      <width>20</width>
-     <height>411</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="orientation">
@@ -1189,9 +1478,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineMAG7">
@@ -1203,9 +1503,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineNova">
@@ -1217,9 +1528,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineXM1014">
@@ -1231,9 +1553,20 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineNegev">
@@ -1245,12 +1578,23 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
    </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QLineEdit" name="lineM249_2">
+  <widget class="QLineEdit" name="lineM249">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -1259,16 +1603,27 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="inputMask">
+    <string>0000</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="Line" name="lineH3">
    <property name="geometry">
     <rect>
      <x>-10</x>
-     <y>470</y>
+     <y>450</y>
      <width>641</width>
      <height>20</height>
     </rect>
@@ -1281,10 +1636,18 @@ border-radius: 3px;</string>
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>490</y>
+     <y>470</y>
      <width>80</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="text">
     <string>Save Layout</string>
@@ -1331,9 +1694,36 @@ border-radius: 3px;</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+     <stylestrategy>PreferAntialias</stylestrategy>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtCurrent</enum>
+   </property>
    <item>
     <property name="text">
      <string>M9 Bayonet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Flip knife</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bayonet</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Karambit</string>
     </property>
    </item>
   </widget>
@@ -1378,16 +1768,56 @@ border-radius: 3px;</string>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">border: 1px solid rgb(130, 130, 130);
 border-radius: 3px;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_20">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>10</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+     <pointsize>11</pointsize>
+     <underline>false</underline>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(19, 109, 147);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::NoFrame</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Plain</enum>
+   </property>
+   <property name="text">
+    <string>&lt;a href=&quot;https://csgostash.com/&quot;&gt;csgostash&lt;/a&gt;</string>
+   </property>
+   <property name="openExternalLinks">
+    <bool>true</bool>
    </property>
   </widget>
  </widget>
  <resources/>
  <connections>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>pushConfirm</sender>
    <signal>accepted()</signal>
    <receiver>ChangeSkinLayout</receiver>
    <slot>accept()</slot>
@@ -1403,7 +1833,7 @@ border-radius: 3px;</string>
    </hints>
   </connection>
   <connection>
-   <sender>buttonBox</sender>
+   <sender>pushConfirm</sender>
    <signal>rejected()</signal>
    <receiver>ChangeSkinLayout</receiver>
    <slot>reject()</slot>

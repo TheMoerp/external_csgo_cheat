@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include "changeskinlayout.h"
 #include "changehotkeys.h"
+#include <QPushButton>
 
 
 class QPushButton;
@@ -24,6 +25,20 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    // Main settings
+    bool wallhackToggle, radarToggle, aimbotToggle, triggerToggle, skinchangerToggle, knifechangerToggle, bhopToggle, noflashToggle;
+    float whRed = 0.0, whGreen = 0.0, whBlue = 0.0;
+
+    // Skinchanger settings
+    int skinDesartEagle, skinDualBerettas, skinFiveSeven, skinGlock18, skinTec9, skinP2000, skinP250, skinUSPS, skinCZ75, skinRevolver,
+        skinAK47, skinAUG, skinAWP, skinFAMAS, skinG35G1, skinGalilAR, skinM4A4, skinSCAR20, skinSG553, skinSSG08, skinM4A1S,
+        skinMAC10, skinP90, skinMP5SD, skinUMP45, skinPPBizon, skinMP7, skinMP9,
+        skinMAG7, skinSawedOff, skinNova, skinXM1014, skinNegev, skinM249, skinKnife;
+    int modelKnife;
+
+    // Hotkey settings
+    int wallhackKey, radarKey, aimbotKey, triggerKey, skinchangerKey, knifechangerKey, bhopKey, noflashKey;
+
 private slots:
     void CheckboxChanged();
     void CheckboxStatus();
@@ -31,6 +46,8 @@ private slots:
     void Resetproccess();
     void Quit();
     void ChangeSkinlayout();
+
+    void SkinlayoutChanged();
 
 private:
     Ui::MainWindow *ui;

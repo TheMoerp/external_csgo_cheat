@@ -5,4 +5,6 @@ ChangeHotkeys::ChangeHotkeys(QWidget *parent)
 {
     ui.setupUi(this);
     setWindowTitle("Hotkeys");
+
+
 }

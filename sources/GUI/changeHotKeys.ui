@@ -33,11 +33,22 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>32</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+   </property>
+   <property name="centerButtons">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QLabel" name="label">
@@ -236,7 +247,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <string>noflash</string>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit">
+  <widget class="QKeySequenceEdit" name="keyWallhack">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -245,8 +256,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_2">
+  <widget class="QKeySequenceEdit" name="keyRadar">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -255,8 +274,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_3">
+  <widget class="QKeySequenceEdit" name="keyAimbot">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -265,8 +292,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_4">
+  <widget class="QKeySequenceEdit" name="keyTrigger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -275,8 +310,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_5">
+  <widget class="QKeySequenceEdit" name="keySkinchanger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -285,8 +328,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_6">
+  <widget class="QKeySequenceEdit" name="keyKnifechanger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -295,8 +346,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_7">
+  <widget class="QKeySequenceEdit" name="keyBhop">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -305,8 +364,16 @@ QCheckBox:rgb(255, 255, 255);</string>
      <height>22</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+    </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_8">
+  <widget class="QKeySequenceEdit" name="keyNoflash">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -319,6 +386,9 @@ QCheckBox:rgb(255, 255, 255);</string>
     <font>
      <family>Microsoft PhagsPa</family>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
   <widget class="Line" name="line_2">
