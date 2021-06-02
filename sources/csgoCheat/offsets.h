@@ -48,6 +48,8 @@ public:
 	HANDLE hProcess = 0;
 	DWORD clientBase = 0;
 	DWORD engineBase = 0;
+
+	void OffsetUpdate();
 };
 
 extern Offsets offsets; 
