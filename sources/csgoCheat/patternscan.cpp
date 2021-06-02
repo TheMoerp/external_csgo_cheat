@@ -1,7 +1,7 @@
 #include "patternscan.h"
 
 
-DWORD FindAddress(HANDLE hProcess, wchar_t* moduleName, char* pattern, char* mask) {
+DWORD FindAddress(HANDLE hProcess, const wchar_t* moduleName, const char* pattern, const char* mask) {
 	MODULEENTRY32 moduleEntry = mem.GetModule(offsets.processID, moduleName);
 
 	if (!moduleEntry.th32ModuleID) {
@@ -36,13 +36,12 @@ DWORD FindAddress(HANDLE hProcess, wchar_t* moduleName, char* pattern, char* mas
 		else {
 			curChunk += bytesRead;
 		}
-
-		return NULL;
 	}
+	return NULL;
 }
 
 
-DWORD FindPattern(char* base, size_t size, char* pattern, char* mask) {
+DWORD FindPattern(char* base, size_t size, const char* pattern, const char* mask) {
 	size_t patternLen = strlen(mask);
 
 	for (DWORD i = 0; i < size - patternLen; i++) {

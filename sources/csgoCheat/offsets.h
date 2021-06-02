@@ -38,10 +38,10 @@ public:
 
 	DWORD dwClientState_ViewAngles = 0x4D90;
 	DWORD dwClientState = 0x588FE4;
-	DWORD dwLocalPlayer = 0xD892CC;
-	DWORD dwEntityList = 0x4DA20DC;
-	DWORD dwForceJump = 0x524BECC;
-	DWORD dwGlowObjectManager = 0x52EA570;
+	DWORD dwLocalPlayer = 0;// = 0xD892CC;
+	DWORD dwEntityList = 0;// = 0x4DA20DC;
+	DWORD dwForceJump = 0; //= 0x524BECC;
+	DWORD dwGlowObjectManager = 0;//= 0x52EA570;
 
 
 	DWORD processID = 0;

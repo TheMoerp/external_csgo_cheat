@@ -4,6 +4,6 @@
 
 #include "memory.h"
 
-DWORD FindAddress(HANDLE hProcess, wchar_t* moduleName, char* pattern, char* mask);
+DWORD FindAddress(HANDLE hProcess, const wchar_t* moduleName, const char* pattern, const char* mask);
 
-DWORD FindPattern(char* base, size_t size, char* pattern, char* mask);
+DWORD FindPattern(char* base, size_t size, const char* pattern, const char* mask);

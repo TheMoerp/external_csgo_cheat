@@ -53,7 +53,7 @@ public:
 	{
 		result = 0;
 
-		if (little_endian)
+		if (isLittleEndian)
 			for (int n = sizeof(result); n >= 0; n--)
 				result = (result << 8) + bytes[n];
 		else

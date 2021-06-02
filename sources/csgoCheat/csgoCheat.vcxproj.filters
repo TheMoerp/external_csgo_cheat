@@ -54,6 +54,9 @@
     <ClCompile Include="radar.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="patternscan.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="config.h">
@@ -90,6 +93,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="radar.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="patternscan.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
