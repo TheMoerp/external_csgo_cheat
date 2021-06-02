@@ -21,7 +21,7 @@ Compile with the *x86* option. If everything is compiled and ready, you need to 
 The cheat will grab the running process and you're ready to go.
 Since this is an external cheat some features can be glitchy at times.
 
-There is no patternscan implemented yet you have to update the offsets manually. You can reverse them by hand or look them up at [frk1/hazedumper](https://github.com/frk1/hazedumper/blob/master/csgo.cs) since most of the used offsets are included in this list.
+I have implemented a patternscan for the offsets: *dwEntityList*, *dwForceJump*, *dwGlowObjectManager*, *dwLocalPlayer*and *dwClientState*. These are the offsets which change often. If any other offsets changes you need to manually update it. You can reverse them by hand or look them up at [frk1/hazedumper](https://github.com/frk1/hazedumper/blob/master/csgo.cs) since most of the used offsets are included in this list.
 
 ##### Wallhack
 Toggle the wallhack with the key **NUM_0**. Enemys will glow red.
