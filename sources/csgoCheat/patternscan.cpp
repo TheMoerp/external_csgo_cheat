@@ -48,6 +48,7 @@ DWORD FindAddress(HANDLE hProcess, const wchar_t* moduleName, const char* patter
 }
 
 
+// Find matching pattern
 DWORD FindPattern(char* base, size_t size, const char* pattern, const char* mask) {
 	size_t patternLen = strlen(mask);
 
