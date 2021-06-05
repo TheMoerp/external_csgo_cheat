@@ -4,6 +4,7 @@
 DWORD FindAddress(HANDLE hProcess, const wchar_t* moduleName, const char* pattern, const char* mask) {
 	MODULEENTRY32 moduleEntry = mem.GetModule(offsets.processID, moduleName);
 
+	// No Module Entry found
 	if (!moduleEntry.th32ModuleID) {
 		return NULL;
 	}
