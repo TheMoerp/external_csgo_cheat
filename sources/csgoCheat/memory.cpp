@@ -40,7 +40,7 @@ MODULEENTRY32 Memory::GetModule(DWORD pID, const wchar_t* moduleName) {
 
 
 void Memory::Setup() {
-	offsets.processID = GetProcessID(L"Counter-Strike: Global Offensive");
+	offsets.processID = GetProcessID(L"Counter-Strike: Global Offensive - Direct3D 9");
 	offsets.hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, offsets.processID);
 }
 
