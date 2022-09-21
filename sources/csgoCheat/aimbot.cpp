@@ -89,9 +89,9 @@ void Aimbot() {
 					// If the bot is ready to target an enemy let the enemy glow
 					DWORD curGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
 					DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
-					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x4, 0.0);
-					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, 2.0);
-					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0xC, 0.0);
+					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x8, 0.0);
+					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0xC, 2.0);
+					mem.WriteMemory<float>(glowObj + curGlowIndex * 0x38 + 0x10, 0.0);
 
 					// target = entity
 					oldDistX = distX;
