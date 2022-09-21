@@ -1,6 +1,14 @@
 #include "radar.h"
 
-void Radar() {
+Radar::Radar() {
+	std::cout << "--> Radar ready                    (Toggle it with NUM_5)" << std::endl;
+}
+
+
+Radar::~Radar() {}
+
+
+void Radar::run() {
 	// Iterates to every player entity in the current game
 	for (int i = 0; i < 32; i++) {
 		DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);

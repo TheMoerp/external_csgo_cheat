@@ -3,4 +3,10 @@
 #include "memory.h"
 
 
-void Bhop();
+class Bhop {
+public:
+	Bhop();
+	~Bhop();
+
+	void run();
+};

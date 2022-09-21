@@ -2,4 +2,10 @@
 #include "memory.h"
 
 
-void Radar();
+class Radar {
+public:
+	Radar();
+	~Radar();
+
+	void run();
+};

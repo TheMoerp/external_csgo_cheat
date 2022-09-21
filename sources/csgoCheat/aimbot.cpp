@@ -1,11 +1,14 @@
 #include "aimbot.h"
 
-using namespace std;
+Aimbot::Aimbot() {
+	std::cout << "--> Autoaim ready                  (Toggle it with NUM_1)" << std::endl;
+}
 
-// 8 = head
-const int TARGET_BONE = 8;
+Aimbot::~Aimbot() {
 
-void Aimbot() {
+}
+
+void Aimbot::run() {
 	// Get localplayer data
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	if (localPlayer) {
@@ -67,14 +70,14 @@ void Aimbot() {
 					distX += 360.0;
 				}
 				else if (distX > 89.0) {
-					distX -=  360.0;
+					distX -= 360.0;
 				}
 				if (distX < 0.0) {
 					distX = -distX;
 				}
 				float distY = angleVec.y - localAngle.y;
 				if (distY < -180.0) {
-					distY +=  360.0;
+					distY += 360.0;
 				}
 				else if (distY > 180.0) {
 					distY -= 360.0;

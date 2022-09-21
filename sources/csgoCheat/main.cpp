@@ -101,19 +101,19 @@ void toggleFeatures() {
 
 // Fast features
 void NoDelayFeatures() {
-    cout << "--> Triggerbot ready               (Toggle it with NUM_2)" << endl;
-    cout << "--> Autoaim ready                  (Toggle it with NUM_1)" << endl;
-    cout << "--> Bhop ready                     (Toggle it with NUM_3)" << endl;
-
+    Triggerbot* triggerbot = new Triggerbot();
+    Aimbot* aimbot = new Aimbot();
+    Bhop* bhop = new Bhop();
+    
     while (true) {
         if (triggerToggle) {
-            Triggerbot();
+            triggerbot->run();
         }
         if (bhobToggle) {
-            Bhop();
+            bhop->run();
         }
         if (aimbotToggle) {
-            Aimbot();
+            aimbot->run();
         }
         
     }
@@ -123,19 +123,20 @@ void NoDelayFeatures() {
 // Not so fast features
 void DelayFeatures() {
     Sleep(10);
-    cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << endl;
-    cout << "--> Radar ready                    (Toggle it with NUM_5)" << endl;
-    cout << "--> Antiflash ready                (Toggle it with NUM_4)" << endl;
+    Wallhack* wh = new Wallhack();
+    Radar* bhop = new Radar();
+    Antiflash* antiflash = new Antiflash();
+    
  
     while (true) {
         if (whToggle) {
-            Wallhack();
+            wh->run();
         }
         if (radarToggle) {
-            Radar();
+            bhop->run();
         }
         if (antiflashToggle) {
-            antiflash();
+            antiflash->run();
         }
         Sleep(1);
     }
@@ -144,7 +145,8 @@ void DelayFeatures() {
 // The skinchanger has to be very fast in order to work properly
 void SkinChangerThread() {
     Sleep(30);
-    cout << "--> Skinchanger activated" << endl;
+    Skinchanger* skinchanger = new Skinchanger();
+
     cout << "" << endl;
     cout << "----------------------------------------------------------" << endl;
     cout << "\n\n\n                         Toggle Log" << endl;
@@ -153,7 +155,7 @@ void SkinChangerThread() {
 
     LoadSkinConfig();
     while (true) {
-        Skinchanger();
+         skinchanger->run();
     }
 }
 

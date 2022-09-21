@@ -5,4 +5,13 @@
 #include "structures.h"
 
 
-void Skinchanger();
+class Skinchanger {
+public:
+	Skinchanger();
+	~Skinchanger();
+
+	void run();
+
+private:
+	int mModelIndex = 0;
+};

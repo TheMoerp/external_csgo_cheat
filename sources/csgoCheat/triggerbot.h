@@ -5,4 +5,10 @@
 #include "weapon.h"
 
 
-void Triggerbot();
+class Triggerbot {
+public:
+	Triggerbot();
+	~Triggerbot();
+
+	void run();
+};

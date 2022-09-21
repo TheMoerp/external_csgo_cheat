@@ -7,9 +7,15 @@
 using namespace std;
 
 
-int modelIndex = 0;
+Skinchanger::Skinchanger() {
+	cout << "--> Skinchanger activated" << endl;
+}
 
-void Skinchanger() {
+
+Skinchanger::~Skinchanger() {}
+
+
+void Skinchanger::run() {
 	int knifeID = config.knifeID;
 
 	// The offsets of knifemodels differs after the tenth knife
@@ -27,20 +33,20 @@ void Skinchanger() {
 			if (curWeaponBase != 0) {
 				short curWeaponID = mem.ReadMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex);
 
-				// Sets everything but skin, modelindex, knifeItemID, seed
+				// Sets everything but skin, mModelIndex, knifeItemID, seed
 				mem.WriteMemory<int>(curWeaponBase + offsets.m_iItemIDHigh, -1);
 				mem.WriteMemory<float>(curWeaponBase + offsets.m_flFallbackWear, 0.00001f);
 
 				if (curWeaponID == 42 || curWeaponID == 59 || curWeaponID == knifeItemID) {
 					// curWeapon is knife
-					if (modelIndex > 0) {
+					if (mModelIndex > 0) {
 						Item curItem = GetItemByID(knifeItemID);
 						int paintKit = curItem.skinID;
 
 						mem.WriteMemory<short>(curWeaponBase + offsets.m_iItemDefinitionIndex, knifeItemID);
 						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackSeed, 661);
 						mem.WriteMemory<int>(curWeaponBase + offsets.m_nFallbackPaintKit, paintKit);
-						mem.WriteMemory<int>(curWeaponBase + offsets.m_nModelIndex, modelIndex);
+						mem.WriteMemory<int>(curWeaponBase + offsets.m_nModelIndex, mModelIndex);
 					}
 				}
 				else {
@@ -56,7 +62,7 @@ void Skinchanger() {
 			}
 		}
 
-		// Calculates and sets the modelindex of the knife
+		// Calculates and sets the mModelIndex of the knife
 		DWORD activeWeapon = mem.ReadMemory<DWORD>(localPlayer + offsets.m_hActiveWeapon) & 0xFFF;
 		DWORD activeWeaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (activeWeapon - 1) * 0x10);
 		if (activeWeaponBase != 0) {
@@ -65,11 +71,11 @@ void Skinchanger() {
 
 			if (activeWeaponID == 42) {
 				// ct team
-				modelIndex = weaponViewModelID + precache_bayonet_ct + knifeID * 3 + knifeIDOffset;
+				mModelIndex = weaponViewModelID + precache_bayonet_ct + knifeID * 3 + knifeIDOffset;
 			}
 			else if (activeWeaponID == 59) {
 				// t team
-				modelIndex = weaponViewModelID + precache_bayonet_t + knifeID * 3 + knifeIDOffset;
+				mModelIndex = weaponViewModelID + precache_bayonet_t + knifeID * 3 + knifeIDOffset;
 			}
 			else if (activeWeaponID != knifeItemID) {
 				// no knife
@@ -80,12 +86,12 @@ void Skinchanger() {
 			knifeViewModel = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (knifeViewModel - 1) * 0x10);
 
 			if (knifeViewModel != 0) {
-				// Write modelindex
-				mem.WriteMemory<DWORD>(knifeViewModel + offsets.m_nModelIndex, modelIndex);
+				// Write mModelIndex
+				mem.WriteMemory<DWORD>(knifeViewModel + offsets.m_nModelIndex, mModelIndex);
 			}
 		}
 	}
 	else {
-		modelIndex = 0;
+		mModelIndex = 0;
 	}
 }

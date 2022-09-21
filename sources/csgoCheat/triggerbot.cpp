@@ -1,9 +1,15 @@
 #include "triggerbot.h"
 
-using namespace std;
+
+Triggerbot::Triggerbot() {
+	std::cout << "--> Triggerbot ready               (Toggle it with NUM_2)" << std::endl;
+}
 
 
-void Triggerbot() {
+Triggerbot::~Triggerbot() {}
+
+
+void Triggerbot::run() {
 	// Mouse settings
 	INPUT down;
 	down.mi.dx = 0;
@@ -32,7 +38,7 @@ void Triggerbot() {
 	DWORD weaponBase = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + (weaponEntity - 1) * 0x10);
 	// Current weapon ID
 	int weaponID = mem.ReadMemory<int>(weaponBase + offsets.m_iItemDefinitionIndex);
-	
+
 	Item curWeapon = GetItemByID(weaponID);
 
 	// Sets triggerinterval to the recoverytime of the current weapon

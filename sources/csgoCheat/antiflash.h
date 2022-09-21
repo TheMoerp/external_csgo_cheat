@@ -3,4 +3,13 @@
 #include "memory.h"
 
 
-void antiflash();
+class Antiflash {
+public:
+	Antiflash();
+	~Antiflash();
+
+	void run();
+
+private:
+	int mFlashDur = 0;
+};

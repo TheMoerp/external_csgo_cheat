@@ -1,15 +1,22 @@
 #include "antiflash.h"
 
 
-int flashDur = 0;
-void antiflash() {
+Antiflash::Antiflash() {
+	std::cout << "--> Antiflash ready                (Toggle it with NUM_4)" << std::endl;
+}
+
+
+Antiflash::~Antiflash() {}
+
+
+void Antiflash::run() {
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 
 	// Current flash duration. Usually 0
-	flashDur = mem.ReadMemory<int>(localPlayer + offsets.m_flFlashDuration);
+	mFlashDur = mem.ReadMemory<int>(localPlayer + offsets.m_flFlashDuration);
 
 	// Checks if the player is flashed
-	if (flashDur > 0) {
+	if (mFlashDur > 0) {
 
 		// Removes flash effect
 		mem.WriteMemory<int>(localPlayer + offsets.m_flFlashDuration, 0);

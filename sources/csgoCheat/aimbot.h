@@ -7,4 +7,14 @@
 #include "structures.h"
 
 
-void Aimbot();
+class Aimbot {
+public:
+	Aimbot();
+	~Aimbot();
+
+	void run();
+
+private:
+	// 8 = head
+	const int TARGET_BONE = 8;
+};

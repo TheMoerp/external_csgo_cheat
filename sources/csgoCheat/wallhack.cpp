@@ -1,9 +1,15 @@
 #include "wallhack.h"
 
-using namespace std;
+
+Wallhack::Wallhack() {
+	std::cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << std::endl;
+}
 
 
-void Wallhack() {
+Wallhack::~Wallhack() {}
+
+
+void Wallhack::run() {
 	DWORD localPlayer = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwLocalPlayer);
 	DWORD glowObj = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwGlowObjectManager);
 	DWORD localTeam = mem.ReadMemory<DWORD>(localPlayer + offsets.m_iTeamNum);
@@ -41,9 +47,7 @@ void Wallhack() {
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x28, true);
 			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x29, false);
 
-
-
-			
+			// TODO: Team Wallhack
 		}
 	}
 }

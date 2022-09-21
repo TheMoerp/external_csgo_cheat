@@ -3,4 +3,12 @@
 #include "memory.h"
 
 
-void Wallhack();
+class Wallhack {
+public:
+	Wallhack();
+	~Wallhack();
+
+	void run();
+
+private:
+};
