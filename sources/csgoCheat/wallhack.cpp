@@ -10,7 +10,6 @@ void Wallhack() {
 
 	// Iterates to every player entity in the current game
 	for (int i = 0; i < 32; i++) {
-
 		DWORD entity = mem.ReadMemory<DWORD>(offsets.clientBase + offsets.dwEntityList + i * 0x10);
 
 		if (entity == 0) {
@@ -31,16 +30,20 @@ void Wallhack() {
 		}
 
 		DWORD currentGlowIndex = mem.ReadMemory<DWORD>(entity + offsets.m_iGlowIndex);
-
 		// Checks if the entity is an enemy
 		if (teamID != localTeam) {
-			// Sets the glowing color 
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x4, 2.0f);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, 0.0f);
+
+			// Sets the glowing color A
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x8, 2.0f);
 			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0xC, 0.0f);
-			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x10, 1.0f);
-			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x24, true);
-			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x25, false);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x10, 0.0f);
+			mem.WriteMemory<float>(glowObj + currentGlowIndex * 0x38 + 0x14, 1.0f);
+			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x28, true);
+			mem.WriteMemory<bool>(glowObj + currentGlowIndex * 0x38 + 0x29, false);
+
+
+
+			
 		}
 	}
 }

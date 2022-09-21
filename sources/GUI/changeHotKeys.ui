@@ -247,7 +247,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <string>noflash</string>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit">
+  <widget class="QKeySequenceEdit" name="keyWallhack">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -265,7 +265,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_2">
+  <widget class="QKeySequenceEdit" name="keyRadar">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -283,7 +283,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_3">
+  <widget class="QKeySequenceEdit" name="keyAimbot">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -301,7 +301,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_4">
+  <widget class="QKeySequenceEdit" name="keyTrigger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -319,7 +319,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_5">
+  <widget class="QKeySequenceEdit" name="keySkinchanger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -337,7 +337,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_6">
+  <widget class="QKeySequenceEdit" name="keyKnifechanger">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -355,7 +355,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_7">
+  <widget class="QKeySequenceEdit" name="keyBhop">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -373,7 +373,7 @@ QCheckBox:rgb(255, 255, 255);</string>
     <cursorShape>PointingHandCursor</cursorShape>
    </property>
   </widget>
-  <widget class="QKeySequenceEdit" name="keySequenceEdit_8">
+  <widget class="QKeySequenceEdit" name="keyNoflash">
    <property name="geometry">
     <rect>
      <x>100</x>

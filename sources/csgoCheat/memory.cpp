@@ -40,7 +40,7 @@ MODULEENTRY32 Memory::GetModule(DWORD pID, const wchar_t* moduleName) {
 
 
 void Memory::Setup() {
-	offsets.processID = GetProcessID(L"Counter-Strike: Global Offensive");
+	offsets.processID = GetProcessID(L"Counter-Strike: Global Offensive - Direct3D 9");
 	offsets.hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, offsets.processID);
 }
 
@@ -58,16 +58,14 @@ void Memory::GetModules() {
 	} while (!offsets.engineBase);
 }
 
-// Read string from memory
-//std::string Memory::ReadStringMemory(DWORD address) {
-//	string str;
-//	StringChar_t tmp = ReadMemory<StringChar_t>(address);
-//
-//	for (int i = 0; i < sizeof(StringChar_t); i++) {
-//		if (tmp.buffer[i] == '\0') {
-//			break;
-//		}
-//		str += tmp.buffer[i];
-//	}
-//	return str;
-//}
+int Memory::ReadInt(int address) {
+	unsigned char buffer[4] = { 0,0,0,0 };
+	int int32 = 0;
+	SIZE_T bytesRead = 0;
+
+	ReadProcessMemory(offsets.hProcess, (LPVOID)address, &buffer, sizeof(buffer), &bytesRead);
+
+	int32 = BytesToInt32(buffer, 0);
+
+	return int32;
+}

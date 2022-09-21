@@ -13,6 +13,7 @@
 #include "antiflash.h"
 #include "radar.h"
 
+
 using namespace std;
 
 bool triggerToggle = false;
@@ -28,6 +29,7 @@ void Init() {
     cout << "Initiating engine..." << endl;
     mem.Setup();
     mem.GetModules();
+    offsets.OffsetUpdate();
     config.LoadConfigs();
 }
 
