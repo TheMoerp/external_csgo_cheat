@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "changeskinlayout.h"
 #include "changehotkeys.h"
+#include "config.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -52,33 +53,34 @@ MainWindow::~MainWindow()
 
 
 void MainWindow::CheckboxChanged() {
-   wallhackToggle = checkWallhack->isChecked();
-   radarToggle = checkWallhack->isChecked();
-   aimbotToggle = checkWallhack->isChecked();
-   triggerToggle = checkWallhack->isChecked();
-   skinchangerToggle = checkWallhack->isChecked();
-   knifechangerToggle = checkWallhack->isChecked();
-   bhopToggle = checkWallhack->isChecked();
-   noflashToggle = checkWallhack->isChecked();
+   config.wallhackToggle = checkWallhack->isChecked();
+   config.radarToggle = checkRadar->isChecked();
+   config.aimbotToggle = checkAimbot->isChecked();
+   config.triggerToggle = checkTrigger->isChecked();
+   config.skinchangerToggle = checkSkinchanger->isChecked();
+   config.knifechangerToggle = checkKnifechanger->isChecked();
+   config.bhopToggle = checkBhop->isChecked();
+   config.antiflashToggle = checkNoflash->isChecked();
 
+   radioRed->setDown(true);
    bool whRedToggle = radioRed->isChecked();
    bool whGreenToggle = radioGreen->isChecked();
    bool whBlueToggle = radioBlue->isChecked();
 
    if (whRedToggle) {
-       whRed = 2.0;
-       whGreen = 0.0;
-       whBlue = 0.0;
+       config.whRed = 2.0f;
+       config.whGreen = 0.0f;
+       config.whBlue = 0.0f;
    }
    else if (whGreenToggle) {
-       whRed = 0.0;
-       whGreen = 2.0;
-       whBlue = 0.0;
+       config.whRed = 0.0f;
+       config.whGreen = 2.0f;
+       config.whBlue = 0.0f;
    }
    else if (whBlueToggle) {
-       whRed = 0.0;
-       whGreen = 0.0;
-       whBlue = 2.0;
+       config.whRed = 0.0f;
+       config.whGreen = 0.0f;
+       config.whBlue = 2.0f;
    }
 }
 

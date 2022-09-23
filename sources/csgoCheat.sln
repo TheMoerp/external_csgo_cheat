@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30621.155
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csgoCheat", "csgoCheat\csgoCheat.vcxproj", "{67223E84-1478-41A5-891A-958280A0063B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TheMoerper_external", "csgoCheat\csgoCheat.vcxproj", "{67223E84-1478-41A5-891A-958280A0063B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "csgocheat_gui", "GUI\csgocheat_gui.vcxproj", "{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{67223E84-1478-41A5-891A-958280A0063B}.Release|x64.Build.0 = Release|x64
 		{67223E84-1478-41A5-891A-958280A0063B}.Release|x86.ActiveCfg = Release|Win32
 		{67223E84-1478-41A5-891A-958280A0063B}.Release|x86.Build.0 = Release|Win32
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Debug|x64.ActiveCfg = Debug|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Debug|x64.Build.0 = Debug|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Debug|x86.ActiveCfg = Debug|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Debug|x86.Build.0 = Debug|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Release|x64.ActiveCfg = Release|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Release|x64.Build.0 = Release|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Release|x86.ActiveCfg = Release|x64
+		{D5E7B364-0534-3DDE-BB0D-EE966799A6FA}.Release|x86.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

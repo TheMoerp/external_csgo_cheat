@@ -25,10 +25,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    // Main settings
-    bool wallhackToggle, radarToggle, aimbotToggle, triggerToggle, skinchangerToggle, knifechangerToggle, bhopToggle, noflashToggle;
-    float whRed = 0.0, whGreen = 0.0, whBlue = 0.0;
-
     // Skinchanger settings
     int skinDesartEagle, skinDualBerettas, skinFiveSeven, skinGlock18, skinTec9, skinP2000, skinP250, skinUSPS, skinCZ75, skinRevolver,
         skinAK47, skinAUG, skinAWP, skinFAMAS, skinG35G1, skinGalilAR, skinM4A4, skinSCAR20, skinSG553, skinSSG08, skinM4A1S,

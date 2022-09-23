@@ -2,6 +2,7 @@
 #include <thread>
 #include <windows.h>
 
+
 #include "memory.h"
 #include "bhop.h"
 #include "triggerbot.h"
@@ -12,6 +13,7 @@
 #include "config.h"
 #include "antiflash.h"
 #include "radar.h"
+#include "offsets.h"
 
 
 using namespace std;
@@ -158,8 +160,10 @@ void SkinChangerThread() {
 }
 
 
-int main()
+int main(int argc, char* argv[])
 {
+    
+
     SetConsoleTitle(L"TheMoerper - external");
     
     // Sets window size
@@ -171,7 +175,6 @@ int main()
     cout << "\n                   The Moerper - external" << endl;
     cout << "----------------------------------------------------------" << endl;
     cout << "waiting for CS:GO..." << endl;
-
     Init();
 
     cout << "" << endl;
@@ -180,7 +183,7 @@ int main()
     // Starts threads
     thread NoDelayThread(NoDelayFeatures);
     thread DelayThread(DelayFeatures);
-    thread SkinChangerThread(SkinChangerThread);
+    //thread SkinChangerThread(SkinChangerThread);
 
     Sleep(20);
     while (true) {
