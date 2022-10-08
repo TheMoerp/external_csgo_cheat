@@ -3,82 +3,85 @@
 #include <fstream>
 #include <algorithm>
 #include <string>
-#include <sstream> 
+#include <sstream>
 
 #include "memory.h"
 
 
 class Config {
 private:
-	void ReadConfigs();
-	void SetConfig(std::string name, std::string value);
-	void CreateConfig();
+    void ReadConfigs();
+    void SetConfig(std::string name, std::string value);
+    void CreateConfig();
 public:
-	int aFOV;
-	int triggerKey;
-	int aimbotKey;
-	int wallhackKey;
-	int antiflashKey;
-	int radarKey;
-	int bhopKey;
+    int aFOV;
+    int triggerKey;
+    int aimbotKey;
+    int wallhackKey;
+    int antiflashKey;
+    int radarKey;
+    int bhopKey;
 
-	int cz75;
-	int desertEagle;
-	int dualBerettas;
-	int fiveSeven;
-	int glock18;
-	int p2000;
-	int p250;
-	int tec9;
-	int ak47;
-	int aug;
-	int awp;
-	int famas;
-	int g3sg1;
-	int galilAr;
-	int m4a4;
-	int scar20;
-	int sg553;
-	int ssg08;
-	int mac10;
-	int mp5sd;
-	int mp7;
-	int mp9;
-	int ppBizon;
-	int p90;
-	int ump45;
-	int mag7;
-	int nova;
-	int sawedOff;
-	int xm1014;
-	int m249;
-	int negev;
-	int usps;
-	int m4a1s;
-	int revolver;
+    int cz75;
+    int desertEagle;
+    int dualBerettas;
+    int fiveSeven;
+    int glock18;
+    int p2000;
+    int p250;
+    int tec9;
+    int ak47;
+    int aug;
+    int awp;
+    int famas;
+    int g3sg1;
+    int galilAr;
+    int m4a4;
+    int scar20;
+    int sg553;
+    int ssg08;
+    int mac10;
+    int mp5sd;
+    int mp7;
+    int mp9;
+    int ppBizon;
+    int p90;
+    int ump45;
+    int mag7;
+    int nova;
+    int sawedOff;
+    int xm1014;
+    int m249;
+    int negev;
+    int usps;
+    int m4a1s;
+    int revolver;
 
-	int knifeID;
-	int bayonet;
-	int flip;
-	int karambit;
-	int m9Bayonet;
-	int huntsman;
-	int falchion;
-	int navaja;
-	int stiletto;
+    int knifeID;
+    int bayonet;
+    int flip;
+    int karambit;
+    int m9Bayonet;
+    int huntsman;
+    int falchion;
+    int navaja;
+    int stiletto;
 
-	bool triggerToggle = false;
-	bool wallhackToggle = false;
-	bool bhopToggle = false;
-	bool aimbotToggle = false;
-	bool antiflashToggle = false;
-	bool radarToggle = false;
-	bool skinchangerToggle = true;
-	bool knifechangerToggle = true;
+    bool triggerToggle = false;
+    bool wallhackToggle = false;
+    bool bhopToggle = false;
+    bool aimbotToggle = false;
+    bool antiflashToggle = false;
+    bool radarToggle = false;
+    bool skinchangerToggle = true;
+    bool knifechangerToggle = true;
 
-	float whRed = 2.0f, whGreen = 0.0f, whBlue = 0.0f;
+    float whRed = 2.0f;
+    float whGreen = 0.0f;
+    float whBlue = 0.0f;
 
-	void LoadConfigs();
+
+    void LoadConfigs();
 };
 
 extern Config config;

@@ -9,15 +9,41 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    aimbot.cpp \
+    antiflash.cpp \
+    bhop.cpp \
     changehotkeys.cpp \
     changeskinlayout.cpp \
+    config.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    memory.cpp \
+    offsets.cpp \
+    patternscan.cpp \
+    radar.cpp \
+    skinchanger.cpp \
+    structures.cpp \
+    triggerbot.cpp \
+    wallhack.cpp \
+    weapon.cpp
 
 HEADERS += \
+    aimbot.h \
+    antiflash.h \
+    bhop.h \
     changehotkeys.h \
     changeskinlayout.h \
-    mainwindow.h
+    config.h \
+    mainwindow.h \
+    memory.h \
+    offsets.h \
+    patternscan.h \
+    radar.h \
+    skinchanger.h \
+    structures.h \
+    triggerbot.h \
+    wallhack.h \
+    weapon.h
 
 FORMS += \
     changeHotKeys.ui \

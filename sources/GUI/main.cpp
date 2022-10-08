@@ -5,7 +5,15 @@
 
 
 #include "memory.h"
+#include "bhop.h"
+#include "triggerbot.h"
 #include "wallhack.h"
+#include "skinchanger.h"
+#include "weapon.h"
+#include "aimbot.h"
+#include "config.h"
+#include "antiflash.h"
+#include "radar.h"
 #include "offsets.h"
 
 #include <QApplication>
@@ -22,14 +30,36 @@ void Init() {
 }
 
 
+// Fast features
+void NoDelayFeatures() {
+    while (true) {
+        if (config.triggerToggle) {
+            Triggerbot();
+        }
+        if (config.bhopToggle) {
+            Bhop();
+        }
+        if (config.aimbotToggle) {
+            Aimbot();
+        }
+    }
+}
+
+
+// Not so fast features
 void DelayFeatures() {
     Sleep(10);
-    std::cout << "--> Wallhack ready                 (Toggle it with NUM_0)" << std::endl;
-
     while (true) {
         if (config.wallhackToggle) {
             Wallhack();
         }
+        if (config.radarToggle) {
+            Radar();
+        }
+        if (config.antiflashToggle) {
+            antiflash();
+        }
+        Sleep(1);
     }
 }
 
@@ -39,6 +69,7 @@ int main(int argc, char *argv[])
     Init();
     // Starts threads
     std::thread DelayThread(DelayFeatures);
+    std::thread NoDelayThread(NoDelayFeatures);
 
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("fusion"));

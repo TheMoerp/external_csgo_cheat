@@ -62,7 +62,6 @@ void MainWindow::CheckboxChanged() {
    config.bhopToggle = checkBhop->isChecked();
    config.antiflashToggle = checkNoflash->isChecked();
 
-   radioRed->setDown(true);
    bool whRedToggle = radioRed->isChecked();
    bool whGreenToggle = radioGreen->isChecked();
    bool whBlueToggle = radioBlue->isChecked();
